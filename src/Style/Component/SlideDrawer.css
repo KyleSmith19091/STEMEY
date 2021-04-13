@@ -1,0 +1,26 @@
+.slide-drawer {
+    position: absolute;
+    background-color: var(--primary-purple);
+    height: 110vh;
+    width: 70%;
+    text-align: right;
+    transition: 2s linear;
+    overflow-y: hidden;
+    z-index: 998;
+}
+
+.drawer-list {
+    padding-top: 40%;
+    padding-right: 10%;
+}
+
+.drawer-list-item {
+    line-height: 1.9em;
+}
+
+.drawer-list-item a{
+    letter-spacing: 0.05rem;
+    color: var(--primary-text-color);
+    font-weight: bold;
+    font-size: 1.4rem;
+}

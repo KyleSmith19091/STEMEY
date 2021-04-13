@@ -1,0 +1,44 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-purple);
+}
+
+.logo-container {
+    margin: 1em 1em 1em 3em;
+}
+
+.logo {
+    font-size: 0.8rem;
+    color: var(--primary-text-color);
+}
+
+.nav {
+    display: none;
+}
+
+.menu-icon-container {
+    padding-right: 1em;
+    z-index: 999;
+}
+
+@media only screen and (min-width: 768px){
+    .menu-icon-container {
+        display: none;
+    }
+
+    .nav {
+        display: unset;
+    }
+
+    .nav-item {
+        padding-left: 2em;
+        padding-right: 2em;
+        display: inline-block;
+    }
+
+    .nav-item a {
+        color: var(--primary-text-color);
+    }
+}
