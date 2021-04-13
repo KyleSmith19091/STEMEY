@@ -1,15 +1,17 @@
 import React from 'react'
 
+// CSS
 import "../Style/Component/MissionSection.css";
 
-import { ReactComponent as WaveSection } from "../Img/WaveSection.svg";
+// Components
+import WaveSection from "./WaveSection";
 
 const MissionSection = () => {
     return (
         <section className="mission-section">
-            <WaveSection className="wave-section" />
+            <WaveSection isLeft={true} />
             <div className="content">
-
+                <h1>Our Mission</h1>
             </div>
         </section>
     )

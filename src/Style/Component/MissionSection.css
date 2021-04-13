@@ -3,8 +3,16 @@
 }
 
 .content {
+    position: relative;
     padding-top: 0;
-    margin-top: -0.5em;
     background-color: var(--primary-purple);
     height: 200px;
+}
+
+.content h1 {
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+    top: -40%;
+    left: 5%;
 }

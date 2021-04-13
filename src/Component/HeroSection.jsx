@@ -1,8 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { motion } from "framer-motion"
 
+// CSS
 import "../Style/Component/HeroSection.css";
 
+// Other Components
 import heroImg from "../Img/HeroImage.png";
 import { ReactComponent as Slider } from "../Img/Slider.svg";
 
@@ -63,6 +67,10 @@ const HeroSection = ({ open }) => {
             </motion.div>
         </section>
     )
+}
+
+HeroSection.propTypes = {
+    open: PropTypes.bool.isRequired
 }
 
 export default HeroSection

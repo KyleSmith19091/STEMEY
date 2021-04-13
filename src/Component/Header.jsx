@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 import Hamburger from 'hamburger-react'
 import { motion } from "framer-motion"
@@ -33,6 +34,11 @@ const Header = ({ open, setOpen }) => {
             </div>
         </header>
     )
+}
+
+Header.propTypes = {
+    open: PropTypes.bool.isRequired,
+    setOpen: PropTypes.func.isRequired
 }
 
 export default Header

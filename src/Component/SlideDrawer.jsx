@@ -1,9 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types';
+
+// Libraries
 import { motion } from "framer-motion"
 
+// CSS
 import "../Style/Component/SlideDrawer.css";
 
 const SlideDrawer = ({ open }) => {
+
     return (
         <motion.div
             className="slide-drawer"
@@ -17,6 +22,10 @@ const SlideDrawer = ({ open }) => {
             </ul>
         </motion.div>
     )
+}
+
+SlideDrawer.propTypes = {
+    open: PropTypes.bool.isRequired
 }
 
 export default SlideDrawer
