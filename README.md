@@ -42,4 +42,14 @@ This is a react project and was bootstrapped with create-react-app.
 ##### Style
 > Will contain the style sheets for the different components and routes.
 
+#### Overall Desgin Requests
+<div align="center">
+
+1. Please **focus** on "Mobile-First" development when designing a component or a route, ensure the component works and looks good on all possible dimensions.
+
+2. Please add PropTypes when creating a component that requires props to be passed to it to help others that might use your component in the future.
+
+3. Please make use of React Arrow Components, just to keep up with the current design standards.
+
+</div>
 
