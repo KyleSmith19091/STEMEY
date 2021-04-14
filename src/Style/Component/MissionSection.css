@@ -6,13 +6,46 @@
     position: relative;
     padding-top: 0;
     background-color: var(--primary-purple);
-    height: 200px;
 }
 
 .content h1 {
     position: absolute;
     font-size: 2rem;
     color: white;
-    top: -40%;
+    top: -15%;
     left: 5%;
+}
+
+.subheading {
+    display: block;
+    text-align: center;
+    color: var(--secondary-blue);
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.subheading:nth-child(2){
+    margin-top: -1em;
+}
+
+.content p {
+    color: white;
+}
+
+.content:last-child{
+    margin-bottom: 1em;
+}
+
+.left-text {
+    display: block;
+    text-align: left;
+    margin-left: 1.5em;
+    padding-right: 2em;
+}
+
+.right-text {
+    display: block;
+    text-align: right;
+    margin-right: 1.5em;
+    padding-left: 1em;
 }

@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const WaveSection = ({ isLeft }) => {
+const WaveSection = ({ isLeft, isPurple }) => {
     if (isLeft) { // Assuming left wave form to be rendered
         return (
             <svg viewBox="0 0 500 150" preserveAspectRatio="none" style={svgStyling}>
-                <path d="M0.00,49.98 C105.80,-39.95 316.87,162.33 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style={pathStyling}></path>
+                <path d="M0.00,49.98 C105.80,-39.95 316.87,162.33 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style={isPurple ? pathStylingPurple : pathStylingBlue}></path>
             </svg>
         );
     } else { // Assuming right wave form to be rendered
         return (
             <svg viewBox="0 0 500 150" preserveAspectRatio="none" style={svgStyling}>
-                <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style={pathStyling}></path>
+                <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style={isPurple ? pathStylingPurple : pathStylingBlue}></path>
             </svg>
         );
     }
@@ -23,13 +23,20 @@ const svgStyling = {
     width: "120%"
 }
 
-const pathStyling = {
+// Stupid solution
+const pathStylingPurple = {
     fill: "#8860d0", // Primary purple color
     stroke: "none"
 }
 
+const pathStylingBlue = {
+    fill: "#84ceeb",
+    stroke: "none"
+}
+
 WaveSection.propTypes = {
-    isLeft: PropTypes.bool
+    isLeft: PropTypes.bool,
+    isPurple: PropTypes.bool
 }
 
 export default WaveSection;
