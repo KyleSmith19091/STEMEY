@@ -42,7 +42,7 @@ This is a react project and was bootstrapped with create-react-app.
 ##### Style
 > Will contain the style sheets for the different components and routes.
 
-#### Overall Desgin Requests
+### Overall Desgin Requests
 <div align="center">
 
 1. Please **focus** on "Mobile-First" development when designing a component or a route, ensure the component works and looks good on all possible dimensions.
@@ -50,6 +50,8 @@ This is a react project and was bootstrapped with create-react-app.
 2. Please add PropTypes when creating a component that requires props to be passed to it to help others that might use your component in the future.
 
 3. Please make use of React Arrow Functional Components.
+
+4. CSS Styling should *preferably* be done in the CSS style sheet for that component, but can also be done in the js/jsx file.
 
 </div>
 

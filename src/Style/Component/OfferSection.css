@@ -1,0 +1,112 @@
+.section-header {
+    position: relative;
+    color: var(--secondary-blue);
+    margin-top: 0.5em;
+    margin-left: 1em;
+}
+
+.offer-header:first-of-type {
+    color: var(--primary-dark-blue);
+    text-align: right;
+    margin-right: 1em;
+}
+
+.offer-header:last-of-type {
+    color: var(--primary-purple);
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+.slider-container {
+    display: block;
+    margin: 0 auto;
+}
+
+.slider-wrapper {
+    display: grid;
+    border-radius: 1em;
+    margin: 1em 3em 1em 3em; 
+
+    box-shadow: 1px 10px 15px -7px rgba(49, 49, 49, 0.75);
+    -webkit-box-shadow: 1px 10px 15px -7px rgba(49, 49, 49, 0.75);
+    -moz-box-shadow: 1px 10px 15px -7px rgba(49, 49, 49, 0.75);
+}
+
+.card-header {
+    display: grid;
+    position: relative;
+    text-align: center;
+    color: var(--secondary-blue);
+    margin-bottom: 0.5em;
+}
+
+.card-header h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-header img {
+    justify-self: center;
+}
+
+.card-description {
+    margin-bottom: 0.5em;
+}
+
+.card-description p{
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-top: 0.5em;
+    font-size: 0.9rem;
+}
+
+.action-statement {
+    color: var(--primary-purple);
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.card-btn {
+    justify-self: center;
+    border: none;
+    border-radius: 0.5em;
+    width: 8em;
+    height: 2em;
+    margin-bottom: 1em;
+    background-color: var(--secondary-blue);
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+     box-shadow: 1px 10px 15px -7px rgba(85,85,85,0.75);
+    -webkit-box-shadow: 1px 10px 15px -7px rgba(85,85,85,0.75);
+    -moz-box-shadow: 1px 10px 15px -7px rgba(85,85,85,0.75)
+}
+
+.card-btn:hover {
+    transition: 0.1s linear;
+    background-color: white;
+    color: var(--secondary-blue);
+}
+
+@media only screen and (min-width: 768px){
+    .section-header {
+        font-size: 4rem;
+    }
+
+    .offer-header {
+        font-size: 2.5rem;
+    }
+
+    .slider-wrapper {
+        height: 25em;
+    }
+
+    .card-header h3 {
+        top: 45%;
+    }
+
+}

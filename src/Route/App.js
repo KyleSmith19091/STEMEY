@@ -7,6 +7,7 @@ import SlideDrawer from "../Component/SlideDrawer";
 // Sections
 import HeroSection from "../Component/HeroSection";
 import MissionSection from "../Component/MissionSection";
+import OfferSection from "../Component/OfferSection";
 
 // CSS
 import '../Style/Route/App.css';
@@ -20,12 +21,11 @@ const App = () => {
     <div className="App">
 
       <Header open={open} setOpen={setOpen} />
-      {/* Rendered on media query breakpoint */}
+      {/* Rendered on media query breakpoint ==> See slide drawer css file for details */}
       <SlideDrawer open={open} />
-
       <HeroSection open={open} />
-
       <MissionSection />
+      <OfferSection />
 
     </div>
   );
