@@ -1,0 +1,77 @@
+.testimonials-section {
+    text-align: center;
+    height: auto;
+}
+
+.testimonials-section h1 {
+    padding-top: 1em;
+    color: var(--primary-purple-light);
+}
+
+.slick-list {margin: 0 -10px;}
+.slick-slide>div {padding: 0 10px;}
+
+.slider-container {
+    margin: 1em;
+}
+
+.slider-wrapper {
+    display: grid;
+    border-radius: 1em;
+
+    box-shadow: 1px 10px 15px -7px rgba(49, 49, 49, 0.75);
+    -webkit-box-shadow: 1px 10px 15px -7px rgba(49, 49, 49, 0.75);
+    -moz-box-shadow: 1px 10px 15px -7px rgba(49, 49, 49, 0.75);
+}
+
+.testimonials-section .slide, .testimonials-section .activeSlide {
+    background-color: var(--primary-light-blue);
+    position: relative;
+    border-radius: 1em;
+    margin-top: 4em;
+    margin-bottom: 1em;
+    padding: 1em;
+    color: white;
+}
+
+.testimonial-img{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: -19%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+
+.testimonial-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.testimonial-msg {
+    padding-top: 3em;
+}
+
+.testimonial-name {
+    padding-left: 1em;
+    float: left;
+    font-weight: 250;
+}
+
+.quote-icon {
+    float: right;
+}
+
+.quote-icon svg{
+    margin-bottom: 1.5em;
+}
+
+@media only screen and (min-width: 768px) {
+    .testimonials-section h1 {
+        font-size: 3rem;
+    }
+}

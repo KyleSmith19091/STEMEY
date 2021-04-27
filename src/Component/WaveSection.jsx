@@ -6,9 +6,17 @@ import "../Style/Component/WaveSection.css";
 const WaveSection = ({ isLeft, isPurple }) => {
     return (
         <div className="wave-wrapper">
-            <svg viewBox="0 0 375 55" preserveAspectRatio="none" style={svgStyling}>
-                <path d="M0 14.9079C91.5 -45.3498 237.5 102.379 375 14.9079V519H0V14.9079Z" style={isPurple ? pathStylingPurple : pathStylingBlue}></path>
-            </svg>
+            {
+                isLeft ?
+                    <svg viewBox="0 0 375 55" preserveAspectRatio="none" style={svgStyling}>
+                        <path d="M0 14.9079C91.5 -45.3498 237.5 102.379 375 14.9079V519H0V14.9079Z" style={isPurple ? pathStylingPurple : pathStylingBlue} />
+                    </svg>
+                    :
+                    <svg viewBox="0 0 375 55" preserveAspectRatio="none" style={svgStyling}>
+                        <path d="M0 7.77655C182.5 89.5 178 -29.3027 375 7.77655V910H0V7.77655Z" style={isPurple ? pathStylingPurple : pathStylingBlue} />
+                    </svg>
+            }
+
         </div>
     );
 };

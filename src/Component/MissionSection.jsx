@@ -6,21 +6,25 @@ import { InView } from "react-intersection-observer";
 
 // CSS
 import "../Style/Component/MissionSection.css";
+import "../Style/Component/PointerAnim.css";
+import "../Style/Component/BulbAnimation.css";
+import "../Style/Component/CityAnimation.css";
 
 // Components
 import WaveSection from "./WaveSection";
 
 // Images paths
-import diamond from "../Img/diamond.png";
-import checkpad from "../Img/checkpad.png";
+import { ReactComponent as OnlineSchool } from "../Img/online_school.svg";
+import { ReactComponent as CreativeProcess } from "../Img/creative_process.svg";
+import { ReactComponent as City } from "../Img/city.svg";
 
 
 const MissionSection = () => {
 
     return (
-        <InView threshhold={0.10} intoViewMargin={0}>
+        <InView as="div" threshhold={0.2} rootMargin={"50%"}>
             {({ ref, inView }) =>
-                <motion.section className="mission-section">
+                <motion.section id="MISSION" className="mission-section">
                     <WaveSection isLeft={true} isPurple={true} />
                     <div className="content">
                         <h1 className="mission-header">Our Mission</h1>
@@ -42,14 +46,14 @@ const MissionSection = () => {
                                 to engage in STEM through personalized academic instruction.
                             </motion.p>
 
-                            <motion.img
+                            <motion.div
                                 ref={ref}
-                                initial={diamondAnimationInital}
-                                animate={inView ? diamondAnimation : diamondAnimationInital}
-                                id="diamond"
-                                src={diamond}
+                                initial={imgAnimInitial}
+                                animate={inView ? imgAnimRot : imgAnimInitial}
                             >
-                            </motion.img>
+                                <OnlineSchool className="mission-vector" />
+                            </motion.div>
+
 
                         </div>
 
@@ -70,13 +74,10 @@ const MissionSection = () => {
                                 and mentorship for underprivileged youth.
                             </motion.p>
 
-                            <motion.img
-                                ref={ref}
-                                initial={checkpadAnimationInital}
-                                animate={inView ? checkpadAnimation : checkpadAnimationInital}
-                                id="checkpad"
-                                src={checkpad}>
-                            </motion.img>
+                            <motion.div>
+                                <CreativeProcess className="mission-vector" />
+                            </motion.div>
+
 
                         </div>
 
@@ -96,6 +97,8 @@ const MissionSection = () => {
                                 className="left-text">
                                 Supportive, tight-knit communities and ______ opportunities
                             </motion.p>
+
+                            <City className="mission-vector" />
 
                         </div>
 
@@ -117,6 +120,10 @@ const textAnimInitial = {
     opacity: 0
 }
 
+const imgAnimInitial = {
+    opacity: 0
+}
+
 const subheadingAnim = {
     x: [-100, 0],
     opacity: 1
@@ -127,24 +134,10 @@ const textAnim = {
     opacity: 1
 }
 
-const diamondAnimationInital = {
-    opacity: 0
-}
-
-const diamondAnimation = {
-    scale: [0, 1],
-    rotate: [0, 360],
+const imgAnimRot = {
     opacity: 1,
-
+    rotateY: [360, 0],
 }
 
-const checkpadAnimationInital = {
-    opacity: 0
-}
-
-const checkpadAnimation = {
-    scale: [0, 2, 1],
-    opacity: 1
-}
 
 export default MissionSection;

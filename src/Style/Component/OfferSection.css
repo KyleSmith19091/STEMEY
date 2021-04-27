@@ -32,6 +32,14 @@
     -moz-box-shadow: 1px 10px 15px -7px rgba(49, 49, 49, 0.75);
 }
 
+.slider-wrapper:hover {
+    transform: scale(1.01); 
+    transition: 0.1s linear;
+    box-shadow: 1px 10px 15px -7px rgba(34, 34, 34, 0.75);
+    -webkit-box-shadow: 1px 10px 15px -7px rgba(34, 34, 34, 0.75);
+    -moz-box-shadow: 1px 10px 15px -7px rgba(34, 34, 34, 0.75);
+}
+
 .card-header {
     display: grid;
     position: relative;
@@ -41,6 +49,7 @@
 }
 
 .card-header h3 {
+    padding: 4em;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -52,13 +61,11 @@
 }
 
 .card-description {
-    margin-bottom: 0.5em;
+    display: grid;
+    padding: 1em 2em 0.5em 2em;
 }
 
 .card-description p{
-    padding-left: 1em;
-    padding-right: 1em;
-    margin-top: 0.5em;
     font-size: 0.9rem;
 }
 

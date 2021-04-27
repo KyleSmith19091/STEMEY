@@ -1,0 +1,12 @@
+.lights {
+    animation: flicker 4s infinite;
+}
+
+@keyframes flicker {
+    from {
+        fill: #6675FF;
+    } 
+    to {
+        fill: yellow;
+    }
+}

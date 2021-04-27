@@ -1,49 +1,52 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { animateScroll as scroll } from "react-scroll";
 
 // CSS
 import "../Style/Component/HeroSection.css";
 
 // Other Components
-import heroImg from "../Img/HeroImage.png";
-import { ReactComponent as Slider } from "../Img/Slider.svg";
+import { ReactComponent as ChevronUp } from "../Img/chevron_up.svg";
+import { ReactComponent as Science } from "../Img/science.svg";
+import { ReactComponent as Books } from "../Img/books.svg";
 
 const HeroSection = ({ open }) => {
+
+    const words = ["STEM", "SCIENCE", "TECHNOLOGY", "ENGINEERING", "MATHEMATICS"];
+    const images = [<Science />, <Books />];
+    const [wordIndex, setWordIndex] = useState(0);
+    const [imageIndex, setImageIndex] = useState(0);
+
+    useEffect(() => {
+        setTimeout(() => {
+            wordIndex === words.length - 1 ? setWordIndex(0) : setWordIndex(wordIndex + 1);
+        }, 2000);
+
+    });
+
+    const onHeroImageClick = (e) => {
+        imageIndex === images.length - 1 ? setImageIndex(0) : setImageIndex(imageIndex + 1);
+    };
+
     return (
         <section className="hero-section" style={{ filter: open ? "blur(2px)" : "none" }}>
             <div className="hero-title-container">
-                <motion.h1
-                    animate={{
-                        y: [-100, 0],
-                    }}
-                    initial={true}
-                    transition={{ type: 'spring' }}
-                    whileHover={{ scale: 0.5 }}
-                >
-                    <span>Build </span>your future with <span>STEM</span>
-                </motion.h1>
+                <h1>Build your future in <br /><motion.span className="stem-anim">{words[wordIndex]}<br /></motion.span> with
+                    <span> STEMEY</span>
+                </h1>
             </div>
-            <motion.div className="hero-image-container"
-                animate={{
-                    x: [150, 0],
-                }}
-                initial={true}
-                transition={{ ease: "easeOut", duration: 1 }}
-            >
-                <motion.img
-                    whileHover={{ scale: 0.5 }}
-                    transition={{ type: 'spring' }}
-                    src={heroImg} alt="Person on rocket" />
+
+            <div className="hero-image-parent-container">
+                <motion.div animate={heroImageContainerAnim} initial="hidden" variants={heroImageVariants} whileTap={heroImageFlip} className="hero-image-container" onClick={onHeroImageClick}>
+                    {images[imageIndex]}
+                </motion.div>
+            </div>
+
+            <motion.div animate={{ y: [0, 20, 0] }} transition={{ repeat: Infinity, duration: 1 }} className="chevron-container" onClick={onChevronClick}>
+                <ChevronUp />
             </motion.div>
-            <motion.div
-                animate={{ x: [-100, 0] }}
-                transition={{ ease: "easeOut", duration: 1 }}
-                initial={true}
-                className="hero-slider-container">
-                <Slider className="slider" />
-            </motion.div>
+
         </section>
     )
 }
@@ -51,5 +54,29 @@ const HeroSection = ({ open }) => {
 HeroSection.propTypes = {
     open: PropTypes.bool.isRequired
 }
+
+const heroImageContainerAnim = {
+    rotate: [180, 0],
+    x: [500, 0]
+};
+
+const heroImageFlip = {
+    rotateY: [0, 180]
+}
+
+const heroImageVariants = {
+    hidden: {
+        rotate: [180, 0],
+        x: [500, 0]
+    },
+    visible: {
+        rotateY: [0, 180]
+    }
+}
+
+const onChevronClick = (e) => {
+    scroll.scrollTo(1000);
+};
+
 
 export default HeroSection

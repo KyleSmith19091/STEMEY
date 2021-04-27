@@ -1,90 +1,119 @@
 .hero-section {
-    display: grid;
-    height: 90vh;
-    text-align: center;
+    display: block;
     justify-content: center;
-    margin-bottom: 2em;
+    height: 100vh;
+}
+
+.hero-title-container {
+    margin: 1em 0;
+    grid-area: text;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-title-container h1 {
-    padding-top: 1em;
-    font-size: 2rem;
     color: var(--primary-purple);
+    font-size: 8vw;
 }
 
-.hero-title-container h1:hover span {
+.hero-title-container span:first-of-type {
+    font-size: 8.5vw;
+}
+
+.hero-title-container span:last-of-type {
     color: var(--primary-light-blue);
 }
 
+.hero-image-parent-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .hero-image-container {
-    margin-top: -35%;
+    background-color: var(--secondary-blue);
+    position: relative;
+    border-radius: 50%;
+    width: 95vw;
+    height: 95vw;
+    padding-top: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2em;
+    padding: 3em;
 }
 
-.hero-image-container img {
-    display: block;
+.chevron-container {
+    margin-top: 2em;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-area: arrow;
+
+    cursor: pointer;
 }
 
-.hero-slider-container {
-    position: absolute;
-    left: 45%;
-    top: 87%;
-}
-
-/* SLIDER ANIMATION */
-.circle {
-    animation: circleAnim 1s infinite alternate-reverse;
-}
-
-@keyframes circleAnim {
-    from {
-        transform: translate(0.5px, 38px);
-        z-index: 5;
-    }
-    to {
-        transform: translate(0.5px, 1px);
-    }
-}
-
-/* DESKTOP DESIGN */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px){
     .hero-section {
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: auto;
-        text-align: left;
-        height: 90vh;
-        row-gap: 0;
-        margin-top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "text img"
+                            "text img"
+                            "arrow arrow";
     }
 
     .hero-title-container {
-        grid-row: 1 / span 1;
-        padding: 2em 2em 2em 3em;
-        font-size: 3rem;
-    }
-
-    .hero-title-container h1{
-        font-size: 3rem;
-    }
-
-    .hero-slider-container {
-        position: unset;
-        padding-left: 9em;
-    }
-
-    .hero-image-container {
-        grid-row: 1 / span 2;
+        margin: 0;
+        grid-area: text;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0;
-        padding-right: 4em;
-        margin-top: 3em;
     }
 
-    .hero-image-container img {
-        max-width: 806px;
-        max-height: 833px;
-        width: 100%;
-    }
+.hero-title-container h1 {
+    color: var(--primary-purple);
+    font-size: 4vw;
 }
+
+.hero-title-container span:first-of-type {
+    font-size: 4.5vw;
+}
+
+.hero-title-container span:last-of-type {
+    color: var(--primary-light-blue);
+}
+
+.hero-image-parent-container {
+    grid-area: img;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image-container {
+    background-color: var(--secondary-blue);
+    position: relative;
+    border-radius: 50%;
+    width: 30vw;
+    height: 30vw;
+    padding-top: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 3em;
+}
+
+
+
+}
+

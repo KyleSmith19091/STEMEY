@@ -1,0 +1,12 @@
+#pointer {
+    animation: wiggle 1s infinite;
+}
+
+@keyframes wiggle {
+    from {
+        transform: rotateX(15deg);
+    }
+    to {
+        transform: rotateX(-15deg);
+    }
+}

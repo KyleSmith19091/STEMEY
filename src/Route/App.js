@@ -3,11 +3,15 @@ import { useState } from "react";
 // Components
 import Header from "../Component/Header";
 import SlideDrawer from "../Component/SlideDrawer";
+import Footer from "../Component/Footer";
 
 // Sections
 import HeroSection from "../Component/HeroSection";
 import MissionSection from "../Component/MissionSection";
 import OfferSection from "../Component/OfferSection";
+import ImpactSection from "../Component/ImpactSection";
+import TestimonialSection from "../Component/TestimonialSection";
+import AnnoucementSection from "../Component/AnnoucementSection";
 
 // CSS
 import '../Style/Route/App.css';
@@ -26,6 +30,10 @@ const App = () => {
       <HeroSection open={open} />
       <MissionSection />
       <OfferSection />
+      <ImpactSection />
+      <TestimonialSection />
+      <AnnoucementSection />
+      <Footer />
 
     </div>
   );

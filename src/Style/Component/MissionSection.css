@@ -1,10 +1,15 @@
 .mission-section {
     position: relative;
-    height: auto;
+    height: 100%;
 }
 
 .content {
     background-color: var(--primary-purple);
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    text-align: center;
+    color: white;
 }
 
 .mission-header {
@@ -15,32 +20,20 @@
     color: white;
 }
 
-.content {
-    display: grid;
-    padding: 1em;
-    text-align: center;
-    padding-top: 2em;
-    color: white;
-}
-
 .subheading {
     color: var(--secondary-blue);
     text-align: center;
 }
 
-.mission-description p {
-    margin-left: 0.5em;
+.subheading:first-of-type {
+    padding-top: 1em;
 }
 
 .mission-description:last-of-type {
     padding-bottom: 1em;
 }
 
-#diamond {
-    display: none;
-}
-
-#checkpad {
+.mission-vector {
     display: none;
 }
 
@@ -50,39 +43,36 @@
     }
 
     .subheading {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .mission-description {
         display: grid;
-        grid-template-columns: 60% auto;
-        column-gap: 1em;
         position: relative;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 60% auto;
         font-size: 2rem;
     }
 
-    .left-text {
-        float: left;
-        margin-left: 1em;
+    .mission-description:nth-of-type(2){
+        grid-template-columns: 30% auto;
+        grid-template-areas: "img text";
     }
 
-    #diamond {
+    .mission-description:nth-of-type(2) p {
+        grid-area: text;
+    }
+
+    .mission-description:nth-of-type(2) svg {
+        grid-area: img;
+    }
+
+    .mission-vector {
         display: unset;
-    }
-
-    .mission-description:nth-of-type(2) {
-        grid-template-columns: 40% auto;
-    }
-
-    .right-text {
+        width: 20vw;
+        height: 20vw;
         align-self: center;
     }
-
-    #checkpad {
-        grid-row: 1 / span 1;
-        display: unset;
-        width: 40%;
-        margin-left: 1em;
-    }
-
+ 
 }
