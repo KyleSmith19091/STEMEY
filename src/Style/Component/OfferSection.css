@@ -25,7 +25,7 @@
 .slider-wrapper {
     display: grid;
     border-radius: 1em;
-    margin: 1em 3em 1em 3em; 
+    margin: 1em; 
 
     box-shadow: 1px 10px 15px -7px rgba(49, 49, 49, 0.75);
     -webkit-box-shadow: 1px 10px 15px -7px rgba(49, 49, 49, 0.75);

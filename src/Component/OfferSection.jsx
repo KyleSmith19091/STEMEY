@@ -61,7 +61,7 @@ const OfferSection = () => {
         swipeToSlide: true,
         focusOnSelect: true,
         autoplay: true, // Remove this to remove autoplay
-        autoplaySpeed: 2000,
+        autoplaySpeed: 4000,
         cssEase: "linear",
         beforeChange: (current, next) => setCardIndex(next),
         responsive: [
