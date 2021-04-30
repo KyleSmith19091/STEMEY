@@ -23,6 +23,7 @@
 .subheading {
     color: var(--secondary-blue);
     text-align: center;
+    margin: 1em;
 }
 
 .subheading:first-of-type {

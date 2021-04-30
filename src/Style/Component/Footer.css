@@ -1,12 +1,12 @@
 footer {
-
+    margin: 0.3em;
 }
 
 footer .icon-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 2em;
+    padding: 1em 1em;
 }
 
 footer form {
@@ -50,6 +50,7 @@ footer form {
 }
 
 .page-dir a {
+    padding: 0.6em 0;
     color: black;
     text-decoration: none;
 }

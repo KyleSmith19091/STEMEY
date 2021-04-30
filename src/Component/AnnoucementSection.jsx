@@ -13,24 +13,22 @@ const AnnoucementSection = () => {
         <section className="announcement-section">
             <WaveSection isLeft={true} isPurple={true} />
             <div className="content">
-                <h1>Announcements</h1>
-                <div className="announcement-container">
-                    <div className="announcement">
-                        <h3>Title</h3>
-                        <p>Elit veniam ex eu id labore esse aliquip nostrud proident deserunt culpa.</p>
-                        <img src={sample1} alt="Announcement" />
-                    </div>
-                    <div className="announcement">
-                        <h3>Title</h3>
-                        <p>Elit veniam ex eu id labore esse aliquip nostrud proident deserunt culpa.</p>
-                        <img src={sample2} alt="Announcement" />
-                    </div>
-                    <div className="announcement">
-                        <h3>Title</h3>
-                        <p>Elit veniam ex eu id labore esse aliquip nostrud proident deserunt culpa.</p>
-                        <img src={sample3} alt="Announcement" />
-                    </div>
-                </div>
+                <h1 className="header">Announcements</h1>
+                <article className="announcement">
+                    <h1>Title</h1>
+                    <img src={sample1} alt="Sample Image" />
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </article>
+                <article className="announcement">
+                    <h1>Title</h1>
+                    <img src={sample1} alt="Sample Image" />
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </article>
+                <article className="announcement">
+                    <h1>Title</h1>
+                    <img src={sample1} alt="Sample Image" />
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </article>
             </div>
         </section>
     )

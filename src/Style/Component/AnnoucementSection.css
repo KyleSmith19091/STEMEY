@@ -1,101 +1,50 @@
 .announcement-section .content {
     padding-bottom: 1em;
+    display: grid;
 }
 
-.announcement-section .content h1{
+.announcement-section .content .header{
     margin-top: -0.5em;
+    margin-bottom: 1em;
     font-size: 1.8rem;
     text-align: left; 
 }
 
 .announcement {
+    border: 1px solid red;
     display: grid;
-    grid-template-columns: 60% auto;
-    grid-template-areas: "title title"
-                         "desc img";
+    padding: 1em;
+    grid-template-areas: "header header"
+                         "img description";
 }
 
-.announcement h3 {
-    border: 1px solid red;
+.announcement h1 {
     text-align: left;
-    margin-top: 2em;
-    grid-area: title;
+    padding-left: 0.5em;
+    grid-area: header;
+}
+
+.announcement img {
+    grid-area: img;
 }
 
 .announcement p {
     align-self: center;
-    grid-area: desc;
+    grid-area: description;
 }
 
-.announcement img {
-    align-self: center;
+/* Mobile view stagger the views */
+.announcement:nth-of-type(2) h1{
+    padding-left: unset;
+    padding-right: 0.5em;
+    text-align: right;
+    grid-area: header;
+}
+
+.announcement:nth-of-type(2) p{
     grid-area: img;
 }
 
-.announcement:nth-of-type(2) {
-    grid-template-columns: 40% auto;
-    grid-template-areas: "title title"
-                         "img desc";
+.announcement:nth-of-type(2) img{
+    grid-area: description;
 }
-
-.announcement:nth-of-type(2) h3 {
-    text-align: right;
-    margin-right: 0.5em;
-}
-
-.announcement:nth-of-type(2) p {
-    margin-left: 0.5em;
-}
-
-@media only screen and (min-width: 768px) {
-    .announcement-section .content h1 {
-        font-size: 3rem;
-        margin-top: -2em;
-    }
-
-    .announcement-container {
-        display: flex;
-        justify-content: center;
-        margin: 1em 2em;
-    }
-
-    .announcement {
-        grid-template-columns: unset;
-        grid-template-rows: repeat(3,minmax(20px,auto));
-        grid-template-areas: "img"
-                             "title"
-                             "desc";
-    }
-
-    .announcement h3 {
-        text-align: left;
-        grid-area: title;
-    }
-
-    .announcement p {
-        align-self: center;
-        justify-self: center;
-        grid-area: desc;
-    }
-
-    .announcement img {
-        align-self: center;
-        justify-self: center;
-        width: 20vw;
-        height: 20vw;
-        grid-area: img;
-    }
-
-    .announcement:nth-of-type(2) {
-       grid-template-areas: "img"
-                             "title"
-                             "desc"; 
-    }
-
-    .announcement:nth-of-type(2) h3 {
-        text-align: left;
-        margin-right: unset;
-    }    
-
-}
-

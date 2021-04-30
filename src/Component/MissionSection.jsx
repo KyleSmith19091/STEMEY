@@ -22,7 +22,7 @@ import { ReactComponent as City } from "../Img/city.svg";
 const MissionSection = () => {
 
     return (
-        <InView as="div" threshhold={0.2} rootMargin={"50%"}>
+        <InView as="div" threshhold={0.2} rootMargin={"80%"}>
             {({ ref, inView }) =>
                 <motion.section id="MISSION" className="mission-section">
                     <WaveSection isLeft={true} isPurple={true} />
@@ -78,7 +78,6 @@ const MissionSection = () => {
                                 <CreativeProcess className="mission-vector" />
                             </motion.div>
 
-
                         </div>
 
 
@@ -106,7 +105,7 @@ const MissionSection = () => {
                 </motion.section>
             }
         </InView >
-    )
+    );
 }
 
 // Helper objects
