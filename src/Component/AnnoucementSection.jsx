@@ -16,17 +16,17 @@ const AnnoucementSection = () => {
                 <h1 className="header">Announcements</h1>
                 <article className="announcement">
                     <h1>Title</h1>
-                    <img src={sample1} alt="Sample Image" />
+                    <img src={sample1} alt="Sample" />
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                 </article>
                 <article className="announcement">
                     <h1>Title</h1>
-                    <img src={sample1} alt="Sample Image" />
+                    <img src={sample2} alt="Sample" />
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                 </article>
                 <article className="announcement">
                     <h1>Title</h1>
-                    <img src={sample1} alt="Sample Image" />
+                    <img src={sample3} alt="Sample" />
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                 </article>
             </div>

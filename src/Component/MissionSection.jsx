@@ -74,7 +74,10 @@ const MissionSection = () => {
                                 and mentorship for underprivileged youth.
                             </motion.p>
 
-                            <motion.div>
+                            <motion.div
+                                ref={ref}
+                                initial={imgAnimInitial}
+                                animate={inView ? imgAnimRot : imgAnimInitial}>
                                 <CreativeProcess className="mission-vector" />
                             </motion.div>
 
@@ -97,7 +100,12 @@ const MissionSection = () => {
                                 Supportive, tight-knit communities and ______ opportunities
                             </motion.p>
 
-                            <City className="mission-vector" />
+                            <motion.div
+                                ref={ref}
+                                initial={imgAnimInitial}
+                                animate={inView ? imgAnimRot : imgAnimInitial}>
+                                <City className="mission-vector" />
+                            </motion.div>
 
                         </div>
 
