@@ -1,0 +1,9 @@
+.container {
+  perspective: 40px;
+}
+
+.inner {
+  width: auto;
+  height: auto;
+  transition: transform 0.5s;
+}
