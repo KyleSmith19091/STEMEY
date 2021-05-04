@@ -28,7 +28,6 @@ const MissionSection = () => {
                     <WaveSection isLeft={true} isPurple={true} />
                     <div className="content">
                         <h1 className="mission-header">Our Mission</h1>
-
                         <motion.h2
                             ref={ref}
                             initial={subheadingAnimInitial}

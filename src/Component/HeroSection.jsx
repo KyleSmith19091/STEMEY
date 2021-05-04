@@ -11,6 +11,8 @@ import { ReactComponent as ChevronUp } from "../Img/chevron_up.svg";
 import { ReactComponent as Science } from "../Img/science.svg";
 import { ReactComponent as Books } from "../Img/books.svg";
 
+import HoverCard from "../Component/HoverCard";
+
 const HeroSection = ({ open }) => {
 
     const words = ["STEM", "SCIENCE", "TECHNOLOGY", "ENGINEERING", "MATHEMATICS"];
@@ -43,9 +45,13 @@ const HeroSection = ({ open }) => {
                 </motion.div>
             </div>
 
-            <motion.div animate={{ y: [0, 20, 0] }} transition={{ repeat: Infinity, duration: 1 }} className="chevron-container" onClick={onChevronClick}>
+            <motion.div animate={{ y: [0, 20, 0] }} transition={{ repeat: Infinity, duration: 2 }} className="chevron-container" onClick={onChevronClick}>
                 <ChevronUp />
             </motion.div>
+
+            <HoverCard bgColor="black">
+                <h1>Content</h1>
+            </HoverCard>
 
         </section>
     )

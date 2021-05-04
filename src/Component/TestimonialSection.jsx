@@ -12,7 +12,6 @@ import "../Style/Component/Testimonials.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 const testimonialMessages = [
     {
         name: "Yulia Anashkina",
@@ -31,10 +30,10 @@ const testimonialMessages = [
     }
 ];
 
-
 const Testimonials = () => {
 
     const [cardIndex, setCardIndex] = useState(0);
+
     const cards = testimonialMessages.map((testimonial, idx) => {
         return (
             <div className={idx === cardIndex ? "activeSlide" : "slide"} key={idx}>
@@ -85,7 +84,7 @@ const Testimonials = () => {
                 <Slider {...settings}>{cards}</Slider>
             </div>
         </section>
-    )
+    );
 }
 
 export default Testimonials

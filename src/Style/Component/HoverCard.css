@@ -1,8 +1,8 @@
-.container {
+.__container {
   perspective: 40px;
 }
 
-.inner {
+.__inner {
   width: auto;
   height: auto;
   transition: transform 0.5s;
