@@ -1,17 +1,20 @@
+// React
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { motion } from "framer-motion";
 import { animateScroll as scroll } from "react-scroll";
 
+// Internal Components
+import HoverCard from "./HoverCard";
+
+// Images
+import { ReactComponent as ChevronUp } from "../Img/Icon/chevron_up.svg";
+import { ReactComponent as Science } from "../Img/SVG/science.svg";
+import { ReactComponent as Books } from "../Img/SVG/books.svg";
+
 // CSS
 import "../Style/Component/HeroSection.css";
 
-// Other Components
-import { ReactComponent as ChevronUp } from "../Img/chevron_up.svg";
-import { ReactComponent as Science } from "../Img/science.svg";
-import { ReactComponent as Books } from "../Img/books.svg";
-
-import HoverCard from "../Component/HoverCard";
 
 const HeroSection = ({ open }) => {
 
@@ -39,19 +42,17 @@ const HeroSection = ({ open }) => {
                 </h1>
             </div>
 
-            <div className="hero-image-parent-container">
-                <motion.div animate={heroImageContainerAnim} initial="hidden" variants={heroImageVariants} whileTap={heroImageFlip} className="hero-image-container" onClick={onHeroImageClick}>
-                    {images[imageIndex]}
-                </motion.div>
-            </div>
+            <HoverCard>
+                <div className="hero-image-parent-container">
+                    <motion.div animate={heroImageContainerAnim} initial="hidden" variants={heroImageVariants} whileTap={heroImageFlip} className="hero-image-container" onClick={onHeroImageClick}>
+                        {images[imageIndex]}
+                    </motion.div>
+                </div>
+            </HoverCard>
 
             <motion.div animate={{ y: [0, 20, 0] }} transition={{ repeat: Infinity, duration: 2 }} className="chevron-container" onClick={onChevronClick}>
                 <ChevronUp />
             </motion.div>
-
-            <HoverCard bgColor="black">
-                <h1>Content</h1>
-            </HoverCard>
 
         </section>
     )

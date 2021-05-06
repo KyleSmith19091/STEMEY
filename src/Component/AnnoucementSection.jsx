@@ -1,11 +1,15 @@
+// Reeact
 import React from 'react'
 
+// Internal Components
 import WaveSection from "./WaveSection";
 
-import sample1 from "../Img/announcement_sample_1.png";
-import sample2 from "../Img/announcement_sample_2.png";
-import sample3 from "../Img/announcement_sample_3.png";
+// Images
+import sample1 from "../Img/Photo/announcement_sample_1.png";
+import sample2 from "../Img/Photo/announcement_sample_2.png";
+import sample3 from "../Img/Photo/announcement_sample_3.png";
 
+// CSS
 import "../Style/Component/AnnoucementSection.css";
 
 const AnnoucementSection = () => {

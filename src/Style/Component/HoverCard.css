@@ -1,9 +1,15 @@
 .__container {
-  perspective: 40px;
+  perspective: 10px;
 }
 
 .__inner {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   transition: transform 0.5s;
+}
+
+@media (hover: none){
+  .__container {
+    perspective: 6000px;
+  }
 }

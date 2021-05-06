@@ -54,3 +54,31 @@ footer form {
     color: black;
     text-decoration: none;
 }
+
+@media only screen and (min-width: 768px) {
+    footer .icon-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .icon-container svg {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .page-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1em 1em;
+    }
+
+    .page-dir h4 {
+        font-size: 1.5rem;
+    }
+    
+    .page-dir a {
+        font-size: 1.2rem;
+    }
+}

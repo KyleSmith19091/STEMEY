@@ -1,8 +1,13 @@
+// React
 import React from 'react'
 
-// Library Components
+// External Components
 import { motion } from "framer-motion";
 import { InView } from "react-intersection-observer";
+
+
+// Internal Components
+import WaveSection from "./WaveSection";
 
 // CSS
 import "../Style/Component/MissionSection.css";
@@ -10,13 +15,10 @@ import "../Style/Component/PointerAnim.css";
 import "../Style/Component/BulbAnimation.css";
 import "../Style/Component/CityAnimation.css";
 
-// Components
-import WaveSection from "./WaveSection";
-
 // Images paths
-import { ReactComponent as OnlineSchool } from "../Img/online_school.svg";
-import { ReactComponent as CreativeProcess } from "../Img/creative_process.svg";
-import { ReactComponent as City } from "../Img/city.svg";
+import { ReactComponent as OnlineSchool } from "../Img/SVG/online_school.svg";
+import { ReactComponent as CreativeProcess } from "../Img/SVG/creative_process.svg";
+import { ReactComponent as City } from "../Img/SVG/city.svg";
 
 
 const MissionSection = () => {

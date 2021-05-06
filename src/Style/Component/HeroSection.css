@@ -1,6 +1,7 @@
 .hero-section {
     display: block;
     justify-content: center;
+    align-content: center;
     height: 100vh;
 }
 
@@ -48,7 +49,6 @@
 }
 
 .chevron-container {
-    margin-top: 2em;
     width: 100%;
     display: flex;
     align-items: center;
@@ -92,10 +92,8 @@
 
 .hero-image-parent-container {
     grid-area: img;
-
-    display: flex;
-    align-items: center;
     justify-content: center;
+    padding-top: 12vh;
 }
 
 .hero-image-container {
@@ -112,8 +110,6 @@
 
     padding: 3em;
 }
-
-
 
 }
 

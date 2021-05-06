@@ -72,6 +72,8 @@
     .mission-vector {
         display: unset;
         align-self: center;
+        width: 20vw;
+        height: 20vw;
     }
  
 }

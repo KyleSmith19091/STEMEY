@@ -1,17 +1,19 @@
+// React
 import React, { useState } from 'react'
 
 // External components
 import Slider from "react-slick";
 
 // Images 
-import elyssa from "../Img/elyssa_wolter.png";
-import { ReactComponent as Quote } from "../Img/testimonial_quote.svg";
+import elyssa from "../Img/Photo/elyssa_wolter.png";
+import { ReactComponent as Quote } from "../Img/Icon/testimonial_quote.svg";
 
 // CSS
 import "../Style/Component/Testimonials.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// Testimonial card content
 const testimonialMessages = [
     {
         name: "Yulia Anashkina",

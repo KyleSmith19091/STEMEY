@@ -1,11 +1,14 @@
+// React
 import React from 'react'
 
-import { ReactComponent as Youtube } from "../Img/youtubeIcon.svg";
-import { ReactComponent as Instagram } from "../Img/instagramIcon.svg";
-import { ReactComponent as Linkedin } from "../Img/linkedin.svg";
-import { ReactComponent as Classroom } from "../Img/googleClassroomIcon.svg";
-import { ReactComponent as Discord } from "../Img/discordIcon.svg";
+// Images
+import { ReactComponent as Youtube } from "../Img/Icon/youtubeIcon.svg";
+import { ReactComponent as Instagram } from "../Img/Icon/instagramIcon.svg";
+import { ReactComponent as Linkedin } from "../Img/Icon/linkedin.svg";
+import { ReactComponent as Classroom } from "../Img/Icon/googleClassroomIcon.svg";
+import { ReactComponent as Discord } from "../Img/Icon/discordIcon.svg";
 
+// CSS
 import "../Style/Component/Footer.css";
 
 const Footer = () => {

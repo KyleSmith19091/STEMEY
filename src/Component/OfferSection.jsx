@@ -1,14 +1,18 @@
+// React
 import React, { useState } from 'react'
+
+// External Libraries
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 import { useSpring, animated } from "react-spring";
 import { InView } from "react-intersection-observer";
 
 // Images 
-import classBlob from "../Img/classesBlob.png";
-import tutoringBlob from "../Img/tutoringBlob.png";
-import eventsAndNetworksBlob from "../Img/eventsAndNetworkingBlob.png";
+import classBlob from "../Img/Photo/classesBlob.png";
+import tutoringBlob from "../Img/Photo/tutoringBlob.png";
+import eventsAndNetworksBlob from "../Img/Photo/eventsAndNetworkingBlob.png";
 
+// CSS
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import "../Style/Component/OfferSection.css";
@@ -84,12 +88,9 @@ const OfferSection = () => {
 
     const cards = cardContents.map((card, idx) => {
         return (
-            <animated.div
-                className={idx === cardIndex ? "activeSlide" : "slide"} key={idx}>
-                <animated.div
-                    className="slider-wrapper">
-                    <animated.div
-                        className="card-header">
+            <animated.div className={idx === cardIndex ? "activeSlide" : "slide"} key={idx}>
+                <animated.div className="slider-wrapper">
+                    <animated.div className="card-header">
                         <h3>{card.heading}</h3>
                         <img src={card.blob} alt={card.heading} />
                     </animated.div>
@@ -103,7 +104,7 @@ const OfferSection = () => {
                         whileTap={{ scale: 0.9 }}
                         className="card-btn">{card.buttonText}</motion.button>
                 </animated.div>
-            </animated.div>
+            </animated.div >
         )
     });
 

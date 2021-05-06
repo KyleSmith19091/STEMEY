@@ -1,3 +1,7 @@
+.announcement-section {
+    position: relative;
+}
+
 .announcement-section .content {
     padding-bottom: 1em;
     display: grid;
@@ -8,6 +12,7 @@
     margin-bottom: 1em;
     font-size: 1.8rem;
     text-align: left; 
+    display: block;
 }
 
 .announcement {
@@ -46,4 +51,39 @@
 
 .announcement:nth-of-type(2) img{
     grid-area: description;
+}
+
+@media only screen and (min-width: 768px){
+    .announcement-section .content .header {
+        font-size: 3rem;
+        position: absolute;
+        top: 25%;
+        left: 2%;
+        color: white
+    }
+
+    .announcement-section .content:not(h1) {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .announcement {
+        grid-template-areas: "img img"
+                              "header header"
+                              "description description";
+    }
+
+    .announcement:nth-of-type(2) h1{
+        grid-area: header;
+        text-align: left;
+    }
+
+    .announcement:nth-of-type(2) p{
+        grid-area: description;
+    }
+
+    .announcement:nth-of-type(2) img{
+        grid-area: img;
+    }
 }
