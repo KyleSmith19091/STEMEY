@@ -28,7 +28,7 @@ This is a react project and was bootstrapped with create-react-app.
 ```
 
 ##### Component
-> Custom React Components found within **Routes**/**Pages**
+> Custom React Components found used in Route files.
 
 ##### Controller
 > Modules which control the way a user interacts with application ex. Database access, Login procedures etc.
