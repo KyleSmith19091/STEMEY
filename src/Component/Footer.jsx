@@ -1,12 +1,16 @@
 // React
 import React from 'react'
 
+// Internal Components
+import Input from "./Input";
+
 // Images
 import { ReactComponent as Youtube } from "../Img/Icon/youtubeIcon.svg";
 import { ReactComponent as Instagram } from "../Img/Icon/instagramIcon.svg";
 import { ReactComponent as Linkedin } from "../Img/Icon/linkedin.svg";
 import { ReactComponent as Classroom } from "../Img/Icon/googleClassroomIcon.svg";
 import { ReactComponent as Discord } from "../Img/Icon/discordIcon.svg";
+import Email from "../Img/Icon/email_icon.svg";
 
 // CSS
 import "../Style/Component/Footer.css";
@@ -22,8 +26,7 @@ const Footer = () => {
                 <Classroom />
             </div>
             <form action="submit" className="newsletter-form">
-                <input type="email" name="email" id="email" placeholder="Enter email for latest news and updates!" />
-                <input type="button" value="Subscribe" id="submit" />
+                <Input id="email" type="text" placeholder="Enter email for updates" Icon={Email} />
             </form>
             <div className="page-links">
                 <div className="page-dir">
