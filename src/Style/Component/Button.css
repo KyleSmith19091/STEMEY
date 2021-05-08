@@ -1,0 +1,42 @@
+.button {
+    position: relative;
+    appearance: none;
+    outline: none;
+    border: none;
+    border-radius: 2em;
+    font-size: 1rem;
+    color: white;
+    background-color: #5F2EEA;
+    cursor: pointer;
+    margin: 0.5em;
+    border: 5px solid transparent;
+}
+
+.button:hover {
+    transition: 0.3s ease;
+    background-color: #2A00A2;
+}
+
+.button:active {
+    border-color: #E4DAFF;
+}
+
+.button:active .loading-icon {
+    display: unset;
+}
+
+.small {
+    padding: 0.5em 2em;
+}
+
+.medium {
+    padding: 0.5em 3em;
+}
+
+.large {
+    padding: 1em 4em;
+}
+
+.loading-icon {
+    display: none; 
+}

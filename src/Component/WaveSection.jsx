@@ -45,7 +45,7 @@ const svgStyling = {
 
 // Stupid solution
 const pathStylingPurple = {
-    fill: "#8860d0", // Primary purple color
+    fill: "#7230E9", // Primary purple color
     stroke: "none"
 }
 

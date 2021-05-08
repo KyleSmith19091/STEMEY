@@ -3,6 +3,7 @@ import React from 'react'
 
 // Internal Components
 import Input from "./Input";
+import Button from "./Button";
 
 // Images
 import { ReactComponent as Youtube } from "../Img/Icon/youtubeIcon.svg";
@@ -27,6 +28,7 @@ const Footer = () => {
             </div>
             <form action="submit" className="newsletter-form">
                 <Input id="email" type="text" placeholder="Enter email for updates" Icon={Email} />
+                <Button text="Signup" size="medium" onClick={onButtonClickHandler} />
             </form>
             <div className="page-links">
                 <div className="page-dir">
@@ -51,5 +53,10 @@ const Footer = () => {
         </footer>
     )
 }
+
+const onButtonClickHandler = (e) => {
+    e.preventDefault();
+    console.log("Clicked my button!");
+};
 
 export default Footer
