@@ -1,9 +1,6 @@
 // React
 import React, { useState } from 'react'
 
-// Internal Components
-import Button from "./Button";
-
 // External Components
 import Slider from "react-slick";
 import { motion } from "framer-motion";

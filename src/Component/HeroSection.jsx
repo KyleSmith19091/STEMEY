@@ -38,7 +38,7 @@ const HeroSection = ({ open }) => {
         <section className="hero-section" style={{ filter: open ? "blur(2px)" : "none" }}>
             <div className="hero-title-container">
                 <h1>Build your future in <br /><motion.span className="stem-anim">{words[wordIndex]}<br /></motion.span> with
-                    <span> STEMEY</span>
+                    <span className="hero-text"> STEMEY </span>
                 </h1>
             </div>
 
