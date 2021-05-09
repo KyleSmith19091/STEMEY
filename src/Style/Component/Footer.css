@@ -1,5 +1,6 @@
 footer {
     margin: 0.3em;
+    display: grid;
 }
 
 footer .icon-container {
@@ -12,6 +13,7 @@ footer .icon-container {
 footer form {
     display: flex;
     justify-content: center;
+    justify-self: center;
 }
 
 .page-links {
@@ -33,6 +35,10 @@ footer form {
 }
 
 @media only screen and (min-width: 768px) {
+    footer form {
+        width: 50vw;
+    }
+
     footer .icon-container {
         display: flex;
         justify-content: space-between;

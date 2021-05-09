@@ -1,16 +1,19 @@
 // React
 import React, { useState } from 'react'
 
-// External Libraries
+// Internal Components
+import Button from "./Button";
+
+// External Components
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 import { useSpring, animated } from "react-spring";
 import { InView } from "react-intersection-observer";
 
 // Images 
-import classBlob from "../Img/Photo/classesBlob.png";
-import tutoringBlob from "../Img/Photo/tutoringBlob.png";
-import eventsAndNetworksBlob from "../Img/Photo/eventsAndNetworkingBlob.png";
+import classBlob from "../Img/Photo/classes_blob.png";
+import tutoringBlob from "../Img/Photo/tutoring_blob.png";
+import eventsAndNetworksBlob from "../Img/Photo/events_blob.png";
 
 // CSS
 import "slick-carousel/slick/slick.css";
@@ -116,7 +119,7 @@ const OfferSection = () => {
                     <motion.h1 initial={{ opacity: 0 }} animate={inView ? { x: [-100, 0], opacity: 1 } : { opacity: 0 }} className="section-header">What We Offer</motion.h1>
                     <h3 className="offer-header">Virtual and Open to All</h3>
                     <h3 className="offer-header"><animated.span ref={ref}>{
-                        inView ? props.number.interpolate(n => n.toFixed(0)) : set({ number: 100, from: { number: 0 } })
+                        inView ? props.number.to(n => n.toFixed(0)) : set({ number: 100, from: { number: 0 } })
                     }</animated.span>% Free</h3>
 
                     <div className="slider-container">

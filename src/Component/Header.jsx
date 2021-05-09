@@ -22,7 +22,7 @@ const Header = ({ open, setOpen }) => {
 
             <nav className="nav">
                 <ul className="nav-list">
-                    <motion.li className="nav-item"><a href="/">Academics</a></motion.li>
+                    <motion.li className="nav-item"><a href="/">Learn With Us</a></motion.li>
                     <motion.li className="nav-item"><a href="/">Events</a></motion.li>
                     <motion.li className="nav-item"><a href="/">Teams</a></motion.li>
                     <motion.li className="nav-item"><a href="/">Get Involved</a></motion.li>

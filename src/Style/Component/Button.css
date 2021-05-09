@@ -21,10 +21,6 @@
     border-color: #E4DAFF;
 }
 
-.button:active .loading-icon {
-    display: unset;
-}
-
 .small {
     padding: 0.5em 2em;
 }
@@ -35,8 +31,4 @@
 
 .large {
     padding: 1em 4em;
-}
-
-.loading-icon {
-    display: none; 
 }

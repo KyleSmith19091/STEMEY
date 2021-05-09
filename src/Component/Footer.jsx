@@ -17,6 +17,7 @@ import Email from "../Img/Icon/email_icon.svg";
 import "../Style/Component/Footer.css";
 
 const Footer = () => {
+
     return (
         <footer>
             <div className="icon-container">
@@ -28,7 +29,7 @@ const Footer = () => {
             </div>
             <form action="submit" className="newsletter-form">
                 <Input id="email" type="text" placeholder="Enter email for updates" Icon={Email} />
-                <Button text="Signup" size="medium" onClick={onButtonClickHandler} />
+                <Button text="Signup" size="small" onClick={onButtonClickHandler} />
             </form>
             <div className="page-links">
                 <div className="page-dir">
@@ -55,8 +56,6 @@ const Footer = () => {
 }
 
 const onButtonClickHandler = (e) => {
-    e.preventDefault();
-    console.log("Clicked my button!");
 };
 
 export default Footer
