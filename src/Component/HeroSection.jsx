@@ -15,7 +15,6 @@ import { ReactComponent as Books } from "../Img/SVG/books.svg";
 // CSS
 import "../Style/Component/HeroSection.css";
 
-
 const HeroSection = ({ open }) => {
 
     const words = ["STEM", "SCIENCE", "TECHNOLOGY", "ENGINEERING", "MATHEMATICS"];
