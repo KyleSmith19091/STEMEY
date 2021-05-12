@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 // External Components
 import Slider from "react-slick";
 import { motion } from "framer-motion";
-import { useSpring, animated } from "react-spring";
 import { InView } from "react-intersection-observer";
 
 // Images 
@@ -53,7 +52,6 @@ const cardContents = [
 const OfferSection = () => {
 
     const [cardIndex, setCardIndex] = useState(0);
-    const [props, set] = useSpring(() => ({ number: 100, from: { number: 0 }, config: { duration: 2000, delay: 1000, reset: false } }));
 
     const settings = {
         centerMode: true,
@@ -88,12 +86,12 @@ const OfferSection = () => {
 
     const cards = cardContents.map((card, idx) => {
         return (
-            <animated.div className={idx === cardIndex ? "activeSlide" : "slide"} key={idx}>
-                <animated.div className="slider-wrapper">
-                    <animated.div className="card-header">
+            <div className={idx === cardIndex ? "activeSlide" : "slide"} key={idx}>
+                <div className="slider-wrapper">
+                    <div className="card-header">
                         <h3>{card.heading}</h3>
                         <img src={card.blob} alt={card.heading} />
-                    </animated.div>
+                    </div>
                     <div className="card-description">
                         <p>{card.description[0]}</p>
                         <p>{card.description[1]}</p>
@@ -103,8 +101,8 @@ const OfferSection = () => {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         className="card-btn">{card.buttonText}</motion.button>
-                </animated.div>
-            </animated.div >
+                </div>
+            </div >
         )
     });
 
@@ -115,9 +113,9 @@ const OfferSection = () => {
                 <section className="offer-section">
                     <motion.h1 initial={{ opacity: 0 }} animate={inView ? { x: [-100, 0], opacity: 1 } : { opacity: 0 }} className="section-header">What We Offer</motion.h1>
                     <h3 className="offer-header">Virtual and Open to All</h3>
-                    <h3 className="offer-header"><animated.span ref={ref}>{
-                        inView ? props.number.to(n => n.toFixed(0)) : set({ number: 100, from: { number: 0 } })
-                    }</animated.span>% Free</h3>
+                    <h3 className="offer-header"><motion.span ref={ref}>{
+                        100
+                    }</motion.span>% Free</h3>
 
                     <div className="slider-container">
                         <Slider {...settings}>{cards}</Slider>

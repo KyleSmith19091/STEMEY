@@ -1,9 +1,8 @@
 // React
 import React from 'react'
 
-// Internal Components
-import Input from "./Input";
-import Button from "./Button";
+// External Components
+import { Button, TextField } from '@material-ui/core';
 
 // Images
 import { ReactComponent as Youtube } from "../Img/Icon/youtubeIcon.svg";
@@ -11,7 +10,7 @@ import { ReactComponent as Instagram } from "../Img/Icon/instagramIcon.svg";
 import { ReactComponent as Linkedin } from "../Img/Icon/linkedin.svg";
 import { ReactComponent as Classroom } from "../Img/Icon/googleClassroomIcon.svg";
 import { ReactComponent as Discord } from "../Img/Icon/discordIcon.svg";
-import Email from "../Img/Icon/email_icon.svg";
+//import Email from "../Img/Icon/email_icon.svg";
 
 // CSS
 import "../Style/Component/Footer.css";
@@ -28,8 +27,8 @@ const Footer = () => {
                 <Classroom />
             </div>
             <form action="submit" className="newsletter-form">
-                <Input id="email" type="text" placeholder="Enter email for updates" Icon={Email} />
-                <Button text="Signup" size="small" onClick={onButtonClickHandler} />
+                <TextField id="email" style={{ width: "40ch" }} label="Signup for newsletter" margin="dense" variant="outlined" />
+                <Button style={{ marginLeft: "1em", width: "20ch", borderRadius: "2em" }} color="primary" variant="contained" >Signup</Button>
             </form>
             <div className="page-links">
                 <div className="page-dir">
@@ -51,11 +50,8 @@ const Footer = () => {
                     <a href="/">STEM-Tober</a>
                 </div>
             </div>
-        </footer>
+        </footer >
     )
 }
-
-const onButtonClickHandler = (e) => {
-};
 
 export default Footer
