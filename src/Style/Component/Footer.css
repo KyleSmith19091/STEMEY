@@ -14,6 +14,7 @@ footer form {
     display: flex;
     justify-content: center;
     justify-self: center;
+    margin: 1em 0;
 }
 
 .page-links {
@@ -35,9 +36,6 @@ footer form {
 }
 
 @media only screen and (min-width: 768px) {
-    footer form {
-        width: 50vw;
-    }
 
     footer .icon-container {
         display: flex;
@@ -63,5 +61,9 @@ footer form {
     
     .page-dir a {
         font-size: 1.2rem;
+    }
+
+    #email {
+        width: 40ch;
     }
 }

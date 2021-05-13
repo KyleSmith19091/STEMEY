@@ -27,8 +27,8 @@ const Footer = () => {
                 <Classroom />
             </div>
             <form action="submit" className="newsletter-form">
-                <TextField id="email" style={{ width: "40ch" }} label="Signup for newsletter" margin="dense" variant="outlined" />
-                <Button style={{ marginLeft: "1em", width: "20ch", borderRadius: "2em" }} color="primary" variant="contained" >Signup</Button>
+                <TextField id="email" style={{ width: "25ch" }} label="Signup for newsletter" size="medium" variant="outlined" />
+                <Button style={{ marginLeft: "1em" }} size="large" color="primary" variant="contained">Signup</Button>
             </form>
             <div className="page-links">
                 <div className="page-dir">

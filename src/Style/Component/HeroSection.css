@@ -6,7 +6,7 @@
 }
 
 .hero-title-container {
-    margin: 1em 0;
+    margin: 0.5em 0;
     grid-area: text;
     display: flex;
     align-items: center;
