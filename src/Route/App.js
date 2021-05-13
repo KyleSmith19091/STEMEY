@@ -8,6 +8,7 @@ import { Switch, Route } from "react-router-dom";
 
 // Internal Routes
 import Home from "./Home";
+import PageNotFound from "./PageNotFound";
 
 // App Component Theme
 const appComponentTheme = createMuiTheme({
@@ -30,6 +31,7 @@ const App = () => {
       <ThemeProvider theme={appComponentTheme}>
         <main className="App">
           <Route path='/' component={Home} exact />
+          <Route component={PageNotFound} />
         </main>
       </ThemeProvider>
     </Switch>
