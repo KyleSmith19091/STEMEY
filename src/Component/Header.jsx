@@ -24,7 +24,7 @@ const Header = ({ open, setOpen }) => {
                 <ul className="nav-list">
                     <motion.li className="nav-item">
                         <p href="/">Learn With Us</p>
-                        <div class="dropdown-content">
+                        <div className="dropdown-content">
                             <a href="#">Classes</a>
                             <a href="#">Tutoring</a>
                             <a href="/tutoring-summer">Tutoring Summer Program</a>

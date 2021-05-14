@@ -1,29 +1,36 @@
 .tutoring-header {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--primary-purple);
+    margin: 0.5em 0;
 }
 
-.tutoring-header span:first-of-type {
+.tutoring-header span {
     font-size: 2.5rem;
-}
-
-.tutoring-header span:last-of-type {
-    font-size: 3.1rem;
 }
 
 .tutoring-header span {
     color: var(--primary-light-blue); 
 }
 
-.tab-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.form {
+    display: block;
+    margin: 0 auto;
+    width: 90vw;
+    height: 170vw;
 }
 
-.form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media only screen and (min-width: 768px) {
+    .tutoring-header {
+        font-size: 3vw;
+    }
+
+    .tutoring-header span {
+        font-size: 3.5vw;
+    }
+
+    .form {
+        width: 50vw;
+    }
 }
+
