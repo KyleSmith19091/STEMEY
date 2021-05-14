@@ -1,0 +1,29 @@
+.tutoring-header {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--primary-purple);
+}
+
+.tutoring-header span:first-of-type {
+    font-size: 2.5rem;
+}
+
+.tutoring-header span:last-of-type {
+    font-size: 3.1rem;
+}
+
+.tutoring-header span {
+    color: var(--primary-light-blue); 
+}
+
+.tab-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

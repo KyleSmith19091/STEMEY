@@ -35,7 +35,7 @@ const Footer = () => {
                     <h4>Academics</h4>
                     <a href="/">Classes</a>
                     <a href="/">Tutoring</a>
-                    <a href="/">See Our Team</a>
+                    <a href="/tutoring-summer">Summer Tutoring Program</a>
                 </div>
                 <div className="page-dir">
                     <h4>Get Involved</h4>

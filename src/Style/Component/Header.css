@@ -38,7 +38,41 @@
         display: inline-block;
     }
 
-    .nav-item a {
-        color: var(--primary-text-color);
+    .nav-item p {
+        cursor: default; /* Prevent text cursor from showing on hover tag */
+        color: white;
     }
+
+    .nav-item:hover p{
+        font-weight: bold;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--primary-purple-light);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 0.5em;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 1.3em;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        font-weight: bold;
+        border-radius: 0.5em; /* Ensures content border radius (please don't remove) */
+        background-color: var(--primary-purple);
+    }
+
+    .nav-item:hover .dropdown-content {        
+        transition: 0.3s linear;
+        display: block;
+    }
+
 }

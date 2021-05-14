@@ -18,7 +18,7 @@ const PageNotFound = () => {
             <Header />
             <section className="content">
                 <h1>Woops Page Not Found!</h1>
-                <h3>Might as well check this guy out <span role="img" aria-label="Panda">👇</span></h3>
+                <h3>Might as well check this guy out <span role="img" aria-label="hand-down">👇</span></h3>
                 <HoverCard>
                     <Error className="error-img" />
                 </HoverCard>
