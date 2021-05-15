@@ -41,7 +41,9 @@ const App = () => {
           <SlideDrawer open={open} />
           <Switch>
             <Route path='/' component={Home} exact />
+
             <Route path='/tutoring-summer' component={TutoringSummer} />
+
             <Route component={PageNotFound} />
           </Switch>
           <Footer />

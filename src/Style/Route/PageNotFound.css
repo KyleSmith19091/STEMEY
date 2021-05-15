@@ -1,18 +1,24 @@
-.page-not-found .content {
+.page-not-found-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.page-not-found .content h1 {
-    font-size: 2rem;
+.page-not-found-content h1 {
+    color: var(--primary-purple);
+    font-size: 3rem;
+}
+
+.page-not-found-content h3 {
+    color: var(--primary-light-blue);
 }
 
 .error-img {
     margin: 1em;
     padding: 1em;
-    border: 2px solid white;
+    border: 2px solid var(--primary-purple);
+    border-radius: 1em;
     width: 50vw;
     height: 50vw;
 }
