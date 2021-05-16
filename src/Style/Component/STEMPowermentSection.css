@@ -82,6 +82,7 @@
 	text-transform: uppercase;
 }
 
+
 .stempowerment-list dd {
     font-size: 4vw;
 }
@@ -97,7 +98,14 @@
 
     .stempowerment-list dt{
         font-size: 2vw;
+        transition: 0.5s ease-in-out;
     } 
+
+    .stempowerment-list dt:hover {
+        padding-left: 3em;
+        font-size: 2.3vw;
+        transition: 0.5s ease-in-out;
+    }
 
     .stempowerment-list dd {
         font-size: 1.5vw; 

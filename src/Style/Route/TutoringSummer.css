@@ -1,15 +1,47 @@
 .tutoring-header {
+    position: relative;
     text-align: center;
     font-size: 2rem;
     color: var(--primary-purple);
     margin: 0.5em 0;
 }
 
-.tutoring-header span {
-    font-size: 2.5rem;
+.header-icon {
+    position: absolute;
+    left: 1vw;
+    transition: 0.3s linear;
+    animation: scale 1s ease-in-out infinite; 
+}
+
+.header-icon:hover {
+    transition: all 0.3s linear;
+    cursor: normal;
+    animation: rotate 1s ease-in-out infinite;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .tutoring-header span {
+    font-size: 2.5rem;
     color: var(--primary-light-blue); 
 }
 
@@ -23,6 +55,10 @@
 @media only screen and (min-width: 768px) {
     .tutoring-header {
         font-size: 3vw;
+    }
+
+    .header-icon {
+        left: 32vw;
     }
 
     .tutoring-header span {

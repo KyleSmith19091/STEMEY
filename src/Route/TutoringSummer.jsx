@@ -20,7 +20,7 @@ const TutoringSummer = () => {
 
     return (
         <main className="tutoring-summer">
-            <h1 className="tutoring-header"><span role="img" aria-label="lightning-bolt">⚡️ </span><span>STEM</span>Powerment</h1>
+            <h1 className="tutoring-header"><span className="header-icon" role="img" aria-label="lightning-bolt">⚡️ </span><span>STEM</span>Powerment</h1>
             <div className="tab-container">
                 <Tabs
                     value={value}
