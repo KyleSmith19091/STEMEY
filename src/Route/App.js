@@ -10,6 +10,7 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Home from "./Home";
 import PageNotFound from "./PageNotFound";
 import TutoringSummer from "./TutoringSummer";
+import Classes from "./Classes";
 
 // Internal Components
 import Header from "../Component/Header";
@@ -43,6 +44,8 @@ const App = () => {
             <Route path='/' component={Home} exact />
 
             <Route path='/tutoring-summer' component={TutoringSummer} />
+
+            <Route path='/classes' component={Classes} />
 
             <Route component={PageNotFound} />
           </Switch>
