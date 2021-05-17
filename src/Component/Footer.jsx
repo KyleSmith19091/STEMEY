@@ -33,8 +33,8 @@ const Footer = () => {
             <div className="page-links">
                 <div className="page-dir">
                     <h4>Academics</h4>
-                    <a href="/">Classes</a>
-                    <a href="/">Tutoring</a>
+                    <a href="/classes">Classes</a>
+                    <a href="/tutoring">Tutoring</a>
                     <a href="/tutoring-summer">Summer Tutoring Program</a>
                 </div>
                 <div className="page-dir">

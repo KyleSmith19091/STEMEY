@@ -23,16 +23,34 @@ const Header = ({ open, setOpen }) => {
             <nav className="nav">
                 <ul className="nav-list">
                     <motion.li className="nav-item">
-                        <p href="/">Learn With Us</p>
+                        <p href="/">Learn With Us <span className="nav-arrow">▼</span></p>
                         <div className="dropdown-content">
                             <a href="/classes">Classes</a>
                             <a href="/tutoring">Tutoring</a>
                             <a href="/tutoring-summer">Tutoring Summer Program</a>
                         </div>
                     </motion.li>
-                    <motion.li className="nav-item"><p href="/">Events</p></motion.li>
-                    <motion.li className="nav-item"><p href="/">Teams</p></motion.li>
-                    <motion.li className="nav-item"><p href="/">Get Involved</p></motion.li>
+                    <motion.li className="nav-item"><p href="/">Events<span className="nav-arrow">▼</span></p>
+                        <div className="dropdown-content">
+                            <a href="/classes">Classes</a>
+                            <a href="/tutoring">Tutoring</a>
+                            <a href="/tutoring-summer">Tutoring Summer Program</a>
+                        </div>
+                    </motion.li>
+                    <motion.li className="nav-item"><p href="/">Teams<span className="nav-arrow">▼</span></p>
+                        <div className="dropdown-content">
+                            <a href="/classes">Classes</a>
+                            <a href="/tutoring">Tutoring</a>
+                            <a href="/tutoring-summer">Tutoring Summer Program</a>
+                        </div>
+                    </motion.li>
+                    <motion.li className="nav-item"><p href="/">Get Involved <span className="nav-arrow">▼</span></p>
+                        <div className="dropdown-content">
+                            <a href="/classes">Classes</a>
+                            <a href="/tutoring">Tutoring</a>
+                            <a href="/tutoring-summer">Tutoring Summer Program</a>
+                        </div>
+                    </motion.li>
                 </ul>
             </nav>
 
