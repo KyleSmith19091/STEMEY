@@ -40,7 +40,7 @@
     -moz-box-shadow: 1px 10px 15px -7px rgba(34, 34, 34, 0.75);
 }
 
-.card-header {
+.offer-card-header {
     display: grid;
     position: relative;
     text-align: center;
@@ -48,7 +48,7 @@
     margin-bottom: 0.5em;
 }
 
-.card-header h3 {
+.offer-card-header h3 {
     padding: 4em;
     position: absolute;
     top: 50%;
@@ -56,16 +56,16 @@
     transform: translate(-50%, -50%);
 }
 
-.card-header img {
+.offer-card-header img {
     justify-self: center;
 }
 
-.card-description {
+.offer-card-description {
     display: grid;
     padding: 1em 2em 0.5em 2em;
 }
 
-.card-description p{
+.offer-card-description p{
     font-size: 0.9rem;
 }
 
@@ -112,7 +112,7 @@
         height: 25em;
     }
 
-    .card-header h3 {
+    .offer-card-header h3 {
         top: 45%;
     }
 

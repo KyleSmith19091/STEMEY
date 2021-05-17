@@ -88,11 +88,11 @@ const OfferSection = () => {
         return (
             <div className={idx === cardIndex ? "activeSlide" : "slide"} key={idx}>
                 <div className="slider-wrapper">
-                    <div className="card-header">
+                    <div className="offer-card-header">
                         <h3>{card.heading}</h3>
                         <img src={card.blob} alt={card.heading} />
                     </div>
-                    <div className="card-description">
+                    <div className="offer-card-description">
                         <p>{card.description[0]}</p>
                         <p>{card.description[1]}</p>
                     </div>
