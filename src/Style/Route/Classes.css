@@ -49,6 +49,7 @@
     color: white;
     font-size: 4vw;
     margin: 0 auto;
+    padding: 1em;
 }
 
 .card-img-container{
@@ -71,7 +72,7 @@
     outline: none;
     border-radius: 2em;
     padding: 0.5em 4em;
-    margin: 1em 0;
+    margin: 1.3em 0;
     background-color: var(--primary-purple);
     align-self: center;
     font-weight: bold;
@@ -88,7 +89,6 @@
     }
 
     .card-header {
-        margin-left: 1em;
         text-align: left;
         font-size: 2vw;
     }
@@ -104,6 +104,7 @@
     .card-img {
         width: 40vw;
         height: 25vw;
+        margin-right: 1em;
         border-radius: 1em;
     }
 
