@@ -7,11 +7,12 @@
 
 .page-not-found-content h1 {
     color: var(--primary-purple);
-    font-size: 3rem;
+    font-size: 8vw;
 }
 
 .page-not-found-content h3 {
     color: var(--primary-light-blue);
+    font-size: 5vw;
 }
 
 .error-img {
@@ -19,6 +20,21 @@
     padding: 1em;
     border: 2px solid var(--primary-purple);
     border-radius: 1em;
-    width: 50vw;
-    height: 50vw;
+    width: 80vw;
+    height: 100vw;
+}
+
+@media only screen and (min-width: 768px) {
+    .page-not-found-content h1 {
+        font-size: 3vw;
+    }
+
+    .page-not-found-content h3 {
+        font-size: 2vw;
+    }
+
+    .error-img {
+        width: 50vw;
+        height: 42vw;
+    }
 }

@@ -1,9 +1,6 @@
 // React
 import React from 'react'
 
-// External Components
-import { Button } from "@material-ui/core";
-
 // Images
 import molbio from "../Img/Photo/MolBio.png";
 
@@ -45,7 +42,7 @@ const Classes = () => {
                     return (
                         <div key={idx} className="card">
                             <div className="card-img-container">
-                                <img src={cl.imgPath} alt="Class Image" className="card-img" />
+                                <img src={cl.imgPath} alt="Class" className="card-img" />
                             </div>
                             <div className="card-text-container">
                                 <h3 className="card-header"><span role="img" aria-label="mountain">{cl.emoji} </span>{cl.name}</h3>

@@ -17,25 +17,25 @@ const SlideDrawer = ({ open }) => {
                 <li className="drawer-list-item">
                     <p>Academics</p>
                     <div className="drawer-list-links-container">
-                        <a href="#">Classes</a>
-                        <a href="#">Tutoring</a>
+                        <a href="/classes">Classes</a>
+                        <a href="/tutoring">Tutoring</a>
                         <a href="/tutoring-summer">Tutoring Summer Program</a>
                     </div>
                 </li>
                 <li className="drawer-list-item">
                     <p href="/">Events</p>
                     <div className="drawer-list-links-container">
-                        <a href="#">Volunteer</a>
-                        <a href="#">Join Our Community</a>
-                        <a href="#">Partner With Us</a>
+                        <a href="/volunteer">Volunteer</a>
+                        <a href="/community">Join Our Community</a>
+                        <a href="/partner">Partner With Us</a>
                     </div>
                 </li>
                 <li className="drawer-list-item">
                     <p href="/">Get Involved</p>
                     <div className="drawer-list-links-container">
-                        <a href="#">STEM World I</a>
-                        <a href="#">STEM World II</a>
-                        <a href="#">STEM-Tober</a>
+                        <a href="/stemworldI">STEM World I</a>
+                        <a href="/stemworldII">STEM World II</a>
+                        <a href="/stemtober">STEM-Tober</a>
                     </div>
                 </li>
             </ul>
