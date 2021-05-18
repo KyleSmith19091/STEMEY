@@ -6,11 +6,14 @@ import { animateScroll as scroll } from "react-scroll";
 
 // Internal Components
 import HoverCard from "./HoverCard";
+import AnimPlayer from "./AnimPlayer";
 
 // Images
 import { ReactComponent as ChevronUp } from "../Img/Icon/chevron_up.svg";
 import { ReactComponent as Science } from "../Img/SVG/science.svg";
 import { ReactComponent as Books } from "../Img/SVG/books.svg";
+
+import animationData from "../Img/animation/flying-man.json";
 
 // CSS
 import "../Style/Component/HeroSection.css";
@@ -43,9 +46,7 @@ const HeroSection = ({ open }) => {
 
             <HoverCard>
                 <div className="hero-image-parent-container">
-                    <motion.div animate={heroImageContainerAnim} initial="hidden" variants={heroImageVariants} whileTap={heroImageFlip} className="hero-image-container" onClick={onHeroImageClick}>
-                        {images[imageIndex]}
-                    </motion.div>
+                    <AnimPlayer data={animationData} width="40vw" height="40vw" />
                 </div>
             </HoverCard>
 
@@ -84,5 +85,14 @@ const onChevronClick = (e) => {
     scroll.scrollTo(1000);
 };
 
+/*
+<div className="hero-image-parent-container">
+                <motion.div animate={heroImageContainerAnim} initial="hidden" variants={heroImageVariants} whileTap={heroImageFlip} className="hero-image-container" onClick={onHeroImageClick}>
+                    {images[imageIndex]}
+                </motion.div>
+            </div
+
+
+*/
 
 export default HeroSection
