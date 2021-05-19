@@ -10,7 +10,6 @@ import { ReactComponent as Instagram } from "../Img/Icon/instagramIcon.svg";
 import { ReactComponent as Linkedin } from "../Img/Icon/linkedin.svg";
 import { ReactComponent as Classroom } from "../Img/Icon/googleClassroomIcon.svg";
 import { ReactComponent as Discord } from "../Img/Icon/discordIcon.svg";
-//import Email from "../Img/Icon/email_icon.svg";
 
 // CSS
 import "../Style/Component/Footer.css";
@@ -20,11 +19,21 @@ const Footer = () => {
     return (
         <footer>
             <div className="icon-container">
-                <Youtube />
-                <Linkedin />
-                <Discord />
-                <Instagram />
-                <Classroom />
+                <a href="https://www.youtube.com/channel/UC9d1d74gAklaCvM9cItwQ0w" target="_blank" rel="noopener noreferrer">
+                    <Youtube />
+                </a>
+                <a href="https://www.linkedin.com/company/stem-enrichment-youth" target="_blank" rel="noopener noreferrer">
+                    <Linkedin />
+                </a>
+                <a href="https://discord.com/invite/NWuv89e" target="_blank" rel="noopener noreferrer">
+                    <Discord />
+                </a>
+                <a href="https://www.instagram.com/stemenrichmentyouth/" target="_blank" rel="noopener noreferrer">
+                    <Instagram />
+                </a>
+                <a href="/classes">
+                    <Classroom />
+                </a>
             </div>
             <form action="submit" className="newsletter-form">
                 <TextField id="email" style={{ width: "25ch" }} label="Signup for newsletter" size="medium" variant="outlined" />

@@ -10,6 +10,32 @@ footer .icon-container {
     padding: 1em 1em;
 }
 
+footer .icon-container svg{
+    transition: all 0.3s ease-in-out;
+}
+
+footer .icon-container svg:hover{
+    transition: all 0.3s ease-in-out;
+    animation: wiggle 0.5s ease-in-out infinite;
+}
+
+footer .icon-container svg:hover path {
+    transition: all 0.3s ease-in-out;
+    fill: var(--primary-purple-light);
+}
+
+@keyframes wiggle {
+    0%{
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 footer form {
     display: flex;
     justify-content: center;

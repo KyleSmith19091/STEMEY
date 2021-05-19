@@ -46,7 +46,7 @@ const HeroSection = ({ open }) => {
 
             <HoverCard>
                 <div className="hero-image-parent-container">
-                    <AnimPlayer data={animationData} width="40vw" height="40vw" />
+                    <AnimPlayer data={animationData} width="50vw" height="50vw" />
                 </div>
             </HoverCard>
 
