@@ -75,7 +75,7 @@
     margin: 1.3em 0;
     background-color: var(--primary-purple);
     align-self: center;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 @media only screen and (min-width: 768px){

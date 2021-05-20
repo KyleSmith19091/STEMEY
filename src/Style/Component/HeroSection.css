@@ -29,7 +29,6 @@
 }
 
 .hero-image-container {
-    background-color: var(--secondary-blue);
     position: relative;
     border-radius: 50%;
     width: 95vw;
@@ -111,15 +110,14 @@
 .hero-image-parent-container {
     grid-area: img;
     justify-content: center;
-    padding-top: 12vh;
+    padding-top: 8vh;
 }
 
 .hero-image-container {
-    background-color: var(--secondary-blue);
     position: relative;
     border-radius: 50%;
-    width: 30vw;
-    height: 30vw;
+    width: 40vw;
+    height: 40vw;
     padding-top: 100%;
 
     display: flex;

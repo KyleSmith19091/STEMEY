@@ -33,8 +33,7 @@
     }
 
     .nav-item {
-        padding-left: 2em;
-        padding-right: 2em;
+        padding: 1em 2em;
         display: inline-block;
         transition: all 0.3s linear;
     }
@@ -79,18 +78,6 @@
 
     .nav-item:hover .dropdown-content {        
         display: block;
-    }
-
-    .nav-arrow {
-        font-size: 0.8rem;
-        transition: all 0.3s linear;
-        writing-mode: unset;
-    }
-
-    .nav-item:hover .nav-arrow {
-        writing-mode:vertical-rl;
-        transition: all 0.3s linear;
-        transform: rotate(180deg);
-    }
+    }    
 
 }
