@@ -5,7 +5,6 @@ import React from 'react'
 import { motion } from "framer-motion";
 import { InView } from "react-intersection-observer";
 
-
 // Internal Components
 import WaveSection from "./WaveSection";
 
@@ -19,7 +18,6 @@ import "../Style/Component/CityAnimation.css";
 import { ReactComponent as OnlineSchool } from "../Img/SVG/online_school.svg";
 import { ReactComponent as CreativeProcess } from "../Img/SVG/creative_process.svg";
 import { ReactComponent as City } from "../Img/SVG/city.svg";
-
 
 const MissionSection = () => {
 
