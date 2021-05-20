@@ -19,7 +19,7 @@ const PageNotFound = () => {
                 <h1>Woops Page Not Found!</h1>
                 <h3>Might as well check this guy out <span role="img" aria-label="hand-down">👇</span></h3>
                 <HoverCard>
-                    <AnimPlayer data={animationData} width="50vw" height="50vw" />
+                    <AnimPlayer data={animationData} width="40vw" height="40vw" />
                 </HoverCard>
             </section>
         </main >
