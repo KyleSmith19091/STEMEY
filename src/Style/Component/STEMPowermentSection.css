@@ -70,7 +70,7 @@
 	background: linear-gradient(90deg, rgba(131, 70, 230, 0.315) 20%, rgba(255,255,255,0) 0%);
 	padding-left: 4vw; 
 	padding-right: 4vw;
-	margin: 0;
+	margin: 2em 0;
 }
 
 .stempowerment-list dt {
@@ -85,6 +85,35 @@
 
 .stempowerment-list dd {
     font-size: 4vw;
+}
+
+.flow-container {
+    border: 2px solid var(--primary-purple);
+    display: block;
+    margin: 0 auto;
+    border-radius: 1em;
+    width: 90vw;
+    height: 100vw;
+}
+
+.purple-node {
+    font-weight: bold;
+    border-radius: 2em;
+    color: var(--primary-purple);
+    border-color: var(--primary-light-blue)
+}
+
+.blue-node {
+    font-weight: bold;
+    border-radius: 2em;
+    color: var(--primary-light-blue);
+    border-color: var(--primary-purple);
+}
+
+.dark-node {
+    font-weight: bold;
+    border-radius: 2em;
+    color: var(--primary-dark-blue);
 }
 
 @media only screen and (min-width: 768px) {
@@ -109,5 +138,10 @@
 
     .stempowerment-list dd {
         font-size: 1.5vw; 
+    }
+
+    .flow-container {
+        width: 50vw;
+        height: 30vw;
     }
 }
