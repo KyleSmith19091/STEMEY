@@ -1,12 +1,12 @@
 #pointer {
-    animation: move 0.3s infinite;
+    animation: move 1s infinite;
 }
 
 @keyframes move {
     from {
-        transform: rotateY(60deg);
+        transform: rotateX(20deg);
     }
     to {
-        transform: rotateY(60deg);
+        transform: rotateX(-20deg);
     }
 }
