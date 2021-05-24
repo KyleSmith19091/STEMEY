@@ -11,6 +11,7 @@ import Home from "./Home";
 import PageNotFound from "./PageNotFound";
 import TutoringSummer from "./TutoringSummer";
 import Classes from "./Classes";
+import Tutoring from "./Tutoring";
 
 // Internal Components
 import Header from "../Component/Header";
@@ -46,6 +47,8 @@ const App = () => {
             <Route path='/tutoring-summer' component={TutoringSummer} />
 
             <Route path='/classes' component={Classes} />
+
+            <Route path='/tutoring' component={Tutoring} />
 
             <Route component={PageNotFound} />
           </Switch>
