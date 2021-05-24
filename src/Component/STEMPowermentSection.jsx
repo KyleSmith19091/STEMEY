@@ -4,11 +4,14 @@ import React from 'react'
 // External Components
 import { motion } from "framer-motion";
 import ReactFlow from 'react-flow-renderer';
+import { install } from "resize-observer";
+
 
 // CSS
 import "../Style/Component/STEMPowermentSection.css";
 
 const STEMPowermentSection = () => {
+    install();
     const elements = [
         {
             id: '1',
