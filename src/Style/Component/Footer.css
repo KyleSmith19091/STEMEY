@@ -89,6 +89,17 @@ footer form {
         font-size: 1.2rem;
     }
 
+    .page-dir a:hover {
+        transition: all 0.3s ease-in-out;
+        letter-spacing: 0.1em;
+        background: #7530FF;
+        background: -webkit-linear-gradient(to right, #7530FF 0%, #9D46CF 33%);
+        background: -moz-linear-gradient(to right, #7530FF 0%, #9D46CF 33%);
+        background: linear-gradient(to right, #7530FF 0%, #9D46CF 33%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
     #email {
         width: 40ch;
     }

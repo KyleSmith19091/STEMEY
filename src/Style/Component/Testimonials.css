@@ -34,6 +34,27 @@
     height: minmax(auto,20vw);
     padding: 1em;
     color: white;
+    transform: all 0.3s linear;
+}
+
+.testimonials-section .slide:hover img, .testimonials-section .activeSlide:hover img{
+    transform: all 0.3s linear;
+    animation: jump 1s linear;
+}
+
+.testimonials-section .slide:hover .testimonial-name, .testimonials-section .activeSlide:hover .testimonial-name{
+    transform: all 0.3s ease-in-out;
+    font-weight: 700;
+}
+
+@keyframes jump {
+     0% { transform: translate(-10%, -15%) scale(1.25, 0.75); }
+    50% { transform: translate(-10%, -15%) scale(1, 1); }
+    55% { transform: translate(-10%, -15%) rotate(15deg); }
+    60% { transform: translate(-10%, -15%) rotate(-15deg); }
+    65% { transform: translate(-10%, -15%) rotate(15deg); }
+    70% { transform: translate(-10%, -15%) rotate(-15deg); }
+    100% { transform: translate(-10%, -15%) scale(1.25, 0.75); }
 }
 
 .testimonial-img{
@@ -62,6 +83,7 @@
     padding-left: 1em;
     float: left;
     font-weight: 250;
+    transform: all 0.3s ease-in-out;
 }
 
 .quote-icon {

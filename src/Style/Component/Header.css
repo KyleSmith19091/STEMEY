@@ -42,9 +42,11 @@
         position: relative;
         cursor: default; /* Prevent text cursor from showing on hover tag */
         color: white;
+        transition: all 0.3s linear;
     }
 
     .nav-item:hover p{
+        transition: all 0.3s linear;
         font-weight: bold;
     }
 
@@ -74,6 +76,8 @@
         font-weight: bold;
         border-radius: 0.5em; /* Ensures content border radius (please don't remove) */
         background-color: var(--primary-purple);
+        transition: all 0.3s linear;
+        letter-spacing: 0.1em;
     }
 
     .nav-item:hover .dropdown-content {        
