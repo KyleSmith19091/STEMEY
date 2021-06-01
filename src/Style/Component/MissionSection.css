@@ -18,12 +18,14 @@
     left: 2%;
     font-size: 2rem;
     color: white;
+    font-weight: bold;
 }
 
 .subheading {
     color: var(--secondary-blue);
     text-align: center;
     margin: 1em;
+    font-weight: bold;
 }
 
 .subheading:first-of-type {

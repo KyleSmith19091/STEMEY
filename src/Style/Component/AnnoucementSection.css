@@ -13,6 +13,7 @@
     font-size: 1.8rem;
     text-align: left; 
     display: block;
+    font-weight: bold;
 }
 
 .announcement {
@@ -24,8 +25,10 @@
 
 .announcement h1 {
     text-align: left;
-    padding-left: 0.5em;
+    padding-left: 0.6em;
     grid-area: header;
+    font-size: 1em;
+    font-weight: bold;
 }
 
 .announcement img {
@@ -35,6 +38,7 @@
 .announcement p {
     align-self: center;
     grid-area: description;
+    padding-left: 0.6em;
 }
 
 /* Mobile view stagger the views */

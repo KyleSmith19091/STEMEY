@@ -8,6 +8,7 @@
 
 .impact-header {
     font-size: 2rem;
+    font-weight: bold;
 }
 
 .impact-container {
@@ -28,6 +29,11 @@
     box-shadow: -2px 1px 27px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: -2px 1px 27px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: -2px 1px 27px 0px rgba(0,0,0,0.75);
+}
+
+.impact-number h2 {
+    font-size: 2em;
+    font-weight: bold;
 }
 
 @media only screen and (min-width: 768px){

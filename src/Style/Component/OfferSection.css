@@ -3,6 +3,7 @@
     color: var(--secondary-blue);
     margin-top: 0.5em;
     margin-left: 1em;
+    font-weight: bold;
 }
 
 .offer-header:first-of-type {
@@ -54,6 +55,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-weight: bold;
 }
 
 .offer-card-header img {

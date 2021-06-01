@@ -6,7 +6,7 @@
     text-align: right;
     transition: 2s linear;
     overflow: hidden;
-    z-index: 998;
+    z-index: 999;
 }
 
 .drawer-list {

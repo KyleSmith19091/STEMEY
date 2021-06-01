@@ -16,10 +16,11 @@
 .hero-title-container h1 {
     color: var(--primary-purple);
     font-size: 8vw;
+    font-weight: bold;
 }
 
 .hero-title-container span:first-of-type {
-    font-size: 8.5vw;
+    font-size: 9vw;
 }
 
 .hero-image-parent-container {
@@ -62,6 +63,7 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
+  font-weight: bold;
 }
 
 @keyframes typing {
