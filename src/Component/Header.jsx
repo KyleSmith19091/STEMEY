@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types';
 
 import Hamburger from 'hamburger-react';
@@ -15,22 +15,6 @@ import {
 } from "@chakra-ui/react";
 
 import "../Style/Component/Header.css";
-
-const Academics = [
-    {
-        name: "Classes",
-        link: "/classes"
-    },
-    {
-        name: "Tutoring",
-        link: "/tutoring"
-    },
-    {
-        name: "Tutoring Summer Program",
-        link: "/summer"
-    }
-]
-
 
 const Header = ({ open, setOpen }) => {
 
