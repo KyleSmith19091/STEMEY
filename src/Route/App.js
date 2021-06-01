@@ -2,9 +2,8 @@
 import React, { useState } from "react";
 
 // External Components
-import { ThemeProvider } from '@material-ui/styles';
-import { createMuiTheme } from "@material-ui/core/styles"
 import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
 
 // Internal Routes
 import Home from "./Home";
@@ -12,32 +11,19 @@ import PageNotFound from "./PageNotFound";
 import TutoringSummer from "./TutoringSummer";
 import Classes from "./Classes";
 import Tutoring from "./Tutoring";
+import Test from "./Test";
+import STEMWorld from "./StemWorld";
 
 // Internal Components
 import Header from "../Component/Header";
 import Footer from "../Component/Footer";
 import SlideDrawer from "../Component/SlideDrawer";
 
-// App Component Theme
-const appComponentTheme = createMuiTheme({
-  palette: {
-    primary: { main: "#7230E9" }
-  },
-  typography: {
-    textField: {
-      fontFamily: '"Poppins", "Helvetica Neue"',
-    },
-    button: {
-      fontFamily: '"Poppins", "Helvetica Neue"',
-    },
-  },
-});
-
 const App = () => {
   const [open, setOpen] = useState(false);
   return (
     <BrowserRouter>
-      <ThemeProvider theme={appComponentTheme}>
+      <ChakraProvider>
         <main className="App">
           <Header open={open} setOpen={setOpen} />
           <SlideDrawer open={open} />
@@ -50,11 +36,15 @@ const App = () => {
 
             <Route path='/tutoring' component={Tutoring} />
 
+            <Route path='/test' component={Test} />
+
+            <Route path='/stemworld' component={STEMWorld} />
+
             <Route component={PageNotFound} />
           </Switch>
           <Footer />
         </main>
-      </ThemeProvider>
+      </ChakraProvider>
     </BrowserRouter>
   );
 }

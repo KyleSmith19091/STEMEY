@@ -43,7 +43,7 @@
 }
 
 .testimonials-section .slide:hover .testimonial-name, .testimonials-section .activeSlide:hover .testimonial-name{
-    transform: all 0.3s ease-in-out;
+    transform: all 3s ease-in-out;
     font-weight: 700;
 }
 

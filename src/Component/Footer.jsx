@@ -1,9 +1,6 @@
 // React
 import React from 'react'
 
-// External Components
-import { Button, TextField } from '@material-ui/core';
-
 // Images
 import { ReactComponent as Youtube } from "../Img/Icon/youtubeIcon.svg";
 import { ReactComponent as Instagram } from "../Img/Icon/instagramIcon.svg";
@@ -35,9 +32,8 @@ const Footer = () => {
                     <Classroom />
                 </a>
             </div>
-            <form action="submit" className="newsletter-form">
-                <TextField id="email" style={{ width: "25ch" }} label="Signup for newsletter" size="medium" variant="outlined" />
-                <Button style={{ marginLeft: "1em", borderRadius: "2em" }} size="large" color="primary" variant="contained">Signup</Button>
+            <form action="submit" className="col s12">
+
             </form>
             <div className="page-links">
                 <div className="page-dir">

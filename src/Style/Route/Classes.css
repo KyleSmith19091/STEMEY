@@ -76,6 +76,15 @@
     background-color: var(--primary-purple);
     align-self: center;
     font-weight: 400;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-text-container button:hover {
+    color: var(--primary-purple);
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.1);
+    font-weight: bold;
 }
 
 @media only screen and (min-width: 768px){
@@ -109,10 +118,11 @@
     }
 
     .card-text-container button{
-        align-self: flex-end;
+        align-self: center;
         font-size: 1.5vw;
         padding: 0.5em 3em;
-        margin: 1.5em 0.5em -5em 0.5em;
+        margin: 1.5em 0.5em -3em 0.5em;
+        cursor: pointer;
     }    
 
 

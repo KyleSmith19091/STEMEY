@@ -1,0 +1,10 @@
+.stemworld {
+    display: grid;
+    grid-template-areas: "timeline content content";
+    grid-template-columns: repeat(3,1fr);
+}
+
+.left-col {
+    grid-area: timeline;
+    border: 1px solid red;
+}

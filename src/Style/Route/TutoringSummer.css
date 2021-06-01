@@ -4,6 +4,7 @@
     font-size: 2rem;
     color: var(--primary-purple);
     margin: 0.5em 0;
+    font-weight: bold;
 }
 
 .header-icon {

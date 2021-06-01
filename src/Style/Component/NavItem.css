@@ -1,0 +1,31 @@
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1em;
+    cursor: pointer;
+    color: white;
+}
+
+.dropdown {
+    transform: translate(-45%);
+    width: 100%;
+    height: 100%;
+    background: var(--primary-purple-light);
+    border-radius: 1em;
+}
+
+.dropdown li {
+    color: white;
+}
+
+.nav-link{
+    width: 100%;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
