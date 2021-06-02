@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 import ReactFlow from 'react-flow-renderer';
 import { install } from "resize-observer";
 
-
 // CSS
 import "../Style/Component/STEMPowermentSection.css";
 
 const STEMPowermentSection = () => {
+    // Resize observer error Safari fix
     install();
     const elements = [
         {
