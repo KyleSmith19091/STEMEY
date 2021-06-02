@@ -16,10 +16,10 @@ const TutoringSummer = () => {
         <main className="tutoring-summer">
             <h1 className="tutoring-header"><span className="header-icon" role="img" aria-label="lightning-bolt">⚡️ </span><span>STEM</span>Powerment</h1>
             <div className="tab-container">
-                <Tabs isFitted>
+                <Tabs isFitted variant="soft-rounded" colorScheme="purple" >
                     <TabList>
-                        <Tab>Description</Tab>
-                        <Tab>Register</Tab>
+                        <Tab sx={{ textDecoration: "underline" }} _focus={{ ringColor: "transparent" }} _hover={{ transform: "scale(1.05)" }}>Description</Tab>
+                        <Tab sx={{ textDecoration: "underline" }} _focus={{ ringColor: "transparent" }} _hover={{ transform: "scale(1.05)" }}>Register</Tab>
                     </TabList>
 
                     <TabPanels>

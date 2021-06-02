@@ -58,7 +58,7 @@
 .hero-text {
   color: var(--secondary-blue);
   display: block;
-  width: 6ch;
+  width: 8ch;
   animation: typing 3s steps(6), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;

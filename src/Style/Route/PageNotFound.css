@@ -8,11 +8,14 @@
 .page-not-found-content h1 {
     color: var(--primary-purple);
     font-size: 8vw;
+    font-weight: bold;
+  white-space: nowrap;
 }
 
 .page-not-found-content h3 {
     color: var(--primary-light-blue);
     font-size: 5vw;
+    font-weight: bold;
 }
 
 .error-img {
