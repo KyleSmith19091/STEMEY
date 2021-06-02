@@ -1,6 +1,9 @@
 // React
 import React from 'react'
 
+// External Components
+import { Link } from "react-router-dom";
+
 // Images
 import { ReactComponent as Youtube } from "../Img/Icon/youtubeIcon.svg";
 import { ReactComponent as Instagram } from "../Img/Icon/instagramIcon.svg";
@@ -38,21 +41,21 @@ const Footer = () => {
             <div className="page-links">
                 <div className="page-dir">
                     <h4>Academics</h4>
-                    <a href="/classes">Classes</a>
-                    <a href="/tutoring">Tutoring</a>
-                    <a href="/tutoring-summer">Summer Tutoring Program</a>
+                    <Link to="/classes">Classes</Link>
+                    <Link to="/tutoring">Tutoring</Link>
+                    <Link to="/tutoring-summer">Summer Tutoring Program</Link>
                 </div>
                 <div className="page-dir">
                     <h4>Get Involved</h4>
-                    <a href="/">Volunteer</a>
-                    <a href="/">Join Our Community</a>
-                    <a href="/">Partner with Us</a>
+                    <Link to="/">Volunteer</Link>
+                    <Link to="/">Join Our Community</Link>
+                    <Link to="/">Partner with Us</Link>
                 </div>
                 <div className="page-dir">
                     <h4>Events</h4>
-                    <a href="/">STEM World I</a>
-                    <a href="/">STEM World II</a>
-                    <a href="/">STEM-Tober</a>
+                    <Link to="/">STEM World I</Link>
+                    <Link to="/">STEM World II</Link>
+                    <Link to="/">STEM-Tober</Link>
                 </div>
             </div>
         </footer >

@@ -27,7 +27,7 @@ const NavItem = ({ name, content }) => {
                 <MenuButton as={Button} colorScheme="transparent" sx={{ fontWeight: "normal", outline: "none" }} _focus={{
                     transform: "scale(0.98)",
                     ringColor: "transparent"
-                }}>
+                }} _hover={{ fontWeight: "bold" }}>
                     {name}
                 </MenuButton>
                 <MenuList>
