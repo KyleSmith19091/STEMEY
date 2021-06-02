@@ -1,28 +1,21 @@
+// React
 import React from 'react'
 import PropTypes from 'prop-types';
 
+// External Components
 import Hamburger from 'hamburger-react';
 import { motion } from "framer-motion";
 import { Link as RouterLink, useHistory } from "react-router-dom";
 
-import {
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-    Button,
-    Container
-} from "@chakra-ui/react";
+// Internal Components
+import NavItem from "./NavItem";
+
+// Internal Data
+import { Academics, Events, Team } from "../Model/NavBarContent";
 
 import "../Style/Component/Header.css";
 
 const Header = ({ open, setOpen }) => {
-
-    const history = useHistory();
-
-    const handleClick = (path) => {
-        history.push(path);
-    }
 
     return (
         <header className="header">
@@ -38,32 +31,9 @@ const Header = ({ open, setOpen }) => {
             </div>
 
             <nav className="nav">
-                <Container padding="4">
-                    <Menu>
-                        <MenuButton as={Button} colorScheme="transparent" sx={{ fontWeight: "normal", outline: "none" }} _active={{
-                            transform: "scale(0.98)",
-                            borderColor: "transparent",
-                        }}>
-                            Academics
-                        </MenuButton>
-                        <MenuList>
-                            <MenuItem onClick={() => handleClick("/classes")}><RouterLink to="/classes">Classes</RouterLink></MenuItem>
-                            <MenuItem onClick={() => handleClick("/tutoring")}>Tutoring</MenuItem>
-                            <MenuItem onClick={() => handleClick("/tutoring-summer")}>Tutoring Summer Program</MenuItem>
-                        </MenuList>
-                    </Menu>
-                </Container>
-                <Container>
-                    <Menu className="nav-item">
-                        <MenuButton as={Button} colorScheme="transparent" sx={{ fontWeight: "normal" }}>
-                            Events
-                        </MenuButton>
-                        <MenuList>
-                            <MenuItem>Download</MenuItem>
-                            <MenuItem>Create a Copy</MenuItem>
-                        </MenuList>
-                    </Menu>
-                </Container>
+                <NavItem name={Academics.name} content={Academics.content} />
+                <NavItem name={Events.name} content={Events.content} />
+                <NavItem name={Team.name} content={Team.content} />
             </nav>
 
             <div className="menu-icon-container">
