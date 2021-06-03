@@ -11,7 +11,7 @@ import { Link as RouterLink, useHistory } from "react-router-dom";
 import NavItem from "./NavItem";
 
 // Internal Data
-import { Academics, Events, Team } from "../Model/NavBarContent";
+import { Academics, Events, Team, GetInvolved } from "../Model/NavBarContent";
 
 import "../Style/Component/Header.css";
 
@@ -34,6 +34,7 @@ const Header = ({ open, setOpen }) => {
                 <NavItem name={Academics.name} content={Academics.content} />
                 <NavItem name={Events.name} content={Events.content} />
                 <NavItem name={Team.name} content={Team.content} />
+                <NavItem name={GetInvolved.name} content={GetInvolved.content} />
             </nav>
 
             <div className="menu-icon-container">

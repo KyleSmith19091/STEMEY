@@ -44,4 +44,10 @@ const Team = {
     ]
 }
 
-export { Academics, Events, Team };
+const GetInvolved = {
+    name: "Get Involved",
+    content: [
+    ]
+}
+
+export { Academics, Events, Team, GetInvolved };

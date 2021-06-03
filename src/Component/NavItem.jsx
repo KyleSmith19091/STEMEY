@@ -24,10 +24,10 @@ const NavItem = ({ name, content }) => {
     return (
         <Container padding="4">
             <Menu>
-                <MenuButton as={Button} colorScheme="transparent" sx={{ fontWeight: "normal", outline: "none" }} _focus={{
+                <MenuButton as={Button} colorScheme="transparent" sx={{ fontWeight: "normal", outline: "none", border: "1px solid white" }} _focus={{
                     transform: "scale(0.98)",
                     ringColor: "transparent"
-                }} _hover={{ fontWeight: "bold" }}>
+                }} _hover={{ border: "2px solid white" }}>
                     {name}
                 </MenuButton>
                 <MenuList>
