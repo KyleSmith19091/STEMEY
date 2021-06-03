@@ -11,12 +11,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .hero-title-container h1 {
     color: var(--primary-purple);
     font-size: 8vw;
     font-weight: bold;
+    transition: text-shadow 0.3s ease;
+    letter-spacing: 3px;
 }
 
 .hero-title-container span:first-of-type {
@@ -58,24 +61,8 @@
 .hero-text {
   color: var(--secondary-blue);
   display: block;
-  width: 8ch;
-  animation: typing 3s steps(6), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
   font-weight: bold;
-}
-
-@keyframes typing {
-  from {
-    width: 0ch;
-  }
-}
-    
-@keyframes blink {
-  50% {
-    border-color: transparent
-  }
+    text-shadow: 2px 2px var(--secondary-blue);
 }
 
 @media only screen and (min-width: 768px){
@@ -127,6 +114,7 @@
     justify-content: center;
 
     padding: 3em;
+    border: 2px solid var(--primary-purple);
 }
 
 }
