@@ -31,9 +31,9 @@ const NavItem = ({ name, content }) => {
                     {name}
                 </MenuButton>
                 <MenuList>
-                    {content.map((item) => {
+                    {content.map((item, idx) => {
                         return (
-                            <MenuItem onClick={() => handleClick(item.path)}><RouterLink to={item.path}>{item.name}</RouterLink></MenuItem>
+                            <MenuItem onClick={() => handleClick(item.path)} key={idx}><RouterLink to={item.path}>{item.name}</RouterLink></MenuItem>
                         );
                     })}
                 </MenuList>
