@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 // External Components
 import Hamburger from 'hamburger-react';
 import { motion } from "framer-motion";
-import { Link as RouterLink, useHistory } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 
 // Internal Components
 import NavItem from "./NavItem";

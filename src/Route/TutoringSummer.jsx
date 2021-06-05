@@ -18,7 +18,7 @@ const TutoringSummer = () => {
             <div className="tab-container">
                 <Tabs isFitted variant="soft-rounded" colorScheme="purple" >
                     <TabList>
-                        <Tab sx={{ textDecoration: "underline" }} _focus={{ ringColor: "transparent" }} _hover={{ transform: "scale(1.05)" }}>Description</Tab>
+                        <Tab sx={{ textDecoration: "underline", margin: "0 1em" }} _focus={{ ringColor: "transparent" }} _hover={{ transform: "scale(1.05)" }}>Description</Tab>
                         <Tab sx={{ textDecoration: "underline" }} _focus={{ ringColor: "transparent" }} _hover={{ transform: "scale(1.05)" }}>Register</Tab>
                     </TabList>
 

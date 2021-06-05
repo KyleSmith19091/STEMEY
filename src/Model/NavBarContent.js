@@ -1,4 +1,4 @@
-const Academics = {
+export const Academics = {
     name: "Academics",
     content: [
         {
@@ -16,7 +16,7 @@ const Academics = {
     ]
 }
 
-const Events = {
+export const Events = {
     name: "Events",
     content: [
         {
@@ -34,7 +34,7 @@ const Events = {
     ]
 }
 
-const Team = {
+export const Team = {
     name: "Team",
     content: [
         {
@@ -44,10 +44,8 @@ const Team = {
     ]
 }
 
-const GetInvolved = {
+export const GetInvolved = {
     name: "Get Involved",
     content: [
     ]
 }
-
-export { Academics, Events, Team, GetInvolved };
