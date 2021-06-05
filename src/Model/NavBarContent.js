@@ -21,7 +21,7 @@ export const Events = {
     content: [
         {
             name: "STEM World I",
-            path: "/stem-world1"
+            path: "/stemworld"
         },
         {
             name: "STEM World II",

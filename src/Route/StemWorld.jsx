@@ -2,14 +2,15 @@ import React from 'react'
 
 import "../Style/Route/StemWorld.css";
 
+import TimelineCard from "../Component/TimelineCard";
+
 const StemWorld = () => {
     return (
         <section className="stemworld">
-            <div className="left-col">
-                <div className="stem-card">
-
-                </div>
-            </div>
+            <TimelineCard first />
+            <TimelineCard />
+            <TimelineCard />
+            <TimelineCard last />
         </section>
     )
 }
