@@ -9,9 +9,43 @@
 }
 
 .timeline-content-container {
+    display: flex;
+    margin-left: 1em;
+    border: 2px solid black;
+    width: 40vw;
+    border-radius: 2em;
+}
+
+.timeline-content-container:hover {
+    border: 2px solid var(--primary-light-blue);
+    cursor: pointer;
+}
+
+.timeline-content-container img {
+    width: 190px;
+    height: 150px;
+    border-radius: 2em 0 0 2em;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     margin-left: 1em;
 }
 
+.text-content h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.text-content p {
+    display: flex;
+}
+
+.text-content span {
+    margin-right: 1em;
+}
 
 .TimelineCard {
     display: flex;
@@ -28,6 +62,15 @@
     padding-top: 50px;
 }
 
+.last {
+    display: flex;
+    align-items: center;
+}
+
+.last .circle {
+    margin-bottom: 100px;
+}
+
 .circle {
     width: var(--circle-size);
     height: var(--circle-size);
@@ -42,7 +85,7 @@
 
 .first .timeline {
     border-right: 5px solid var(--primary-light-blue);
-    height: 50px;
+    height: 100px;
 }
 
 .timeline {

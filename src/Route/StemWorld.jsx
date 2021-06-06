@@ -10,6 +10,8 @@ const StemWorld = () => {
             <TimelineCard first />
             <TimelineCard />
             <TimelineCard />
+            <TimelineCard />
+            <TimelineCard />
             <TimelineCard last />
         </section>
     )
