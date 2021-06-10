@@ -1,19 +1,54 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-// Libraries
+// External Components
+import {
+    Drawer,
+    DrawerBody,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerOverlay,
+    DrawerContent,
+    useDisclosure
+} from "@chakra-ui/react"
 
 // CSS
 import "../Style/Component/SlideDrawer.css";
 
-const SlideDrawer = ({ open }) => {
+const SlideDrawer = ({ open, myRef }) => {
+
+    const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
-        <div
-            className="slide-drawer"
-            style={{ transform: open ? "translate(45%,-10%)" : "translate(145%,-10%)", display: open ? "block" : "none" }}
+        <Drawer
+            isOpen={isOpen}
+            placement="right"
+            onClose={onClose}
+            finalFocusRef={myRef}
         >
-            <ul className="drawer-list">
+            <DrawerOverlay />
+            <DrawerContent>
+                <DrawerHeader>Create your account</DrawerHeader>
+
+                <DrawerBody>
+                </DrawerBody>
+
+                <DrawerFooter>
+                </DrawerFooter>
+            </DrawerContent>
+
+        </Drawer>
+    )
+}
+
+SlideDrawer.propTypes = {
+    open: PropTypes.bool.isRequired
+}
+
+/**
+ 
+
+                <ul className="drawer-list">
                 <li className="drawer-list-item">
                     <p>Academics</p>
                     <div className="drawer-list-links-container">
@@ -39,12 +74,10 @@ const SlideDrawer = ({ open }) => {
                     </div>
                 </li>
             </ul>
-        </div>
-    )
-}
 
-SlideDrawer.propTypes = {
-    open: PropTypes.bool.isRequired
-}
+
+
+
+ */
 
 export default SlideDrawer
