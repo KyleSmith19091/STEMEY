@@ -1,5 +1,5 @@
 // React
-import React, { useState } from "react";
+import React from "react";
 
 // External Components
 import { Switch, Route, BrowserRouter } from "react-router-dom";
@@ -16,17 +16,14 @@ import STEMWorld from "./StemWorld";
 // Internal Components
 import Header from "../Component/Header";
 import Footer from "../Component/Footer";
-import SlideDrawer from "../Component/SlideDrawer";
 
 const App = () => {
-  const [open, setOpen] = useState(false);
   return (
     <BrowserRouter>
       <main className="App">
-        <Header open={open} setOpen={setOpen} />
-        <SlideDrawer open={open} />
+        <Header />
         <Switch>
-          <Route path='/' component={() => <Home open={open} />} exact />
+          <Route path='/' component={Home} exact />
 
           <Route path='/tutoring-summer' component={TutoringSummer} />
 
