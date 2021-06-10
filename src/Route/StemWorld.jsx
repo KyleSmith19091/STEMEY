@@ -7,12 +7,17 @@ import TimelineCard from "../Component/TimelineCard";
 const StemWorld = () => {
     return (
         <section className="stemworld">
-            <TimelineCard first />
-            <TimelineCard />
-            <TimelineCard />
-            <TimelineCard />
-            <TimelineCard />
-            <TimelineCard last />
+            <div className="timeline-container">
+                <TimelineCard first title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
+                <TimelineCard title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
+                <TimelineCard title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
+                <TimelineCard title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
+                <TimelineCard title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
+                <TimelineCard last title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
+            </div>
+            <div className="expanded-card-container">
+
+            </div>
         </section>
     )
 }
