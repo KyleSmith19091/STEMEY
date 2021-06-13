@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
+import { install } from "resize-observer";
 
 function Box(props) {
+    install();
     // This reference will give us direct access to the THREE.Mesh object
     const mesh = useRef()
     // Set up state for the hovered and active state
