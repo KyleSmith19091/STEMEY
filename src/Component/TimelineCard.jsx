@@ -1,4 +1,5 @@
-import React from 'react'
+// React
+import React from 'react';
 import PropTypes from 'prop-types';
 
 // Images
@@ -10,9 +11,9 @@ import { ReactComponent as Calendar } from "../Img/Icon/Calendar.svg";
 // CSS
 import "../Style/Component/TimelineCard.css";
 
-const TimelineCard = ({ first, last, title, speaker, date }) => {
+const TimelineCard = ({ first, last, title, speaker, date, onClick }) => {
     return (
-        <div className={last ? "last" : "timelineCard"}>
+        <div className={last ? "last" : "timelineCard"} onClick={onClick}>
             <div className={first ? "first" : "TimelineCard"}>
                 {!first && <div className="timeline"></div>}
                 <div className="circle"></div>

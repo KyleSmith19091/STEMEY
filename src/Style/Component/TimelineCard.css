@@ -36,7 +36,7 @@
 
 .text-content h2 {
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 3vw;
 }
 
 .text-content p {
@@ -96,17 +96,13 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .timeline-content-container {
-        width: 55%;
-    }
-
     .timeline-content-container img {
         width: 190px;
         height: 150px;
     }
 
     .text-content h2 {
-        font-size: 2rem;
+        font-size: 2vw;
     }
 
     .text-content p {
