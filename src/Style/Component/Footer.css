@@ -1,6 +1,7 @@
 footer {
-    margin: 0.3em;
-    display: grid;
+    width: 100%;        
+    display: block;
+    margin: 0 auto;
 }
 
 footer .icon-container {
@@ -39,29 +40,34 @@ footer .icon-container svg:hover path {
 footer form {
     display: flex;
     justify-content: center;
-    justify-self: center;
+    align-items: center;
     margin: 1em 0;
+    padding: 0 1em;
 }
 
 .page-links {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .page-dir {
     justify-self: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .page-dir a {
-    padding: 0.6em 0;
+    padding: 0.8em 0em;
+    font-size: 4vw;
     color: black;
     text-decoration: none;
 }
 
 .page-dir h4 {
+    font-size: 7vw;
     font-weight: bold;
 }
 
@@ -85,7 +91,6 @@ footer form {
 
 .link::before {
     content: '';
-    /* show by default */
 }
 
 .link--metis {
@@ -120,7 +125,7 @@ footer form {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 1em 1em;
+        padding: 1em 5em;
     }
 
     .page-dir h4 {
@@ -132,6 +137,6 @@ footer form {
     }
 
     #email {
-        width: 40ch;
+        width: 50%;
     }
 }

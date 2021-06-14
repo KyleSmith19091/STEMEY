@@ -81,7 +81,7 @@ const Footer = () => {
                         pointerEvents="none"
                         children={<EmailIcon />}
                     />
-                    <Input sx={{ borderWidth: "2px", borderColor: "black" }} colorScheme="blackAlpha" variant="outline" placeholder="Enter email for latest news and updates!" type="email" onChange={handleChange} />
+                    <Input id="email" sx={{ borderWidth: "2px", borderColor: "black" }} colorScheme="blackAlpha" variant="outline" placeholder="Enter email for latest news and updates!" type="email" onChange={handleChange} />
                 </InputGroup>
                 <Button colorScheme="purple" variant="solid" onClick={onSubmitHandler}>
                     Register
