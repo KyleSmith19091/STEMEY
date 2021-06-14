@@ -3,6 +3,7 @@ import React from "react";
 
 // External Components
 import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 // Internal Routes
 import Home from "./Home";
@@ -20,28 +21,30 @@ import ScrollToTop from "../Component/ScrollToTop";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <main className="App">
-        <Header />
-        <Switch>
-          <Route path='/' component={Home} exact />
+    <AnimatePresence exitBeforeEnter>
+      <BrowserRouter>
+        <ScrollToTop />
+        <main className="App">
+          <Header />
+          <Switch>
+            <Route path='/' component={Home} exact />
 
-          <Route path='/tutoring-summer' component={TutoringSummer} />
+            <Route path='/tutoring-summer' component={TutoringSummer} />
 
-          <Route path='/classes' component={Classes} />
+            <Route path='/classes' component={Classes} />
 
-          <Route path='/tutoring' component={Tutoring} />
+            <Route path='/tutoring' component={Tutoring} />
 
-          <Route path='/test' component={Test} />
+            <Route path='/test' component={Test} />
 
-          <Route path='/stemworld' component={STEMWorld} />
+            <Route path='/stemworld' component={STEMWorld} />
 
-          <Route component={PageNotFound} />
-        </Switch>
-        <Footer />
-      </main>
-    </BrowserRouter>
+            <Route component={PageNotFound} />
+          </Switch>
+          <Footer />
+        </main>
+      </BrowserRouter>
+    </AnimatePresence>
   );
 }
 

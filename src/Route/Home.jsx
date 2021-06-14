@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { motion } from 'framer-motion';
+
 // Sections
 import HeroSection from "../Component/HeroSection";
 import MissionSection from "../Component/MissionSection";
@@ -14,14 +16,14 @@ import '../Style/Route/App.css';
 const Home = ({ open }) => {
     // Keep track of the drawer on *Mobile*
     return (
-        <div className="home">
+        <motion.div exit={{ opacity: 0 }} className="home">
             <HeroSection open={open} />
             <MissionSection />
             <OfferSection />
             <ImpactSection />
             <TestimonialSection />
             <AnnoucementSection />
-        </div>
+        </motion.div>
     )
 }
 

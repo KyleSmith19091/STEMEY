@@ -2,7 +2,6 @@
 import React, { useRef } from 'react'
 
 // External Components
-import Hamburger from 'hamburger-react';
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -21,6 +20,10 @@ import NavItem from "./NavItem";
 // Internal Data
 import { Academics, Events, Team, GetInvolved } from "../Model/NavBarContent";
 
+// Images 
+import { ReactComponent as Hamburger } from "../Img/Icon/hamburger.svg";
+
+// CSS
 import "../Style/Component/Header.css";
 
 const Header = ({ open, setOpen }) => {
@@ -50,7 +53,7 @@ const Header = ({ open, setOpen }) => {
 
             <div className="menu-icon-container">
                 <Button ref={hamburgerRef} colorScheme="transparent" onClick={onOpen} _focus={{ ringColor: "transparent" }}>
-                    <Hamburger onClick={onOpen} color="#ffffff" />
+                    <Hamburger className="hamburger-icon" />
                 </Button>
                 <Drawer
                     isOpen={isOpen}
