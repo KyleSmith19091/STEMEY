@@ -61,6 +61,48 @@ footer form {
     text-decoration: none;
 }
 
+.page-dir h4 {
+    font-weight: bold;
+}
+
+.link {
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    color: var(--color-text);
+}
+
+.link::before,
+.link::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+    pointer-events: none;
+}
+
+.link::before {
+    content: '';
+    /* show by default */
+}
+
+.link--metis {
+    text-transform: uppercase;
+}
+
+.link--metis::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+}
+
+.link--metis:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+}
+
 @media only screen and (min-width: 768px) {
 
     footer .icon-container {
@@ -87,16 +129,6 @@ footer form {
     
     .page-dir a {
         font-size: 1.2rem;
-    }
-
-    .page-dir a:hover {
-        transition: all 0.3s ease-in-out;
-        background: #7530FF;
-        background: -webkit-linear-gradient(to right, #7530FF 0%, #9D46CF 33%);
-        background: -moz-linear-gradient(to right, #7530FF 0%, #9D46CF 33%);
-        background: linear-gradient(to right, #7530FF 0%, #9D46CF 33%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
 
     #email {

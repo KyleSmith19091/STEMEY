@@ -90,21 +90,21 @@ const Footer = () => {
             <div className="page-links">
                 <div className="page-dir">
                     <h4>Academics</h4>
-                    <Link to="/classes">Classes</Link>
-                    <Link to="/tutoring">Tutoring</Link>
-                    <Link to="/tutoring-summer">Summer Tutoring Program</Link>
+                    <Link className="link link--metis" to="/classes">Classes</Link>
+                    <Link className="link link--metis" to="/tutoring">Tutoring</Link>
+                    <Link className="link link--metis" to="/tutoring-summer">Summer Tutoring Program</Link>
                 </div>
                 <div className="page-dir">
                     <h4>Get Involved</h4>
-                    <Link to="/">Volunteer</Link>
-                    <Link to="/">Join Our Community</Link>
-                    <Link to="/">Partner with Us</Link>
+                    <Link className="link link--metis" to="/">Volunteer</Link>
+                    <Link className="link link--metis" to="/">Join Our Community</Link>
+                    <Link className="link link--metis" to="/">Partner with Us</Link>
                 </div>
                 <div className="page-dir">
                     <h4>Events</h4>
-                    <Link to="/">STEM World I</Link>
-                    <Link to="/">STEM World II</Link>
-                    <Link to="/">STEM-Tober</Link>
+                    <Link className="link link--metis" to="/">STEM World I</Link>
+                    <Link className="link link--metis" to="/">STEM World II</Link>
+                    <Link className="link link--metis" to="/">STEM-Tober</Link>
                 </div>
             </div>
         </footer >
