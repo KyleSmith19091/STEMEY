@@ -61,32 +61,32 @@ const Header = ({ open, setOpen }) => {
                 >
                     <DrawerOverlay />
                     <DrawerContent>
-                        <DrawerHeader sx={{ backgroundColor: "purple" }}>STEMEY</DrawerHeader>
+                        <DrawerHeader sx={{ backgroundColor: "var(--primary-purple)", color: "white" }}>STEMEY</DrawerHeader>
 
-                        <DrawerBody className="drawer-body" sx={{ backgroundColor: "purple" }}>
+                        <DrawerBody className="drawer-body" sx={{ backgroundColor: "var(--primary-purple)" }}>
                             <ul className="drawer-list">
                                 <li className="drawer-list-item">
                                     <p>Academics</p>
                                     <div className="drawer-list-links-container">
-                                        <Link to="/classes">Classes</Link>
-                                        <Link to="/tutoring">Tutoring</Link>
-                                        <Link to="/tutoring-summer">Tutoring Summer Program</Link>
+                                        <Link onClick={onClose} to="/classes">Classes</Link>
+                                        <Link onClick={onClose} to="/tutoring">Tutoring</Link>
+                                        <Link onClick={onClose} to="/tutoring-summer">Tutoring Summer Program</Link>
                                     </div>
                                 </li>
                                 <li className="drawer-list-item">
                                     <p>Events</p>
                                     <div className="drawer-list-links-container">
-                                        <Link to="/volunteer">Volunteer</Link>
-                                        <Link to="/community">Join Our Community</Link>
-                                        <Link to="/partner">Partner With Us</Link>
+                                        <Link onClick={onClose} to="/volunteer">Volunteer</Link>
+                                        <Link onClick={onClose} to="/community">Join Our Community</Link>
+                                        <Link onClick={onClose} to="/partner">Partner With Us</Link>
                                     </div>
                                 </li>
                                 <li className="drawer-list-item">
                                     <p>Get Involved</p>
                                     <div className="drawer-list-links-container">
-                                        <Link to="/stemworldI">STEM World I</Link>
-                                        <Link to="/stemworldII">STEM World II</Link>
-                                        <Link to="/stemtober">STEM-Tober</Link>
+                                        <Link onClick={onClose} to="/stemworldI">STEM World I</Link>
+                                        <Link onClick={onClose} to="/stemworldII">STEM World II</Link>
+                                        <Link onClick={onClose} to="/stemtober">STEM-Tober</Link>
                                     </div>
                                 </li>
                             </ul>

@@ -25,7 +25,7 @@
 
 .drawer-list-item p{
     letter-spacing: 0.05rem;
-    color: black;
+    color: white;
     font-weight: bold;
     font-size: 1.4rem;
     cursor: default;
@@ -35,7 +35,7 @@
 .drawer-list-links-container a{
     padding: 0.3em 0;
     display: block;
-    color: black;
+    color: white;
     text-decoration: none;
     text-align: right;
 }
