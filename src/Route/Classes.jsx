@@ -47,7 +47,7 @@ const Classes = () => {
                             <div className="card-text-container">
                                 <h3 className="card-header"><span role="img" aria-label="mountain">{cl.emoji} </span>{cl.name}</h3>
                                 <p className="card-description">{cl.description}</p>
-                                <button>Register</button>
+                                <button><span><span>Register</span></span></button>
                             </div>
                         </div>
                     );
