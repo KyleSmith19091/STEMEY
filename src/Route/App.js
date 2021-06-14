@@ -16,10 +16,12 @@ import STEMWorld from "./StemWorld";
 // Internal Components
 import Header from "../Component/Header";
 import Footer from "../Component/Footer";
+import ScrollToTop from "../Component/ScrollToTop";
 
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <main className="App">
         <Header />
         <Switch>
