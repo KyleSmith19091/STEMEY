@@ -10,21 +10,24 @@ import {
     MenuItem,
     Button,
     Container,
+    useDisclosure
 } from "@chakra-ui/react";
 
 import "../Style/Component/NavItem.css";
 
 const NavItem = ({ name, content }) => {
-    const history = useHistory();
 
+    // Hacky stuff to move around js event system 👍
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const history = useHistory();
     const handleClick = (path) => {
         history.push(path);
     }
 
     return (
         <Container padding="4">
-            <Menu>
-                <MenuButton as={Button} colorScheme="transparent" sx={{ fontWeight: "normal", outline: "none", border: "1px solid white" }} _focus={{
+            <Menu isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
+                <MenuButton className="link--mneme" as={Button} onClick={onOpen} colorScheme="transparent" sx={{ fontWeight: "normal", outline: "none", border: "1px solid white" }} _focus={{
                     transform: "scale(0.98)",
                     ringColor: "transparent"
                 }} _hover={{ border: "2px solid white" }}>
@@ -33,7 +36,7 @@ const NavItem = ({ name, content }) => {
                 <MenuList>
                     {content.map((item, idx) => {
                         return (
-                            <MenuItem onClick={() => handleClick(item.path)} key={idx}><RouterLink to={item.path}>{item.name}</RouterLink></MenuItem>
+                            <MenuItem onClick={() => { handleClick(item.path); onClose(); }} key={idx}><RouterLink to={item.path}>{item.name}</RouterLink></MenuItem>
                         );
                     })}
                 </MenuList>

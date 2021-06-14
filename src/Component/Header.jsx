@@ -87,7 +87,7 @@ const Header = ({ open, setOpen }) => {
                                 <li className="drawer-list-item">
                                     <p>Get Involved</p>
                                     <div className="drawer-list-links-container">
-                                        <Link onClick={onClose} to="/stemworldI">STEM World I</Link>
+                                        <Link onClick={onClose} to="/stemworld">STEM World I</Link>
                                         <Link onClick={onClose} to="/stemworldII">STEM World II</Link>
                                         <Link onClick={onClose} to="/stemtober">STEM-Tober</Link>
                                     </div>
