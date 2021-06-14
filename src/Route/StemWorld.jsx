@@ -19,20 +19,35 @@ import timelineImage from "../Img/Photo/timelineImage.jpg";
 
 // TODO: Create expanded timeline card component, Render all expanded cards and make them visible when clicked?
 
+/*
+
+Expanded Card state object
+{
+    open: false | true,
+    title: "",
+    speaker-name: "",
+    date: "",
+    timeline-image: "",
+    description: "",
+    video-container: "",
+}
+
+*/
+
 const StemWorld = () => {
     const [open, setOpen] = useState(false);
     return (
         <section className="stemworld">
             <div className="timeline-container">
                 <TimelineCard first onClick={(e) => { setOpen(true) }} title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
-                <TimelineCard title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
-                <TimelineCard title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
-                <TimelineCard title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
-                <TimelineCard title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
-                <TimelineCard last title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
+                <TimelineCard onClick={(e) => { setOpen(true) }} title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
+                <TimelineCard onClick={(e) => { setOpen(true) }} title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
+                <TimelineCard onClick={(e) => { setOpen(true) }} title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
+                <TimelineCard onClick={(e) => { setOpen(true) }} title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
+                <TimelineCard onClick={(e) => { setOpen(true) }} last title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
             </div>
             <div className="expanded-card-container">
-                <div className="timeline-card-expanded" style={{ "display": open ? "flex" : "none" }}>
+                <div className="timeline-card-expanded" style={{ "display": open ? "flex" : "none" }} onClick={(e) => { setOpen(!open) }}>
                     <div className="card-header">
                         <div className="overlapped-images">
                             <img src={timelineImage} alt="Event" />
