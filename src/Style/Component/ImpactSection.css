@@ -7,13 +7,14 @@
 }
 
 .impact-header {
-    font-size: 2rem;
+    font-size: 8vw;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .impact-container {
     display: grid;
-    row-gap: 2em;
+    row-gap: 1em;
 }
 
 .impact-container iframe {
@@ -29,6 +30,7 @@
     box-shadow: -2px 1px 27px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: -2px 1px 27px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: -2px 1px 27px 0px rgba(0,0,0,0.75);
+    margin: 1em 0;
 }
 
 .impact-number h2 {
@@ -37,24 +39,32 @@
 }
 
 @media only screen and (min-width: 768px){
+
+    .impact-section .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .impact-header {
         font-size: 4rem;
     }
 
     .impact-container .impact-number {
+        white-space: nowrap;
         align-self: center;
         justify-self: center;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 30%;
+        width: 40%;
         height: 8vh;
         font-size: 1.5rem;
     }
 
-    .impact-container iframe {
-        width: 80%;
-        height: 80vh;
+    .impact-container {
+        margin: 1em 0;
+        width: 60%;
     }
 
 }
