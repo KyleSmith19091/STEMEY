@@ -37,7 +37,7 @@ const classesContent = [
 const Classes = () => {
     return (
         <main className="classes">
-            <div className="classes-container">
+            <div initial="hidden" animate="show" className="classes-container">
                 {classesContent.map((cl, idx) => {
                     return (
                         <div key={idx} className="card">
