@@ -94,6 +94,7 @@ footer form {
 }
 
 .link--metis {
+    position: relative;
     text-transform: uppercase;
 }
 
