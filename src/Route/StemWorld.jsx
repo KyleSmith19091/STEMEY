@@ -1,5 +1,5 @@
 // React
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 // External Components
 import { AspectRatio } from "@chakra-ui/react";
@@ -36,8 +36,23 @@ Expanded Card state object
 
 const StemWorld = () => {
     const [open, setOpen] = useState(false);
+    const [scroll, setScroll] = useState(0);
+
+    const handleScroll = () => {
+        const totalScroll = document.documentElement.scrollTop;
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scroll = `${totalScroll / windowHeight}`;
+        setScroll(scroll * 100);
+        console.log(scroll * 100);
+    }
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll); // Same as component did unmount
+    });
+
     return (
-        <section className="stemworld">
+        <section className="stemworld" onScroll={handleScroll}>
             <div className="timeline-container">
                 <TimelineCard first onClick={(e) => { setOpen(true) }} title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
                 <TimelineCard onClick={(e) => { setOpen(true) }} title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
@@ -47,7 +62,7 @@ const StemWorld = () => {
                 <TimelineCard onClick={(e) => { setOpen(true) }} last title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
             </div>
             <div className="expanded-card-container">
-                <div className="timeline-card-expanded" style={{ "display": open ? "flex" : "none" }} onClick={(e) => { setOpen(!open) }}>
+                <div className={scroll < 60 ? "timeline-card-expanded" : "timeline-card-expanded absolute"} style={{ "display": open ? "flex" : "none" }} onClick={(e) => { setOpen(!open) }}>
                     <div className="card-header">
                         <div className="overlapped-images">
                             <img src={timelineImage} alt="Event" />
@@ -77,7 +92,7 @@ const StemWorld = () => {
                     </div>
                 </div>
             </div>
-        </section >
+        </section>
     )
 }
 

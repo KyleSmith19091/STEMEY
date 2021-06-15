@@ -2,6 +2,7 @@
     height: 100%;
     padding: 1em;
     display: flex;
+    position: relative;
 }
 
 .timeline-container {
@@ -23,10 +24,17 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 35%;
+    position: absolute;
     position: fixed;
+    width: 40%;
     top: 10%;
     transition: border,box-shadow 0.3s ease;
+}
+
+.absolute {
+    position: absolute;
+    height: 53%;
+    top: 43%;
 }
 
 .timeline-card-expanded:hover {
