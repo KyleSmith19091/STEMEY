@@ -74,6 +74,8 @@
     left: 0;
     pointer-events: none;
     transform-origin: 100% 50%;
+    -webkit-transform: scale3d(0, 1, 1);
+    -moz-transform: scale3d(0, 1, 1);
     transform: scale3d(0, 1, 1);
     transition: transform 0.3s
 }
@@ -127,13 +129,14 @@
     justify-content: center;
     padding-top: 3vh;
     margin: 3em 0;
+    pointer-events: none;
 }
 
 .hero-image-container {
     position: relative;
     border-radius: 50%;
-    width: 40vw;
-    height: 40vw;
+    width: 30vw;
+    height: 30vw;
     padding-top: 100%;
 
     display: flex;
