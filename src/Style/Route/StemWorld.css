@@ -1,5 +1,4 @@
 .stemworld {
-    height: 100%;
     padding: 1em;
     display: flex;
     position: relative;
@@ -33,7 +32,7 @@
 
 .absolute {
     position: absolute;
-    height: 53%;
+    height: 56%;
     top: 43%;
 }
 
