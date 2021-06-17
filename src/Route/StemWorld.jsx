@@ -1,5 +1,5 @@
 // React
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // External Components
 import { AspectRatio } from "@chakra-ui/react";
@@ -39,17 +39,18 @@ const StemWorld = () => {
     const [scroll, setScroll] = useState(0);
 
     const handleScroll = () => {
-        const totalScroll = document.documentElement.scrollTop;
-        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const totalScroll = window.pageYOffset || document.documentElement.scrollTop;
+        const windowHeight = (document.documentElement.scrollHeight - document.documentElement.clientHeight);
         const scroll = `${totalScroll / windowHeight}`;
         setScroll(scroll * 100);
         console.log(scroll * 100);
+        console.log(totalScroll);
     }
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll); // Same as component did unmount
-    });
+    }, []);
 
     return (
         <section className="stemworld" onScroll={handleScroll}>
@@ -62,7 +63,7 @@ const StemWorld = () => {
                 <TimelineCard onClick={(e) => { setOpen(true) }} last title="How does one make money?" speaker="Bill Gates" date="2020-02-12" />
             </div>
             <div className="expanded-card-container">
-                <div className={scroll < 60 ? "timeline-card-expanded" : "timeline-card-expanded absolute"} style={{ "display": open ? "flex" : "none" }} onClick={(e) => { setOpen(!open) }}>
+                <div className={scroll < 58 ? "timeline-card-expanded" : "timeline-card-expanded absolute"} style={{ "display": open ? "flex" : "none" }} onClick={(e) => { setOpen(!open) }}>
                     <div className="card-header">
                         <div className="overlapped-images">
                             <img src={timelineImage} alt="Event" />
@@ -85,7 +86,7 @@ const StemWorld = () => {
                         <AspectRatio ratio={16 / 9}>
                             <iframe
                                 title="naruto"
-                                src="https://www.youtube.com/embed/QhBnZ6NPOY0"
+                                src="https://www.youtube.com/embed/DlKBSvQfM1c"
                                 allowFullScreen
                             />
                         </AspectRatio>
