@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Link as RouterLink, useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import {
     Menu,
@@ -27,16 +27,22 @@ const NavItem = ({ name, content }) => {
     return (
         <Container padding="4">
             <Menu isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
-                <MenuButton className="link--mneme" as={Button} onClick={onOpen} colorScheme="transparent" sx={{ fontWeight: "normal", outline: "none", border: "1px solid white" }} _focus={{
+                <MenuButton as={Button} onClick={onOpen} colorScheme="transparent" sx={{ fontWeight: "normal", outline: "none", border: "1px solid white" }} _focus={{
                     transform: "scale(0.98)",
                     ringColor: "transparent"
                 }} _hover={{ border: "2px solid white" }}>
                     {name}
                 </MenuButton>
-                <MenuList>
+                <MenuList sx={{ padding: "1em", backgroundColor: "var(--primary-purple)", color: "white", outline: "none", border: "none", borderRadius: "1.5em" }}
+                >
                     {content.map((item, idx) => {
                         return (
-                            <MenuItem onClick={() => { handleClick(item.path); onClose(); }} key={idx}><RouterLink to={item.path}>{item.name}</RouterLink></MenuItem>
+                            <MenuItem
+                                _focus={{ backgroundColor: "var(--primary-purple-light)" }}
+                                onClick={() => { handleClick(item.path); onClose(); }}
+                                key={idx}
+                                sx={{ borderRadius: "1em" }}
+                            ><Link to={item.path}>{item.name}</Link></MenuItem>
                         );
                     })}
                 </MenuList>
