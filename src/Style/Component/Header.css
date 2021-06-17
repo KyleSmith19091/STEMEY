@@ -6,7 +6,7 @@
 }
 
 .logo-container {
-    margin: 1em 1em 1em 3em;
+    margin: 1em 1em 1em 5em;
 }
 
 .logo {
@@ -60,6 +60,7 @@
         height: 60px;
         align-items: center;
         justify-content: space-between;
+        margin-right: 5em;
     }
 
     .nav-item {

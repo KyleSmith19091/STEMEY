@@ -26,7 +26,7 @@ import { ReactComponent as Hamburger } from "../Img/Icon/hamburger.svg";
 // CSS
 import "../Style/Component/Header.css";
 
-const Header = ({ open, setOpen }) => {
+const Header = () => {
 
     const { isOpen, onOpen, onClose } = useDisclosure();
     const hamburgerRef = useRef();
@@ -95,7 +95,6 @@ const Header = ({ open, setOpen }) => {
                             </ul>
                         </DrawerBody>
                     </DrawerContent>
-
                 </Drawer>
             </div>
         </header >

@@ -6,6 +6,10 @@
     font-weight: bold;
 }
 
+.offer-header {
+    font-weight: bold;
+}
+
 .offer-header:first-of-type {
     color: var(--primary-dark-blue);
     text-align: right;
@@ -52,6 +56,7 @@
 .offer-card-header h3 {
     padding: 4em;
     position: absolute;
+    font-weight: bold;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
