@@ -1,6 +1,8 @@
 // React
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+
+// External Components
 import { motion } from "framer-motion";
 import { animateScroll as scroll } from "react-scroll";
 
