@@ -18,7 +18,8 @@
 
 .timeline-content-container:hover {
     border: 2px solid var(--primary-light-blue);
-    cursor: pointer;
+    transition: cursor 0.4s ease-in-out;
+    cursor: url("../../Img/SVG/StemWorldCursor2.svg"), auto;
 }
 
 .timeline-content-container img {
