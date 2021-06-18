@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--primary-purple);
+    background-color: white;
 }
 
 .logo-container {
@@ -11,7 +11,7 @@
 
 .logo {
     font-size: 1.5rem;
-    color: var(--primary-text-color);
+    color: var(--primary-purple);
     font-weight: bold;
 }
 
@@ -51,9 +51,9 @@
 }
 
 @media only screen and (min-width: 768px){
-    .menu-icon-container {
+    /* .menu-icon-container {
         display: none;
-    }
+    } */
 
     .nav {
         display: flex;
