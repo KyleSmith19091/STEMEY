@@ -27,10 +27,13 @@ const NavItem = ({ name, content }) => {
     return (
         <Container padding="4">
             <Menu isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
-                <MenuButton as={Button} onClick={onOpen} colorScheme="transparent" sx={{ fontWeight: "normal", outline: "none", border: "1px solid white" }} _focus={{
+                <MenuButton as={Button} onClick={onOpen} color="white" sx={{ backgroundColor: "var(--primary-purple)", fontWeight: "normal", outline: "none", border: "1px solid white" }} _focus={{
                     transform: "scale(0.98)",
-                    ringColor: "transparent"
-                }} _hover={{ border: "2px solid white" }}>
+                    ringColor: "transparent",
+                }}
+                    _hover={{ border: "2px solid white" }}
+                    _active={{ backgroundColor: "var(--primary-purple)" }}
+                >
                     {name}
                 </MenuButton>
                 <MenuList sx={{ padding: "1em", backgroundColor: "var(--primary-purple)", color: "white", outline: "none", border: "none", borderRadius: "1.5em" }}
