@@ -2,17 +2,28 @@
 import React, { useRef, useEffect, useState } from 'react'
 
 // External Components
-import { TweenMax, Power3 } from 'gsap';
+import { TimelineLite, Power2 } from 'gsap';
+import CSSRulePlugin from 'gsap/CSSRulePlugin';
 
 // CSS
 import "../Style/Route/Test.css";
 
 const Test = () => {
+
+    let image = useRef(null);
+    let imageReveal = CSSRulePlugin.getRule('.img-container::after');
+    const tl = new TimelineLite();
+
+    useEffect(() => {
+        tl.to(imageReveal, 1.4, { width: "0%", ease: Power2.easeInOut, delay: 0.8 })
+            .from(image, 1.4, { scale: 1.4, ease: Power2.easeOut });
+    }, []);
+
     return (
         <main>
             <div className="container">
-                <div className="anim-img-container">
-                    <img src={require("../Img/Photo/timelineImage.jpg")} alt="Test" />
+                <div className="img-container">
+                    <img ref={el => image = el} src={require("../Img/Photo/timelineImage.jpg")} alt="Test" />
                 </div>
             </div>
         </main>
