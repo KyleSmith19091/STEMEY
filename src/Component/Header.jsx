@@ -39,12 +39,12 @@ const Header = () => {
                     <motion.h1 whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                     >
-                        STEMEY
+                        STEMEY.
                     </motion.h1>
                 </Link>
             </div>
 
-            <nav className="nav">
+            <nav className="nav" style={{ display: "none" }}>
                 <NavItem name={Academics.name} content={Academics.content} />
                 <NavItem name={Events.name} content={Events.content} />
                 <NavItem name={Team.name} content={Team.content} />
@@ -60,11 +60,12 @@ const Header = () => {
                     placement="right"
                     onClose={onClose}
                     finalFocusRef={hamburgerRef}
+                    size="lg"
                     sx={{ backgroundColor: "purple" }}
                 >
                     <DrawerOverlay />
                     <DrawerContent>
-                        <DrawerHeader sx={{ backgroundColor: "var(--primary-purple)", color: "white" }}>STEMEY</DrawerHeader>
+                        <DrawerHeader sx={{ backgroundColor: "var(--primary-purple)", color: "white" }}>STEMEY.</DrawerHeader>
 
                         <DrawerBody className="drawer-body" sx={{ backgroundColor: "var(--primary-purple)" }}>
                             <ul className="drawer-list">
@@ -89,7 +90,7 @@ const Header = () => {
                                     <div className="drawer-list-links-container">
                                         <Link onClick={onClose} to="/stemworld">STEM World I</Link>
                                         <Link onClick={onClose} to="/stemworldII">STEM World II</Link>
-                                        <Link onClick={onClose} to="/stemtober">STEM-Tober</Link>
+                                        <Link onClick={onClose} to="/test">STEM-Tober</Link>
                                     </div>
                                 </li>
                             </ul>
