@@ -1,36 +1,37 @@
 // React
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useEffect, useState } from "react";
 
 // External Components
-import { TimelineLite, Power2 } from 'gsap';
-import CSSRulePlugin from 'gsap/CSSRulePlugin';
+import { TimelineLite, Power2 } from "gsap";
+import CSSRulePlugin from "gsap/CSSRulePlugin";
 
 // CSS
-import "../Style/Route/Test.css";
+import styles from "../Style/Route/Test.module.css";
 
 const Test = () => {
+  let image = useRef(null);
+  let imageReveal = CSSRulePlugin.getRule(".imgContainer::after");
+  const tl = new TimelineLite();
 
-    let image = useRef(null);
-    let imageReveal = CSSRulePlugin.getRule('.img-container::after');
-    const tl = new TimelineLite();
+  useEffect(() => {
+    tl.to(imageReveal, 1.4, { width: "0%", ease: Power2.easeInOut, delay: 0.8 }).from(image, 1.4, {
+      scale: 1.4,
+      ease: Power2.easeOut,
+    });
+  }, []);
 
-    useEffect(() => {
-        tl.to(imageReveal, 1.4, { width: "0%", ease: Power2.easeInOut, delay: 0.8 })
-            .from(image, 1.4, { scale: 1.4, ease: Power2.easeOut });
-    }, []);
+  return (
+    <main>
+      <div className={styles.container}>
+        <div className={styles.imgContainer}>
+          <img ref={(el) => (image = el)} src={require("../Img/Photo/timelineImage.jpg")} alt="Test" />
+        </div>
+      </div>
+    </main>
+  );
+};
 
-    return (
-        <main>
-            <div className="container">
-                <div className="img-container">
-                    <img ref={el => image = el} src={require("../Img/Photo/timelineImage.jpg")} alt="Test" />
-                </div>
-            </div>
-        </main>
-    )
-}
-
-export default Test
+export default Test;
 
 /*
 const [expand, setExpand] = useState(false);
