@@ -1,9 +1,10 @@
 // React
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 // External Components
 import { motion } from "framer-motion";
+import { TimelineLite, TweenLite, Power3 } from 'gsap/gsap-core';
 import { animateScroll as scroll } from "react-scroll";
 
 // Internal Components
@@ -18,10 +19,15 @@ import animationData from "../Img/animation/flying-man.json";
 // CSS
 import "../Style/Component/HeroSection.css";
 
-const HeroSection = ({ open }) => {
+const HeroSection = () => {
 
     const words = ["STEM", "SCIENCE", "TECHNOLOGY", "ENGINEERING", "MATHEMATICS"];
     const [wordIndex, setWordIndex] = useState(0);
+
+    const tl = new TimelineLite();
+    let titleContentContainer = useRef(null);
+    let heroImage = useRef(null);
+    let chevronUp = useRef(null);
 
     useEffect(() => {
         setTimeout(() => {
@@ -29,24 +35,44 @@ const HeroSection = ({ open }) => {
         }, 2000);
     });
 
+    useEffect(() => {
+
+        const content = titleContentContainer.children;
+        tl.staggerFrom([content], 1, {
+            x: -80,
+            ease: Power3.easeOut,
+            opacity: 0,
+            delay: 0.8
+        }, 0.15).from(heroImage, 1, {
+            x: 80,
+            opacity: 0,
+            ease: Power3.easeOut,
+        }).to(chevronUp, 1, {
+            y: -80,
+            opacity: 1,
+            ease: Power3.easeOut
+        });
+
+    }, []);
+
     return (
-        <section className="hero-section" style={{ filter: open ? "blur(2px)" : "none" }}>
-            <div className="hero-title-container">
-                <h1>Build your future in <motion.span className="stem-anim">{words[wordIndex]}<br /></motion.span> with
+        <section className="hero-section">
+            <div className="hero-title-container" ref={el => titleContentContainer = el}>
+                <h1>Build your future in <span className="stem-anim">{words[wordIndex]}<br /></span> with
                     <span className="hero-text"> STEMEY </span>
                 </h1>
             </div>
 
             <HoverCard bgColor="transparent">
-                <motion.div animate={{ scale: [0, 0.5, 1, 1.1] }} transition={{ duration: 1 }} className="hero-image-parent-container">
-                    <div className="hero-image-container">
+                <div className="hero-image-parent-container">
+                    <div ref={el => heroImage = el} className="hero-image-container">
                         <AnimPlayer className="hero-img" data={animationData} />
                     </div>
-                </motion.div>
+                </div>
             </HoverCard>
 
             <motion.div animate={{ y: [0, 20, 0] }} transition={{ repeat: Infinity, duration: 2 }} className="chevron-container" onClick={onChevronClick}>
-                <ChevronUp />
+                <ChevronUp ref={el => chevronUp = el} />
             </motion.div>
 
         </section>
