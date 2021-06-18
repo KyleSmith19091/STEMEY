@@ -2,6 +2,7 @@
     padding: 1em;
     display: flex;
     position: relative;
+    cursor: url("../../Img/SVG/StemWorldCursor.svg"), auto;
 }
 
 .timeline-container {
