@@ -1,41 +1,47 @@
-import React, { useRef, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { install } from "resize-observer";
+// React
+import React, { useRef, useEffect, useState } from 'react'
 
-function Box(props) {
-    install();
-    // This reference will give us direct access to the THREE.Mesh object
-    const mesh = useRef()
-    // Set up state for the hovered and active state
-    const [hovered, setHover] = useState(false)
-    const [active, setActive] = useState(false)
-    // Subscribe this component to the render-loop, rotate the mesh every frame
-    useFrame((state, delta) => (mesh.current.rotation.x += 0.01))
-    // Return the view, these are regular Threejs elements expressed in JSX
-    return (
-        <mesh
-            {...props}
-            ref={mesh}
-            scale={active ? 1.5 : 1}
-            onClick={(event) => setActive(!active)}
-            onPointerOver={(event) => setHover(true)}
-            onPointerOut={(event) => setHover(false)}>
-            <boxGeometry args={[1, 1, 1]} />
-            <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
-        </mesh>
-    )
-}
+// External Components
+import { TweenMax, Power3 } from 'gsap';
+
+// CSS
+import "../Style/Route/Test.css";
 
 const Test = () => {
-
     return (
-        <Canvas style={{ width: "50vw", height: "50vw" }}>
-            <ambientLight />
-            <pointLight position={[10, 10, 10]} />
-            <Box position={[-1.2, 0, 0]} />
-            <Box position={[1.2, 1, 0]} />
-        </Canvas>
+        <main>
+            <div className="container">
+                <div className="anim-img-container">
+                    <img src={require("../Img/Photo/timelineImage.jpg")} alt="Test" />
+                </div>
+            </div>
+        </main>
     )
 }
 
 export default Test
+
+/*
+const [expand, setExpand] = useState(false);
+
+    let circle = useRef(null);
+    let circleRed = useRef(null);
+    let circleBlue = useRef(null);
+
+    const handleExpand = () => {
+        TweenMax.to(circleRed, 0.8, { width: 200, height: 200, x: 40, ease: Power3.easeOut });
+        setExpand(!expand);
+    }
+
+    const handleShrink = () => {
+        TweenMax.to(circleRed, 0.8, { width: 75, height: 75, x: 0, ease: Power3.easeOut });
+        setExpand(!expand);
+    }
+
+    useEffect(() => {
+        // TweenMax.from(circle, 0.8, { opacity: 0, x: 80, ease: Power3.easeOut });
+        // TweenMax.from(circleRed, 0.8, { opacity: 0, x: 80, ease: Power3.easeOut, delay: 0.2 });
+        // TweenMax.from(circleBlue, 0.8, { opacity: 0, x: 80, ease: Power3.easeOut, delay: 0.4 });
+        TweenMax.staggerFrom([circle, circleBlue, circleRed], 0.8, { opacity: 0, x: 80, ease: Power3.easeOut }, 0.2);
+    }, []);
+*/
