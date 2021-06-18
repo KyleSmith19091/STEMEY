@@ -10,10 +10,11 @@
   align-items: center;
   background-color: var(--primary-light-blue);
   border-radius: 1em;
-  height: auto;
   width: 85vw;
   margin: 1.5em 0;
   transition: all 0.2s ease-in-out;
+  position: relative;
+  opacity: 1;
 }
 
 .card:hover {
@@ -23,7 +24,7 @@
 }
 
 .card:hover .cardHeader span {
-  transition: all 0.2s ease-in-out;
+  transition: box-shadow font-size 0.2s ease-in-out;
   font-size: 3vw;
 }
 

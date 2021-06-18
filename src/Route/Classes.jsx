@@ -1,11 +1,15 @@
 // React
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+
+// External Components
+import { TimelineLite, Power3 } from "gsap";
 
 // Images
 import molbio from "../Img/Photo/MolBio.png";
 
 // CSS
 import styles from "../Style/Route/Classes.module.css";
+import "../Style/Route/Classes.module.css";
 
 const classesContent = [
   {
@@ -39,9 +43,26 @@ const classesContent = [
 ];
 
 const Classes = () => {
+
+  const [mounted, setMounted] = useState(false);
+
+  let cardRef = useRef(null);
+  const tl = new TimelineLite();
+
+  useEffect(() => {
+    setMounted(true);
+    tl.staggerFrom([cardRef.children], 0.9, {
+      opacity: 0,
+      scale: 0,
+      ease: Power3.easeIn,
+      delay: 0.3
+    }, 0.3);
+  }, []);
+
+
   return (
-    <main className={styles.classes}>
-      <div initial="hidden" animate="show" className={styles.classesContainer}>
+    <main className={styles.classes} style={{ visibility: mounted ? 'visible' : 'hidden' }}>
+      <div className={styles.classesContainer} ref={el => cardRef = el}>
         {classesContent.map((cl, idx) => {
           return (
             <div key={idx} className={styles.card}>
