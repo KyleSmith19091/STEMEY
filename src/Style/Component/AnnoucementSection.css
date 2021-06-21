@@ -23,12 +23,13 @@
                          "img description";
 }
 
-.announcement h1 {
+.announcement > h1 {
     text-align: left;
     padding-left: 0.6em;
     grid-area: header;
     font-size: 1em;
     font-weight: bold;
+    color: white;
 }
 
 .announcement img {
