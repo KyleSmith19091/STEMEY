@@ -51,11 +51,11 @@ const Classes = () => {
 
   useEffect(() => {
     setMounted(true);
-    tl.staggerFrom([cardRef.children], 0.9, {
-      opacity: 0,
-      scale: 0,
+    tl.staggerTo([cardRef.children], 0.9, {
+      opacity: 1,
+      scale: 1,
       ease: Power3.easeIn,
-      delay: 0.3
+      delay: 0.2
     }, 0.3);
   }, []);
 
