@@ -19,8 +19,7 @@
     color: var(--primary-purple);
     font-size: 8vw;
     font-weight: bold;
-    transition: text-shadow 0.3s ease;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 }
 
 .hero-title-container span:first-of-type {
@@ -63,7 +62,6 @@
   color: var(--secondary-blue);
   display: block;
   font-weight: bold;
-    text-shadow: 4px 4px var(--secondary-blue);
 }
 
 .stem-anim::before, .stem-anim::after {
@@ -88,6 +86,11 @@
 .stem-anim:hover::before {
     transform-origin: 0% 50%;
     transform: scale3d(1, 1, 1);
+}
+
+.stem-anim-play.stem-anim::before{
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1); 
 }
 
 .stem-anim::before {
@@ -118,11 +121,12 @@
 }
 
 .hero-title-container span:first-of-type {
-    font-size: 4.5vw;
+    font-size: 5.5vw;
 }
 
 .hero-title-container span:last-of-type {
     color: var(--primary-light-blue);
+    font-size: 4.5vw;
 }
 
 .hero-image-parent-container {
@@ -136,8 +140,8 @@
 .hero-image-container {
     position: relative;
     border-radius: 50%;
-    width: 30vw;
-    height: 30vw;
+    width: 35vw;
+    height: 35vw;
     padding-top: 100%;
 
     display: flex;
