@@ -1,8 +1,9 @@
 // React
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 
 // External Components
 import { motion } from "framer-motion";
+import { TweenLite, Power3 } from "gsap";
 import { Link } from "react-router-dom";
 import {
     Drawer,
@@ -29,12 +30,22 @@ import "../Style/Component/Header.css";
 const Header = () => {
 
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const hamburgerRef = useRef();
+    let hamburgerRef = useRef(null);
+    let logoRef = useRef(null);
+
+    useEffect(() => {
+        TweenLite.from(logoRef, 1.4, {
+            y: -200,
+            opacity: 0,
+            ease: Power3.easeOut,
+            delay: 0.2
+        })
+    }, [])
 
     return (
         <header className="header">
 
-            <div className="logo-container">
+            <div className="logo-container" ref={el => logoRef = el}>
                 <Link to="/" className="logo">
                     <motion.h1 whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
@@ -52,7 +63,7 @@ const Header = () => {
             </nav>
 
             <div className="menu-icon-container">
-                <Button ref={hamburgerRef} colorScheme="transparent" onClick={onOpen} _focus={{ ringColor: "transparent" }}>
+                <Button ref={el => hamburgerRef = el} colorScheme="transparent" onClick={onOpen} _focus={{ ringColor: "transparent" }}>
                     <Hamburger className="hamburger-icon" />
                 </Button>
                 <Drawer
