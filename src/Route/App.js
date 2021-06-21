@@ -13,6 +13,7 @@ import Classes from "./Classes";
 import Tutoring from "./Tutoring";
 import Test from "./Test";
 import STEMWorld from "./StemWorld";
+import Form from "./Form";
 
 // Internal Components
 import Header from "../Component/Header";
@@ -38,6 +39,8 @@ const App = () => {
             <Route path='/test' component={Test} />
 
             <Route path='/stemworld' component={STEMWorld} />
+
+            <Route path='/form' component={Form} />
 
             <Route component={PageNotFound} />
           </Switch>
