@@ -11,9 +11,9 @@ import { ReactComponent as Calendar } from "../Img/Icon/Calendar.svg";
 // CSS
 import "../Style/Component/TimelineCard.css";
 
-const TimelineCard = ({ first, last, title, speaker, date, onClick }) => {
+const TimelineCard = ({ first, last, title, speaker, date, onClick, id }) => {
     return (
-        <div className={last ? "last" : "timelineCard"} onClick={onClick}>
+        <div className={last ? "last" : "timelineCard"} onClick={onClick} id={id}>
             <div className={first ? "first" : "TimelineCard"}>
                 {!first && <div className="timeline"></div>}
                 <div className="circle"></div>

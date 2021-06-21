@@ -1,21 +1,15 @@
 // React
-import React, { useState, useEffect } from "react";
-
-// External Components
-import { AspectRatio } from "@chakra-ui/react";
+import React, { useState, useEffect, useRef } from "react";
 
 // Internal Components
 import TimelineCard from "../Component/TimelineCard";
+import ExpandedTimelineCard from "../Component/ExpandedTimelineCard";
 
 // CSS
 import "../Style/Route/StemWorld.css";
 
-import { ReactComponent as Profile } from "../Img/Icon/Profile.svg";
-import { ReactComponent as Calendar } from "../Img/Icon/Calendar.svg";
-
-// Temp Resources
-import elyssa from "../Img/Photo/elyssa_wolter.png";
-import timelineImage from "../Img/Photo/timelineImage.jpg";
+// Data
+import { EventData } from "../Data/StemWorldData.js";
 
 // TODO: Create expanded timeline card component, Render all expanded cards and make them visible when clicked?
 
@@ -35,121 +29,80 @@ Expanded Card state object
 */
 
 const StemWorld = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
+  const [expandedCardContent, setExpandedCardContent] = useState(EventData[0]);
   const [scroll, setScroll] = useState(0);
+  const [sectionHeight, setSectionHeight] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    document.documentElement.style.setProperty('--card-height', document.querySelector(".timeline-card-expanded").clientHeight);
+    console.log(document.querySelector(".timeline-card-expanded").clientHeight);
+    setSectionHeight(document.querySelector(".stemworld").clientHeight / document.documentElement.scrollHeight * 100);
+    return () => window.removeEventListener("scroll", handleScroll); // Same as component did unmount
+  }, []);
 
   const handleScroll = () => {
     const totalScroll = window.pageYOffset || document.documentElement.scrollTop;
     const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scroll = `${totalScroll / windowHeight}`;
     setScroll(scroll * 100);
-    console.log(scroll * 100);
-    console.log(totalScroll);
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll); // Same as component did unmount
-  }, []);
-
   return (
-    <section className="stemworld" onScroll={handleScroll}>
+    <section className="stemworld">
       <div className="timeline-container">
-        <TimelineCard
-          first
-          onClick={(e) => {
-            setOpen(true);
-          }}
-          title="How does one make money?"
-          speaker="Bill Gates"
-          date="2020-02-12"
-        />
-        <TimelineCard
-          onClick={(e) => {
-            setOpen(true);
-          }}
-          title="How does one make money?"
-          speaker="Bill Gates"
-          date="2020-02-12"
-        />
-        <TimelineCard
-          onClick={(e) => {
-            setOpen(true);
-          }}
-          title="How does one make money?"
-          speaker="Bill Gates"
-          date="2020-02-12"
-        />
-        <TimelineCard
-          onClick={(e) => {
-            setOpen(true);
-          }}
-          title="How does one make money?"
-          speaker="Bill Gates"
-          date="2020-02-12"
-        />
-        <TimelineCard
-          onClick={(e) => {
-            setOpen(true);
-          }}
-          title="How does one make money?"
-          speaker="Bill Gates"
-          date="2020-02-12"
-        />
-        <TimelineCard
-          onClick={(e) => {
-            setOpen(true);
-          }}
-          last
-          title="How does one make money?"
-          speaker="Bill Gates"
-          date="2020-02-12"
-        />
+        {
+          EventData.map((event, i) => {
+            if (i === 0) {
+              return (<TimelineCard
+                first
+                onClick={(e) => {
+                  setOpen(true);
+                  setExpandedCardContent(EventData[e.currentTarget.id]);
+                }}
+                title={event.title}
+                speaker={event.speaker}
+                date={event.date}
+                id={i}
+                key={i}
+              />)
+            } else if (i === EventData.length - 1) {
+              return (<TimelineCard
+                last
+                onClick={(e) => {
+                  setOpen(true);
+                  setExpandedCardContent(EventData[e.currentTarget.id]);
+                }}
+                title={event.title}
+                speaker={event.speaker}
+                date={event.date}
+                id={i}
+                key={i}
+              />)
+            } else {
+              return (<TimelineCard
+                onClick={(e) => {
+                  setOpen(true);
+                  setExpandedCardContent(EventData[e.currentTarget.id]);
+                }}
+                title={event.title}
+                speaker={event.speaker}
+                date={event.date}
+                id={i}
+                key={i}
+              />)
+            }
+          })
+        }
       </div>
       <div className="expanded-card-container">
-        <div
-          className={scroll < 58 ? "timeline-card-expanded" : "timeline-card-expanded absolute"}
-          style={{ display: open ? "flex" : "none" }}
-          onClick={(e) => {
-            setOpen(!open);
-          }}
-        >
-          <div className="card-header">
-            <div className="overlapped-images">
-              <img src={timelineImage} alt="Event" />
-              <img src={elyssa} alt="Speaker" />
-            </div>
-            <div className="text-container">
-              <h2>The Origins of the Universe</h2>
-            </div>
-          </div>
-          <div className="info-container">
-            <p>
-              <span>
-                <Profile />
-              </span>
-              speaker
-            </p>
-            <p>
-              <span>
-                <Calendar />
-              </span>
-              date
-            </p>
-          </div>
-          <div className="description-container">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores rem exercitationem tenetur.
-              Consequatur nemo hic aperiam voluptas sequi fugiat omnis repudiandae reiciendis saepe, nobis asperiores
-              ipsa laboriosam dolor laudantium dolore.
-            </p>
-          </div>
-          <div className="video-container">
-            <AspectRatio ratio={16 / 9}>
-              <iframe title="naruto" src="https://www.youtube.com/embed/DlKBSvQfM1c" allowFullScreen />
-            </AspectRatio>
-          </div>
-        </div>
+        <ExpandedTimelineCard
+          open={open}
+          setOpen={setOpen}
+          absolute={scroll > sectionHeight ? true : false}
+          content={expandedCardContent}
+        />
       </div>
     </section>
   );
