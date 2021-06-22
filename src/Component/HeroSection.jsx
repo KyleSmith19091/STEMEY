@@ -37,7 +37,7 @@ const HeroSection = () => {
     useEffect(() => {
         setTimeout(() => {
             wordIndex === words.length - 1 ? setWordIndex(0) : setWordIndex(wordIndex + 1);
-        }, 2000);
+        }, 3000);
     });
 
     useEffect(() => {
