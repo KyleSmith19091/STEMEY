@@ -16,6 +16,8 @@ This is a react project and was bootstrapped with create-react-app.
 +-- src 
 |   +-- Component
 |   +-- Controller
+|   +-- Hooks
+| 	+-- Data
 |   +-- Img
 |       |   +-- Icon
 |       |   +-- SVG
@@ -32,6 +34,12 @@ This is a react project and was bootstrapped with create-react-app.
 
 ##### Controller
 > Modules which control the way a user interacts with application ex. Database access, Login procedures etc.
+
+##### Data
+> Data for populating components/routes.
+
+##### Hooks
+> Custom Hooks
 
 ##### Img
 > Contains all image files used in the website ex. *.png, *.svg, *.jpg
