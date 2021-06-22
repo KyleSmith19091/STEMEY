@@ -7,6 +7,7 @@ import { Input, InputLeftElement, InputGroup, Button, useToast } from "@chakra-u
 
 // Internal Components
 import { validateEmail } from "../Controller/ValidateForm";
+import TextInput from "../Component/TextInput";
 
 // Images
 import { ReactComponent as Youtube } from "../Img/Icon/youtubeIcon.svg";
@@ -76,13 +77,7 @@ const Footer = () => {
                 </a>
             </div>
             <form action="submit">
-                <InputGroup sx={{ margin: "0 1em" }}>
-                    <InputLeftElement
-                        pointerEvents="none"
-                        children={<EmailIcon />}
-                    />
-                    <Input id="email" sx={{ borderWidth: "2px", borderColor: "black" }} colorScheme="blackAlpha" variant="outline" placeholder="Enter email for latest news and updates!" type="email" onChange={handleChange} />
-                </InputGroup>
+                <TextInput placeholder="Enter your email for updates" type="email" valid leftIcon={<EmailIcon />} />
                 <Button colorScheme="purple" variant="solid" onClick={onSubmitHandler}>
                     Register
                 </Button>
