@@ -46,7 +46,7 @@ const TextInput = ({ leftIcon, placeholder, type, valid }) => {
 		<InputGroup>
 			<InputLeftElement sx={{ margin: width > 768 ? "0.4em" : "0.2em" }} children={leftIcon} />
 			<Input
-				className="input valid"
+				className="input"
 				type={type}
 				placeholder={placeholder}
 				variant={inputVariant}
