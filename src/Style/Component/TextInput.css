@@ -1,0 +1,7 @@
+.valid.input {
+	background-color: #97ffe0;
+}
+
+.valid.input::placeholder {
+	color: black;
+}
