@@ -76,12 +76,14 @@ const Footer = () => {
                     <Classroom />
                 </a>
             </div>
-            <form action="submit">
-                <TextInput placeholder="Enter your email for updates" type="email" valid leftIcon={<EmailIcon />} />
-                <Button colorScheme="purple" variant="solid" onClick={onSubmitHandler}>
-                    Register
-                </Button>
-            </form>
+            <div className="form-container">
+                <form action="submit">
+                    <TextInput placeholder="Enter your email for updates" type="email" leftIcon={<EmailIcon />} />
+                    <Button colorScheme="purple" variant="solid" onClick={onSubmitHandler}>
+                        Register
+                    </Button>
+                </form>
+            </div>
             <div className="page-links">
                 <div className="page-dir">
                     <h4>Academics</h4>

@@ -45,6 +45,10 @@ footer form {
     padding: 0 1em;
 }
 
+footer button {
+    margin-left: 1em;
+}
+
 .page-links {
     display: flex;
     flex-direction: column;
@@ -137,7 +141,14 @@ footer form {
         font-size: 1.2rem;
     }
 
-    #email {
-        width: 50%;
+    .form-container{
+        display: block;
+        margin: 0 auto;
+        max-width: 50vw;
     }
+
+    form button {
+        margin-left: 2em;
+    }
+
 }
