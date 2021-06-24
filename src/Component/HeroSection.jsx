@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 // External Components
 import { motion } from "framer-motion";
-import { TimelineLite, TweenLite, Power3 } from 'gsap/gsap-core';
+import { TimelineLite, Power3 } from 'gsap/gsap-core';
 import { animateScroll as scroll } from "react-scroll";
 
 // Internal Components

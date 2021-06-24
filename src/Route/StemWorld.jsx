@@ -1,53 +1,23 @@
 // React
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 
 // Internal Components
 import TimelineCard from "../Component/TimelineCard";
 import ExpandedTimelineCard from "../Component/ExpandedTimelineCard";
 
-// CSS
-import "../Style/Route/StemWorld.css";
+// Hooks
+import { useScrollSection } from "../Hooks/useScrollSection";
 
 // Data
 import { EventData } from "../Data/StemWorldData.js";
 
-// TODO: Create expanded timeline card component, Render all expanded cards and make them visible when clicked?
-
-/*
-
-Expanded Card state object
-{
-    open: false | true,
-    title: "",
-    speaker-name: "",
-    date: "",
-    timeline-image: "",
-    description: "",
-    video-container: "",
-}
-
-*/
+// CSS
+import "../Style/Route/StemWorld.css";
 
 const StemWorld = () => {
   const [open, setOpen] = useState(true);
   const [expandedCardContent, setExpandedCardContent] = useState(EventData[0]);
-  const [scroll, setScroll] = useState(0);
-  const [sectionHeight, setSectionHeight] = useState(0);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    document.documentElement.style.setProperty('--card-height', document.querySelector(".timeline-card-expanded").clientHeight);
-    console.log(document.querySelector(".timeline-card-expanded").clientHeight);
-    setSectionHeight(document.querySelector(".stemworld").clientHeight / document.documentElement.scrollHeight * 100);
-    return () => window.removeEventListener("scroll", handleScroll); // Same as component did unmount
-  }, []);
-
-  const handleScroll = () => {
-    const totalScroll = window.pageYOffset || document.documentElement.scrollTop;
-    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scroll = `${totalScroll / windowHeight}`;
-    setScroll(scroll * 100);
-  };
+  const { scroll, sectionHeight } = useScrollSection(".stemworld");
 
   return (
     <section className="stemworld">
@@ -100,7 +70,7 @@ const StemWorld = () => {
         <ExpandedTimelineCard
           open={open}
           setOpen={setOpen}
-          absolute={scroll > sectionHeight ? true : false}
+          absolute={scroll >= sectionHeight ? true : false}
           content={expandedCardContent}
         />
       </div>

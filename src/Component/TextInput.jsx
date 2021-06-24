@@ -1,5 +1,5 @@
 // React
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 
 // External Components
 import { Input, InputLeftElement, InputRightElement, InputGroup } from "@chakra-ui/react"
@@ -13,10 +13,12 @@ import { ReactComponent as Close } from "../Img/Icon/close_icon.svg";
 // CSS
 import "../Style/Component/TextInput.css";
 
-const TextInput = ({ leftIcon, placeholder, type, valid }) => {
+const TextInput = ({ leftIcon, placeholder, type, valid, onChange }) => {
 	const [inputVariant, setInputVariant] = useState("filled");
 	const [showCloseIcon, setShowCloseIcon] = useState(false);
 	const { width } = useScreenDimensions();
+
+	let input = useRef(null);
 
 	const onInputFocus = () => {
 		setInputVariant("outline");
@@ -28,14 +30,19 @@ const TextInput = ({ leftIcon, placeholder, type, valid }) => {
 		setShowCloseIcon(false);
 	};
 
-	const validStyle = {
-		backgroundColor: "#F2FFFB",
-	};
+	const onCloseClick = () => {
+		console.log("YES!");
+		input.current.value = "";
+	}
 
-	const errorStyle = {
-		border: "2px solid red",
-		backgroundColor: "red"
-	};
+	// const validStyle = {
+	// 	backgroundColor: "#F2FFFB",
+	// };
+
+	// const errorStyle = {
+	// 	border: "2px solid red",
+	// 	backgroundColor: "red"
+	// };
 
 	const defaultStyle = {
 		padding: "1.5em 2.5em",
@@ -47,12 +54,14 @@ const TextInput = ({ leftIcon, placeholder, type, valid }) => {
 			<InputLeftElement sx={{ margin: width > 768 ? "0.4em" : "0.2em" }} children={leftIcon} />
 			<Input
 				className="input"
+				ref={el => input = el}
 				type={type}
 				placeholder={placeholder}
 				variant={inputVariant}
 				onFocus={onInputFocus}
 				onBlur={onInputBlur}
 				size={width > 768 ? "md" : "sm"}
+				onChange={onChange}
 				sx={
 					defaultStyle
 				}
@@ -60,7 +69,7 @@ const TextInput = ({ leftIcon, placeholder, type, valid }) => {
 					border: "2px solid black"
 				}}
 			/>
-			{showCloseIcon && <InputRightElement sx={{ margin: width > 768 ? "0.4em" : "0.2em" }} children={<Close />} />}
+			{showCloseIcon && <InputRightElement onFocus={onCloseClick} sx={{ margin: width > 768 ? "0.4em" : "0.2em", cursor: "pointer" }} children={<Close />} />}
 		</InputGroup>
 	)
 }

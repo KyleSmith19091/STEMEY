@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 // External Components
 import { Link } from "react-router-dom";
-import { Input, InputLeftElement, InputGroup, Button, useToast } from "@chakra-ui/react";
+import { Button, useToast } from "@chakra-ui/react";
 
 // Internal Components
 import { validateEmail } from "../Controller/ValidateForm";
@@ -78,7 +78,7 @@ const Footer = () => {
             </div>
             <div className="form-container">
                 <form action="submit">
-                    <TextInput placeholder="Enter your email for updates" type="email" leftIcon={<EmailIcon />} />
+                    <TextInput placeholder="Enter your email for updates" type="email" leftIcon={<EmailIcon />} onChange={handleChange} />
                     <Button colorScheme="purple" variant="solid" onClick={onSubmitHandler}>
                         Register
                     </Button>

@@ -1,5 +1,5 @@
 // React
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 
 // External Components
 import { TimelineLite, Power2 } from "gsap";
