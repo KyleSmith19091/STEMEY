@@ -22,10 +22,10 @@ const StemWorld = () => {
   return (
     <section className="stemworld">
       <div className="timeline-container">
-        {
-          EventData.map((event, i) => {
-            if (i === 0) {
-              return (<TimelineCard
+        {EventData.map((event, i) => {
+          if (i === 0) {
+            return (
+              <TimelineCard
                 first
                 onClick={(e) => {
                   setOpen(true);
@@ -36,9 +36,11 @@ const StemWorld = () => {
                 date={event.date}
                 id={i}
                 key={i}
-              />)
-            } else if (i === EventData.length - 1) {
-              return (<TimelineCard
+              />
+            );
+          } else if (i === EventData.length - 1) {
+            return (
+              <TimelineCard
                 last
                 onClick={(e) => {
                   setOpen(true);
@@ -49,9 +51,11 @@ const StemWorld = () => {
                 date={event.date}
                 id={i}
                 key={i}
-              />)
-            } else {
-              return (<TimelineCard
+              />
+            );
+          } else {
+            return (
+              <TimelineCard
                 onClick={(e) => {
                   setOpen(true);
                   setExpandedCardContent(EventData[e.currentTarget.id]);
@@ -61,10 +65,10 @@ const StemWorld = () => {
                 date={event.date}
                 id={i}
                 key={i}
-              />)
-            }
-          })
-        }
+              />
+            );
+          }
+        })}
       </div>
       <div className="expanded-card-container">
         <ExpandedTimelineCard
