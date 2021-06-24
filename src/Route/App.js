@@ -22,11 +22,11 @@ import ScrollToTop from "../Component/ScrollToTop";
 
 const App = () => {
   return (
-    <AnimatePresence exitBeforeEnter>
-      <BrowserRouter>
-        <ScrollToTop />
-        <main className="App">
-          <Header />
+    <BrowserRouter>
+      <ScrollToTop />
+      <main className="App">
+        <Header />
+        <AnimatePresence exitBeforeEnter>
           <Switch>
             <Route path='/' component={Home} exact />
 
@@ -44,10 +44,10 @@ const App = () => {
 
             <Route component={PageNotFound} />
           </Switch>
-          <Footer />
-        </main>
-      </BrowserRouter>
-    </AnimatePresence>
+        </AnimatePresence>
+        <Footer />
+      </main>
+    </BrowserRouter>
   );
 }
 
