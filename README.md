@@ -17,7 +17,7 @@ This is a react project and was bootstrapped with create-react-app.
 |   +-- Component
 |   +-- Controller
 |   +-- Hooks
-| 	+-- Data
+|   +-- Data
 |   +-- Img
 |       |   +-- Icon
 |       |   +-- SVG
