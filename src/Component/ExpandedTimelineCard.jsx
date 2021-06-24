@@ -8,6 +8,9 @@ import { AspectRatio } from "@chakra-ui/react";
 import { ReactComponent as Profile } from "../Img/Icon/Profile.svg";
 import { ReactComponent as Calendar } from "../Img/Icon/Calendar.svg";
 
+// CSS
+import "../Style/Component/ExpandedTimelineCard.css";
+
 const ExpandedTimelineCard = ({ open, setOpen, absolute, content }) => {
 	return (
 		<div
