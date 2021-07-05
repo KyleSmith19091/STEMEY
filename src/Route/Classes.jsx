@@ -1,6 +1,9 @@
 // React
 import React, { useEffect, useRef, useState } from "react";
 
+// Components
+import Button from '../Component/Button';
+
 // External Components
 import { TimelineLite, Power3 } from "gsap";
 
@@ -77,11 +80,7 @@ const Classes = () => {
                   {cl.name}
                 </h3>
                 <p className={styles.cardDescription}>{cl.description}</p>
-                <button>
-                  <span>
-                    <span>Register</span>
-                  </span>
-                </button>
+                <Button title="Register"/>
               </div>
             </div>
           );
