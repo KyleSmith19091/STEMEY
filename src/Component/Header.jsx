@@ -62,6 +62,7 @@ const Header = () => {
                 <NavItem name={GetInvolved.name} content={GetInvolved.content} />
             </nav>
 
+            {/* TODO: Move this to SlideDrawer Component */}
             <div className="menu-icon-container">
                 <Button ref={el => hamburgerRef = el} colorScheme="transparent" onClick={onOpen} _focus={{ ringColor: "transparent" }}>
                     <Hamburger className="hamburger-icon" />
@@ -100,7 +101,7 @@ const Header = () => {
                                     <p>Get Involved</p>
                                     <div className="drawer-list-links-container">
                                         <Link onClick={onClose} to="/stemworld">STEM World I</Link>
-                                        <Link onClick={onClose} to="/stemworldII">STEM World II</Link>
+                                        <Link onClick={onClose} to="/stemworld2">STEM World II</Link>
                                         <Link onClick={onClose} to="/test">STEM-Tober</Link>
                                     </div>
                                 </li>

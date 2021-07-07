@@ -6,7 +6,7 @@
     align-items: flex-start;
     position: fixed;
     width: 40%;
-    top: 10%;
+    top: 20%;
     transition: border,box-shadow 0.3s ease;
     height: var(--card-height);
     max-height: var(--card-height);
@@ -102,4 +102,5 @@
 	.timeline-card-expanded {
 		visibility: hidden;
 	}
+
 }

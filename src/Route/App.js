@@ -13,6 +13,7 @@ import Classes from "./Classes";
 import Tutoring from "./Tutoring";
 import Test from "./Test";
 import STEMWorld from "./StemWorld";
+import STEMWorldII from "./StemWorld2";
 import Form from "./Form";
 
 // Internal Components
@@ -39,6 +40,8 @@ const App = () => {
             <Route path='/test' component={Test} />
 
             <Route path='/stemworld' component={STEMWorld} />
+
+            <Route path='/stemworld2' component={STEMWorldII} />
 
             <Route path='/form' component={Form} />
 

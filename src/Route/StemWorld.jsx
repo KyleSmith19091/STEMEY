@@ -1,8 +1,11 @@
 // React
 import React, { useState } from "react";
 
+// External Component
+import { animateScroll as scroll, Element, Link } from "react-scroll";
+
 // Internal Components
-import TimelineCard from "../Component/TimelineCard";
+import EventTimeline from "../Component/EventTimeline";
 import ExpandedTimelineCard from "../Component/ExpandedTimelineCard";
 
 // Hooks
@@ -16,55 +19,39 @@ import "../Style/Route/StemWorld.css";
 
 const StemWorld = () => {
   const [open, setOpen] = useState(true);
-  const [expandedCardContent, setExpandedCardContent] = useState(EventData[0]);
+  const [expandedCardContent, setExpandedCardContent] = useState(EventData[0][0]);
   const { scroll, sectionHeight } = useScrollSection(".stemworld");
+
+  // REMOVE THIS => Just experimenting with some colors //
+  const colors = ["#F64C72", "#2F2FA2", "#FC4445"];
 
   return (
     <section className="stemworld">
-      <div className="timeline-container">
-        {
-          EventData.map((event, i) => {
-            if (i === 0) {
-              return (<TimelineCard
-                first
-                onClick={(e) => {
-                  setOpen(true);
-                  setExpandedCardContent(EventData[e.currentTarget.id]);
-                }}
-                title={event.title}
-                speaker={event.speaker}
-                date={event.date}
-                id={i}
-                key={i}
-              />)
-            } else if (i === EventData.length - 1) {
-              return (<TimelineCard
-                last
-                onClick={(e) => {
-                  setOpen(true);
-                  setExpandedCardContent(EventData[e.currentTarget.id]);
-                }}
-                title={event.title}
-                speaker={event.speaker}
-                date={event.date}
-                id={i}
-                key={i}
-              />)
-            } else {
-              return (<TimelineCard
-                onClick={(e) => {
-                  setOpen(true);
-                  setExpandedCardContent(EventData[e.currentTarget.id]);
-                }}
-                title={event.title}
-                speaker={event.speaker}
-                date={event.date}
-                id={i}
-                key={i}
-              />)
-            }
-          })
-        }
+      <h1 className="page-header"><span role="img" aria-labelledby="panda1">🌍</span> STEM World</h1>
+      <div className="days-container">
+        {EventData.map((day, i) => {
+          return (
+            <Link to={i} smooth={true}>
+              <h2 style={{ color: colors[i % colors.length] }}>{"Day " + (i + 1)}</h2>
+            </Link>
+          )
+        })}
+      </div>
+      <div className="event-container">
+        {EventData.map((day, idx) => {
+          return (
+            <Element name={idx}>
+              <EventTimeline
+                key={idx}
+                day={idx + 1}
+                dayData={day}
+                setOpen={setOpen}
+                setExpandedCardContent={setExpandedCardContent}
+                headerColor={colors[idx % colors.length]}
+              />
+            </Element>
+          )
+        })}
       </div>
       <div className="expanded-card-container">
         <ExpandedTimelineCard
