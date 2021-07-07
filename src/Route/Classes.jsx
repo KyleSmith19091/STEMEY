@@ -10,6 +10,7 @@ import molbio from "../Img/Photo/MolBio.png";
 // CSS
 import styles from "../Style/Route/Classes.module.css";
 import "../Style/Route/Classes.module.css";
+import OffsetCard from "../Component/OffsetCard";
 
 const classesContent = [
   {
@@ -65,25 +66,7 @@ const Classes = () => {
       <div className={styles.classesContainer} ref={el => cardRef = el}>
         {classesContent.map((cl, idx) => {
           return (
-            <div key={idx} className={styles.card}>
-              <div className={styles.cardImgContainer}>
-                <img src={cl.imgPath} alt="Class" className={styles.cardImg} />
-              </div>
-              <div className={styles.cardTextContainer}>
-                <h3 className={styles.cardHeader}>
-                  <span role="img" aria-label="mountain">
-                    {cl.emoji}{" "}
-                  </span>
-                  {cl.name}
-                </h3>
-                <p className={styles.cardDescription}>{cl.description}</p>
-                <button>
-                  <span>
-                    <span>Register</span>
-                  </span>
-                </button>
-              </div>
-            </div>
+            <OffsetCard idx={idx} imgPath={cl.imgPath} emoji={cl.emoji} name={cl.name} description={cl.description}/>
           );
         })}
       </div>

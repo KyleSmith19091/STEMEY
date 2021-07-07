@@ -50,9 +50,9 @@ const StemWorld = () => {
                 headerColor={colors[idx % colors.length]}
               />
             </Element>
-          )
-        })}
-      </div>
+            )
+          })}
+        </div>
       <div className="expanded-card-container">
         <ExpandedTimelineCard
           open={open}
