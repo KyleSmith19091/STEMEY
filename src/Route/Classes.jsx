@@ -66,7 +66,7 @@ const Classes = () => {
       <div className={styles.classesContainer} ref={el => cardRef = el}>
         {classesContent.map((cl, idx) => {
           return (
-            <OffsetCard cl={cl} idx={idx}/>
+            <OffsetCard idx={idx} imgPath={cl.imgPath} emoji={cl.emoji} name={cl.name} description={cl.description}/>
           );
         })}
       </div>
