@@ -72,12 +72,12 @@ const Header = () => {
                     placement="right"
                     onClose={onClose}
                     finalFocusRef={hamburgerRef}
-                    size="lg"
+                    size="xlg"
                     sx={{ backgroundColor: "purple" }}
                 >
                     <DrawerOverlay />
                     <DrawerContent>
-                        <DrawerHeader sx={{ backgroundColor: "var(--primary-purple)", color: "white" }}>STEMEY.</DrawerHeader>
+                        <DrawerHeader sx={{ backgroundColor: "var(--primary-purple)", color: "white", float: "right" }}><Link onClick={onClose} to="/">STEMEY.</Link></DrawerHeader>
 
                         <DrawerBody className="drawer-body" sx={{ backgroundColor: "var(--primary-purple)" }}>
                             <ul className="drawer-list">
