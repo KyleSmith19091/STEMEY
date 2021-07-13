@@ -27,7 +27,7 @@ const StemWorld = () => {
 
   return (
     <section className="stemworld">
-      <h1 className="page-header"><span role="img" aria-labelledby="panda1">🌍</span> STEM World</h1>
+      <h1 className="page-header"><span role="img" aria-labelledby="globe">🌍</span> STEM World</h1>
       <div className="days-container">
         {EventData.map((day, i) => {
           return (
