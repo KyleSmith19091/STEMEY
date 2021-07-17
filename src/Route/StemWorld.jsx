@@ -19,7 +19,9 @@ import "../Style/Route/StemWorld.css";
 
 const StemWorld = () => {
   const [open, setOpen] = useState(true);
-  const [expandedCardContent, setExpandedCardContent] = useState(EventData[0][0]);
+  const [expandedCardContent, setExpandedCardContent] = useState(
+    EventData[0][0]
+  );
   const { scroll, sectionHeight } = useScrollSection(".stemworld");
 
   // REMOVE THIS => Just experimenting with some colors //
@@ -27,20 +29,27 @@ const StemWorld = () => {
 
   return (
     <section className="stemworld">
-      <h1 className="page-header"><span role="img" aria-labelledby="globe">🌍</span> STEM World</h1>
+      <h1 className="page-header">
+        <span role="img" aria-labelledby="globe">
+          🌍
+        </span>{" "}
+        STEM World
+      </h1>
       <div className="days-container">
         {EventData.map((day, i) => {
           return (
-            <Link to={i} smooth={true}>
-              <h2 style={{ color: colors[i % colors.length] }}>{"Day " + (i + 1)}</h2>
+            <Link key={i} to={String(i)} smooth={true}>
+              <h2 style={{ color: colors[i % colors.length] }}>
+                {"Day " + (i + 1)}
+              </h2>
             </Link>
-          )
+          );
         })}
       </div>
       <div className="event-container">
         {EventData.map((day, idx) => {
           return (
-            <Element name={idx}>
+            <Element key={idx} name={String(idx)}>
               <EventTimeline
                 key={idx}
                 day={idx + 1}
@@ -50,13 +59,14 @@ const StemWorld = () => {
                 headerColor={colors[idx % colors.length]}
               />
             </Element>
-            )
-          })}
-        </div>
+          );
+        })}
+      </div>
       <div className="expanded-card-container">
         <ExpandedTimelineCard
           open={open}
           setOpen={setOpen}
+          initial={scroll <= 10}
           absolute={scroll >= sectionHeight ? true : false}
           content={expandedCardContent}
         />

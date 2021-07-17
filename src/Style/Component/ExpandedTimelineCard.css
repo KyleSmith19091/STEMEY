@@ -1,106 +1,114 @@
 .timeline-card-expanded {
-    border: 2px solid black;
-    border-radius: 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: fixed;
-    width: 40%;
-    top: 20%;
-    transition: border,box-shadow 0.3s ease;
-    height: var(--card-height);
-    max-height: var(--card-height);
+  border: 2px solid black;
+  border-radius: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  width: 40%;
+  top: 10%;
+  height: var(--card-height);
+  max-height: var(--card-height);
+  box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px,
+    rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px,
+    rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px,
+    rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px,
+    rgb(255, 85, 85) 40px -40px;
+  transition: 0.3s box-shadow cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.timeline-card-expanded.initial {
+  position: absolute;
+  top: 12%;
 }
 
 .timeline-card-expanded.absolute {
-    position: absolute;
-    top: unset;
-    bottom: 4em;
-    height: var(--card-height);
-    max-height: var(--card-height);
-    transition: bottom 0.3s linear;
+  position: absolute;
+  top: unset;
+  bottom: 4em;
+  height: var(--card-height);
+  max-height: var(--card-height);
 }
 
 .timeline-card-expanded:hover {
-    transition: transform 0.3s ease;
-    border-color: var(--primary-purple);
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
+    rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
+    rgb(255, 85, 85) 0px 0px 0px 15px;
 }
 
 .timeline-card-expanded .card-header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: black;
-    font-weight: bold;
-    width: 100%;
-    padding: 0.5em;
-    margin: 0.5em 0;
-    transition: color,transform 0.4s ease;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+  width: 100%;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  transition: color, transform 0.4s ease;
 }
 
-
 .card-header .text-container {
-    display: flex;
-    justify-content: center;
-    text-align: left;
-    align-items: center;
-    font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  align-items: center;
+  font-size: 1.8rem;
 }
 
 .overlapped-images {
-    position: relative;
-    display: flex;
-    height: 100px;
-    width: 50%;
-    margin-right: 2em;
+  position: relative;
+  display: flex;
+  height: 100px;
+  width: 50%;
+  margin-right: 2em;
 }
 
 .overlapped-images img {
-    position: absolute;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+  position: absolute;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
 }
 
 /* Offset speaker image */
 .overlapped-images img:last-of-type {
-    left: 70px; 
+  left: 70px;
 }
 
 .info-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .info-container p {
-    font-size: 1.4rem;
-    display: flex;
-    align-items: center;
-    margin: 0.5em 1em;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  margin: 0.5em 1em;
 }
 
 .info-container p span {
-    margin-right: 0.5em;
+  margin-right: 0.5em;
 }
 
 .description-container {
-    padding: 1em;
-    margin: 0 0.5em;
+  padding: 1em;
+  margin: 0 0.5em;
 }
 
-.timeline-card-expanded .video-container{
-    width: 100%;
-    padding: 1em;
+.timeline-card-expanded .video-container {
+  width: 100%;
+  padding: 1em;
 }
 
 .video-container iframe {
-    border-radius: 2em;
+  border-radius: 2em;
 }
 
 @media only screen and (max-width: 768px) {
-	.timeline-card-expanded {
-		visibility: hidden;
-	}
-
+  .timeline-card-expanded {
+    visibility: hidden;
+  }
 }
