@@ -29,3 +29,15 @@ a {
 ul {
   list-style: none;
 }
+
+.page-header {
+  font-size: 10vw;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-header {
+    font-size: 4vw;
+  }
+}
