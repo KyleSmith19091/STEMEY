@@ -1,38 +1,38 @@
 .stemworld {
-    padding: 1em;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  padding: 1em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .days-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 2em;
-    margin-bottom: 2em;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2em;
+  margin-bottom: 2em;
 }
 
 .days-container h2 {
-    font-size: 2rem; 
-    text-decoration: underline;
-    font-weight: bold;
-    cursor: pointer;
+  font-size: 2rem;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .event-container {
-    width: 100%;
+  width: 100%;
 }
 
 .expanded-card-container {
-    padding: 1em;
-    margin-right: 1em;
-    display: flex;
-    justify-content: flex-end;
+  padding: 1em;
+  margin-right: 1em;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media only screen and (min-width: 768px) {
-    .event-container {
-        width: 50%;
-    }
+  .event-container {
+    width: 50%;
+  }
 }

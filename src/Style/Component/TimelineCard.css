@@ -1,136 +1,138 @@
 :root {
-    --circle-size: 50px;
-    --border-size: 5px;
+  --circle-size: 50px;
+  --border-size: 5px;
 }
 
 .timelineCard {
-    display: flex;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .timeline-content-container {
-    display: flex;
-    margin-left: 1em;
-    border: 2px solid black;
-    width: 90vw;
-    border-radius: 2em;
+  display: flex;
+  margin-left: 1em;
+  border: 2px solid black;
+  width: 90vw;
+  border-radius: 2em;
 }
 
 .timeline-content-container:hover {
-    border: 2px solid var(--primary-light-blue);
-    transition: cursor 0.4s ease-in-out;
-    cursor: url("../../Img/SVG/StemWorldCursor2.svg"), auto;
+  border: 2px solid var(--primary-light-blue);
+}
+
+.timeline-content-container:hover .timeline-header {
+  border: 2px solid red;
 }
 
 .timeline-content-container img {
-    width: 130px;
-    height: 100px;
-    border-radius: 1.9em 0em 0em 1.9em;
+  width: 130px;
+  height: 100px;
+  border-radius: 1.9em 0em 0em 1.9em;
 }
 
 .text-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-left: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 1em;
 }
 
 .text-content h2 {
-    font-weight: bold;
-    font-size: 3vw;
+  font-weight: bold;
+  font-size: 3vw;
 }
 
 .text-content p {
-    font-size: 0.7rem;
-    display: flex;
+  font-size: 0.7rem;
+  display: flex;
 }
 
 .text-content span {
-    margin-right: 1em;
+  margin-right: 1em;
 }
 
 .TimelineCard {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1em;
 }
 
 .first {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 1em;
-    padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 1em;
+  padding-top: 50px;
 }
 
 .last {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .last .circle {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .circle {
-    width: var(--circle-size);
-    height: var(--circle-size);
-    border-radius: 50%;
-    border: var(--border-size) solid var(--primary-light-blue);
-    position: relative;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 50%;
+  border: var(--border-size) solid var(--primary-light-blue);
+  position: relative;
 }
 
 .circle:hover {
-    background-color: var(--primary-light-blue);
+  background-color: var(--primary-light-blue);
 }
 
 .first .timeline {
-    border-right: 5px solid var(--primary-light-blue);
-    height: 70px;
+  border-right: 5px solid var(--primary-light-blue);
+  height: 70px;
 }
 
 .timeline {
-    border-right: 5px solid var(--primary-light-blue);
-    height: 80px;
-    margin-left: calc((var(--circle-size) + var(--border-size))/2.5);
+  border-right: 5px solid var(--primary-light-blue);
+  height: 80px;
+  margin-left: calc((var(--circle-size) + var(--border-size)) / 2.5);
 }
 
 @media only screen and (min-width: 768px) {
-    .first .timeline {
-        height: 100px;
-    }
+  .first .timeline {
+    height: 100px;
+  }
 
-    .timeline {
-        height: 100px;
-    }
+  .timeline {
+    height: 100px;
+  }
 
-    .timeline-content-container {
-        display: flex;
-        flex-direction: row;
-        border: 2px solid black;
-        width: 100%;
-        border-radius: 2em;
-    }
+  .timeline-content-container {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    width: 100%;
+    border-radius: 2em;
+  }
 
-    .timeline-content-container img {
-        width: 200px;
-        height: 100px;
-        border-radius: 1.9em 0em 0em 1.9em;
-    }
+  .timeline-content-container img {
+    width: 200px;
+    height: 100px;
+    border-radius: 1.9em 0em 0em 1.9em;
+  }
 
-    .timeline-content-container img {
-        width: 190px;
-        height: 150px;
-    }
+  .timeline-content-container img {
+    width: 190px;
+    height: 150px;
+  }
 
-    .text-content h2 {
-        font-size: 2vw;
-    }
+  .text-content h2 {
+    font-size: 2vw;
+  }
 
-    .text-content p {
-        font-size: 1rem;
-        display: flex;
-    }
+  .text-content p {
+    font-size: 1rem;
+    display: flex;
+  }
 }
