@@ -29,21 +29,21 @@ const App = () => {
         <Header />
         <AnimatePresence exitBeforeEnter>
           <Switch>
-            <Route path='/' component={Home} exact />
+            <Route path="/" component={Home} exact />
 
-            <Route path='/tutoring-summer' component={TutoringSummer} />
+            <Route path="/tutoring-summer" component={TutoringSummer} />
 
-            <Route path='/classes' component={Classes} />
+            <Route path="/classes" component={Classes} />
 
-            <Route path='/tutoring' component={Tutoring} />
+            <Route path="/tutoring" component={Tutoring} />
 
-            <Route path='/test' component={Test} />
+            <Route path="/test" component={Test} />
 
-            <Route path='/stemworld' component={STEMWorld} />
+            <Route path="/stemworld" component={STEMWorld} />
 
-            <Route path='/stemworld2' component={STEMWorldII} />
+            <Route path="/stemworld2" component={STEMWorldII} />
 
-            <Route path='/form' component={Form} />
+            <Route path="/form" component={Form} />
 
             <Route component={PageNotFound} />
           </Switch>
@@ -52,6 +52,6 @@ const App = () => {
       </main>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
