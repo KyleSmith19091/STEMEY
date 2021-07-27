@@ -1,5 +1,4 @@
 .timeline-card-expanded {
-  border: 2px solid black;
   border-radius: 2em;
   display: flex;
   flex-direction: column;
@@ -9,12 +8,12 @@
   top: 10%;
   height: var(--card-height);
   max-height: var(--card-height);
-  box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px,
+  box-shadow: blue 0px 0px 0px 3px inset, rgb(255, 255, 255) 10px -10px 0px -3px,
     rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px,
     rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px,
     rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px,
     rgb(255, 85, 85) 40px -40px;
-  transition: 0.3s box-shadow cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: box-shadow 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .timeline-card-expanded.initial {
@@ -31,9 +30,11 @@
 }
 
 .timeline-card-expanded:hover {
-  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px,
-    rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px,
-    rgb(255, 85, 85) 0px 0px 0px 15px;
+  box-shadow: blue 0px 0px 0px 3px inset, blue 0px 0px 0px 0px,
+    rgb(31, 193, 27) 0px 0px 0px 3px, rgb(255, 255, 255) 0px 0px 0px 0px,
+    rgb(255, 217, 19) 0px 0px 0px 6px, rgb(255, 255, 255) 0px 0px 0px 0px,
+    rgb(255, 156, 85) 0px 0px 0px 9px, rgb(255, 255, 255) 0px 0px 0px 0px,
+    rgb(255, 85, 85) 0px 0px 0px 12px;
 }
 
 .timeline-card-expanded .card-header {

@@ -1,20 +1,19 @@
 .timeline-header {
-	font-weight: bold;
-	padding-left: 2em;
-	font-size: 3rem;
-	text-align: center;
-	position: relative;
+  font-weight: bold;
+  padding-left: 2em;
+  font-size: 3rem;
+  text-align: center;
+  position: relative;
 }
 
 .timeline-header span {
-	position: absolute;
-	left: 20vw;
-	transition: transform 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  position: absolute;
+  left: 20vw;
+  transition: transform 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .timeline-header:hover span {
-	transform: rotate(90deg);
-	transition: transform 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transform: rotate(90deg);
 }
 
 .page-header {
