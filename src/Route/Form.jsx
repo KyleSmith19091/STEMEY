@@ -1,52 +1,27 @@
 import React, { useState } from 'react'
 
-import { Input, Stack, InputGroup, InputLeftElement, InputRightElement } from "@chakra-ui/react"
-import {
-	FormControl,
-	FormLabel,
-} from "@chakra-ui/react"
+import { Stack } from "@chakra-ui/react"
 
-import { ReactComponent as Close } from "../Img/Icon/close_icon.svg";
+import FormTextInput from "../Component/FormTextInput";
+import RadioGroup from "../Component/RadioGroup";
+import Radio from "../Component/Radio";
+
 import { ReactComponent as Email } from "../Img/Icon/email_icon.svg";
 
 import "../Style/Route/Form.css";
 
 const Form = () => {
-	const [inputVariant, setInputVariant] = useState("filled");
-
-	const onInputFocus = () => {
-		setInputVariant("outline");
-	};
-
-	const onInputBlur = () => {
-		setInputVariant("filled");
-	};
-
 	return (
 		<div>
 			<Stack spacing={3} padding="1em">
-				<FormControl id="first-name" isRequired>
-					<FormLabel sx={{ paddingLeft: "1em" }}>First name</FormLabel>
-					<InputGroup>
-						<InputLeftElement sx={{ margin: "0.4em" }} children={<Email />} />
-						<Input
-							className="input"
-							type="email"
-							placeholder="Enter your email"
-							variant={inputVariant}
-							onFocus={onInputFocus}
-							onBlur={onInputBlur}
-							sx={{
-								padding: "1.5em 2.5em",
-								borderRadius: "1em"
-							}}
-							_focus={{
-								border: "2px solid black"
-							}}
-						/>
-						<InputRightElement sx={{ margin: "0.4em" }} children={<Close />} />
-					</InputGroup>
-				</FormControl>
+				<FormTextInput id="name" leftIcon={<Email />} placeholder="Enter your name" type="text" label="First Name" />
+				<FormTextInput id="surname" leftIcon={<Email />} placeholder="Enter your name" type="text" label="Surname" />
+				<FormTextInput id="experience" placeholder="Any Past Experience?" type="text" label="Past Experience" multiline />
+				<RadioGroup defaultValue="2" direction="column">
+					<Radio value="1">First</Radio>
+					<Radio value="2">Second</Radio>
+					<Radio value="3">Third</Radio>
+				</RadioGroup>
 			</Stack>
 		</div>
 	)
