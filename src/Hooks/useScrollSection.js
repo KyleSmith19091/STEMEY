@@ -26,7 +26,7 @@ export const useScrollSection = (sectionClass) => {
 
     // Set sectionheight state
     setSectionHeight(
-      (document.querySelector(".stemworld").clientHeight /
+      (document.querySelector(sectionClass).clientHeight /
         document.documentElement.scrollHeight) *
         100
     );
