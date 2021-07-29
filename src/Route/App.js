@@ -15,6 +15,7 @@ import Test from "./Test";
 import STEMWorld from "./StemWorld";
 import STEMWorldII from "./StemWorld2";
 import Form from "./Form";
+import MeetOurTeam from "./MeetOurTeam";
 
 // Internal Components
 import Header from "../Component/Header";
@@ -44,6 +45,8 @@ const App = () => {
             <Route path="/stemworld2" component={STEMWorldII} />
 
             <Route path="/form" component={Form} />
+
+            <Route path="/meet-our-team" component={MeetOurTeam} />
 
             <Route component={PageNotFound} />
           </Switch>
