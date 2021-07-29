@@ -30,6 +30,17 @@ ul {
   list-style: none;
 }
 
+.container {
+  display: flex;
+  padding: 1em;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  padding: 1em;
+}
+
 .page-header {
   font-size: 10vw;
   font-weight: bold;
