@@ -23,7 +23,6 @@ import styles from "../Style/Component/Footer.module.css";
 const Footer = () => {
   const toast = useToast();
   const [email, setEmail] = useState("");
-  const handleChange = (event) => setEmail(event.target.value);
 
   const onSubmitHandler = () => {
     if (validateEmail(email)) {
@@ -81,7 +80,7 @@ const Footer = () => {
             placeholder="Enter your email for updates"
             type="email"
             leftIcon={<EmailIcon />}
-            onChange={handleChange}
+            value={email}
           />
           <Button colorScheme="purple" variant="solid" onClick={onSubmitHandler} className={styles.button}>
             Register
