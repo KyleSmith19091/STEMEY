@@ -1,5 +1,5 @@
 // React
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 // External Components
@@ -16,7 +16,7 @@ import { useScreenDimensions } from "../Hooks/useScreenDimensions";
 // CSS
 import "../Style/Component/TextInput.css";
 
-const TextInput = ({ leftIcon, placeholder, type, multiline }) => {
+const TextInput = ({ leftIcon, placeholder, type, multiline, value }) => {
   const [inputVariant, setInputVariant] = useState("filled");
   const { width } = useScreenDimensions();
 
@@ -71,6 +71,8 @@ const TextInput = ({ leftIcon, placeholder, type, multiline }) => {
         />
         <Input
           className="input"
+          value={value}
+          onChange={(e) => value = e.target.value}
           type={type}
           placeholder={placeholder}
           variant={inputVariant}

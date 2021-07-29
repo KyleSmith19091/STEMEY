@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { RadioGroup as ChakraRadioGroup, Stack } from "@chakra-ui/react"
-import Radio from "./Radio";
 
 const RadioGroup = ({ defaultValue, children, direction }) => {
 	return (
