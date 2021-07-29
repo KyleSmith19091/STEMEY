@@ -80,7 +80,6 @@ const Footer = () => {
             placeholder="Enter your email for updates"
             type="email"
             leftIcon={<EmailIcon />}
-            value={email}
           />
           <Button colorScheme="purple" variant="solid" onClick={onSubmitHandler} className={styles.button}>
             Register
