@@ -1,0 +1,13 @@
+.team-grid {
+	place-items: center;
+	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+	row-gap: 2em;
+	padding-top: -30%;
+	margin-bottom: 10%;
+}
+
+@media only screen and (min-width: 768px) {
+	.meetOurTeamCard:nth-of-type(2n) { /* Select every second card */
+		margin-top: 30%;
+	}
+}
