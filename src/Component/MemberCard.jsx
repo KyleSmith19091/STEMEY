@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "../Style/Component/MeetOurTeam.css";
+import "../Style/Component/MeetOurTeam.css";
 
 const MemberCard = ({ para, name, position, image }) => {
   return (
