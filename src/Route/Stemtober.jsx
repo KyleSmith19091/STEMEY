@@ -12,7 +12,7 @@ import ExpandedTimelineCard from "../Component/ExpandedTimelineCard";
 import { useScrollSection } from "../Hooks/useScrollSection";
 
 // Data
-import { EventData } from "../Data/StemWorld2Data.js";
+import { EventData } from "../Data/StemtoberData.js";
 
 // CSS
 import "../Style/Route/StemWorld.css";
@@ -33,7 +33,7 @@ const StemWorld = () => {
         <span role="img" aria-labelledby="globe">
           🌍
         </span>{" "}
-        STEM World 2
+        STEMTOBER
       </h1>
       <div className="days-container">
         {EventData.map((day, i) => {

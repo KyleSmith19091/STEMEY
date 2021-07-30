@@ -14,6 +14,7 @@ import Tutoring from "./Tutoring";
 import Test from "./Test";
 import STEMWorld from "./StemWorld";
 import STEMWorldII from "./StemWorld2";
+import STEMTOBER from "./Stemtober";
 import Form from "./Form";
 import MeetOurTeam from "./MeetOurTeam";
 
@@ -43,6 +44,8 @@ const App = () => {
             <Route path="/stemworld" component={STEMWorld} />
 
             <Route path="/stemworld2" component={STEMWorldII} />
+
+            <Route path="/stemtober" component={STEMTOBER} />
 
             <Route path="/form" component={Form} />
 
