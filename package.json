@@ -23,7 +23,7 @@
     "react-slick": "^0.28.1",
     "resize-observer": "^1.0.1",
     "slick-carousel": "^1.8.1",
-    "three": "^0.129.0"
+    "three": "^0.137.0"
   },
   "scripts": {
     "start": "react-scripts start",
